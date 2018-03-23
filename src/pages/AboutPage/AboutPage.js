@@ -15,14 +15,13 @@ export default () => {
       </Segment>
       <Segment vertical>
         <p>
-          This starter was created by @fabien0102.
+          This project is created by @helmuthdu.
         </p>
         <p>
-          For any question, I'm on <a href="https://discord.gg/2bz8EzW" target="blank">discord #reactiflux/gatsby</a>
+          For any question, I'm on <a href="mailto:helmuthdu@gmail.com" target="blank">helmuthdu@gmail.com</a>
         </p>
         <p>
-          For any issues, any PR are welcoming
-          <a href="https://github.com/fabien0102/gatsby-starter/issues" target="blank"> on this repository</a>
+          For any issues, any PR are welcoming<a href="https://github.com/helmuthdu/toystory" target="blank"> on this repository</a>
         </p>
       </Segment>
     </Container>

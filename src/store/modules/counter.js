@@ -9,7 +9,7 @@ const initialState = {
   isDecrementing: false
 };
 
-export const reducer = (state = initialState, action) => {
+export const counterReducer = (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT_REQUESTED:
       return {
@@ -41,7 +41,6 @@ export const reducer = (state = initialState, action) => {
       return state;
   }
 };
-export default reducer;
 
 export const increment = () => {
   return dispatch => {

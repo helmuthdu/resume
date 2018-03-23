@@ -1,10 +1,12 @@
 import { routerReducer } from 'react-router-redux';
 import { combineReducers } from 'redux';
-import counter from './counter';
-import ui from './counter';
+import { authReducer } from './auth';
+import { counterReducer } from './counter';
+import { uiReducer } from './ui';
 
 export default combineReducers({
+  auth: authReducer,
+  counter: counterReducer,
   router: routerReducer,
-  counter,
-  ui
+  ui: uiReducer,
 });

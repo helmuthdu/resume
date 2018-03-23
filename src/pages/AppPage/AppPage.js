@@ -16,8 +16,8 @@ export default (props: IndexPageProps) =>
     <Segment vertical inverted textAlign="center" className="masthead">
       <HeaderMenu pathname={props.location.pathname} items={menuItems} inverted/>
       <Container text>
-        <Header inverted as="h1">Gatsby 1.0 - Starter kit</Header>
-        <Header inverted as="h2">Typescript - Jest - Semantic UI</Header>
+        <Header inverted as="h1">React</Header>
+        <Header inverted as="h2">Flow - Jest - Semantic UI</Header>
         <Button primary size="huge">Get started!</Button>
       </Container>
     </Segment>

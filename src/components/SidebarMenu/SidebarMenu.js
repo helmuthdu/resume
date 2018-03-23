@@ -10,7 +10,7 @@ import { Icon, Menu, Sidebar } from 'semantic-ui-react';
 interface SidebarMenuProps extends MenuProps {
   visible?: boolean;
   dispatch?: Dispatch<any>;
-  Link: any;
+  pathname: any;
 }
 
 export const SidebarMenu = ({ items, pathname, visible }: SidebarMenuProps) => {

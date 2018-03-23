@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import React from 'react';
+import React, { PureComponent } from 'react';
+import { Route } from 'react-router-dom';
 import HeaderMenu from '../components/HeaderMenu/HeaderMenu';
 import SidebarMenu from '../components/SidebarMenu/SidebarMenu';
 import { Container, Icon, Segment, Sidebar } from 'semantic-ui-react';
@@ -16,16 +16,13 @@ export const menuItems = [
 ];
 
 interface DefaultLayoutProps {
-  location: {
-    pathname: string;
-  };
   children: any;
 }
 
-export default class DefaultLayout extends React.PureComponent<DefaultLayoutProps> {
+export default class DefaultLayout extends PureComponent<DefaultLayoutProps> {
   render () {
-    const { pathname } = this.props.location;
-    const isHome = pathname === '/';
+    const { pathname } = this.props.children.props.location;
+    const isHome = pathname === '/home';
 
     return (
       <Sidebar.Pushable as={Segment}>
@@ -36,13 +33,13 @@ export default class DefaultLayout extends React.PureComponent<DefaultLayoutProp
 
           {/* Render children pages */}
           <div style={{ paddingBottom: 60 }}>
-            {this.props.children()}
+            {this.props.children}
           </div>
 
           {/* Footer */}
           <Segment inverted vertical style={{ position: 'absolute', bottom: 0, width: '100%' }}>
             <Container textAlign="center">
-              <p>Powered with <Icon name="heart"/> by Gatsby 1.0</p>
+              <p>Powered with <Icon name="heart"/> by React</p>
             </Container>
           </Segment>
         </Sidebar.Pusher>
@@ -50,3 +47,13 @@ export default class DefaultLayout extends React.PureComponent<DefaultLayoutProp
     );
   }
 }
+
+export const DefaultLayoutRoute = ({component: Component, ...rest}) => {
+  return (
+    <Route {...rest} render={matchProps => (
+      <DefaultLayout>
+        <Component {...matchProps} />
+      </DefaultLayout>
+    )} />
+  )
+};

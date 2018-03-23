@@ -15,7 +15,7 @@ export interface ToggleSidebar {
 }
 
 // Reducer
-export const reducer = (state: UIStoreState = initialState, action: ToggleSidebar): UIStoreState => {
+export const uiReducer = (state: UIStoreState = initialState, action: ToggleSidebar): UIStoreState => {
   switch (action.type) {
     case TOGGLE_SIDEBAR:
       return Object.assign({}, state, { isSidebarVisible: !state.isSidebarVisible });
@@ -23,6 +23,5 @@ export const reducer = (state: UIStoreState = initialState, action: ToggleSideba
       return state;
   }
 };
-export default reducer;
 
 export const toggleSidebar = () => ({ type: TOGGLE_SIDEBAR });
