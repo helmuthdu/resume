@@ -1,8 +1,8 @@
 // @flow
-import React from 'react';
+import React, { Fragment } from 'react';
 import HeaderMenu from '../../components/HeaderMenu/HeaderMenu';
 import { menuItems } from '../../layouts/DefaultLayout';
-import { Button, Container, Grid, Header, Icon, Segment } from 'semantic-ui-react';
+import { Button, Container, Grid, Header, Icon, List, Segment } from 'semantic-ui-react';
 
 interface IndexPageProps {
   location: {
@@ -11,7 +11,7 @@ interface IndexPageProps {
 }
 
 export default (props: IndexPageProps) =>
-  <div>
+  <Fragment>
     {/* Master head */}
     <Segment vertical inverted textAlign="center" className="masthead">
       <HeaderMenu pathname={props.location.pathname} items={menuItems} inverted/>
@@ -24,32 +24,56 @@ export default (props: IndexPageProps) =>
 
     {/* About this starter */}
     <Segment vertical className="stripe">
-      <Grid stackable verticalAlign="middle" className="container">
+      <Grid columns="3" divided relaxed stackable className="container">
         <Grid.Row>
-          <Grid.Column width="8">
-            <Header>Lorem ipsum</Header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Porro laudantium ad, quae, perspiciatis ipsa distinctio.
-            </p>
-            <Header>Dolor sit amet</Header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Porro laudantium ad, quae, perspiciatis ipsa distinctio.
-            </p>
+          <Grid.Column>
+            {/* WHO AM I? */}
+            <Header>Who am I?</Header>
+            <em>
+              A talented Web Developer / Designer Located in Our Lovely Earth<br/>
+            </em>
+              Advanced web developer with expertise in designing, architecture, developing and implementing interactive websites.
+              Creative and innovate, love learning new technologies and fixing little details that matters.
+              Also I like working in a team, you'll learn faster and much more.
           </Grid.Column>
-          <Grid.Column width="6" floated="right">
-            {/* TODO replace with a pretty GIF */}
-            <Header>Lorem ipsum</Header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Porro laudantium ad, quae, perspiciatis ipsa distinctio.
-            </p>
-            <Header>Dolor sit amet</Header>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Porro laudantium ad, quae, perspiciatis ipsa distinctio.
-            </p>
+          <Grid.Column>
+            {/* PERSONAL INFO */}
+            <Header>Personal Info</Header>
+            <List>
+              <List.Item><strong>Birthdate</strong> 18/02/1986</List.Item>
+              <List.Item><strong>Phone</strong> +55 61 98105-6014</List.Item>
+              <List.Item><strong>Email</strong> helmuthdu@gmail.com</List.Item>
+              <List.Item><strong>Skype</strong> helmuthdu</List.Item>
+              <List.Item><strong>Github</strong> https://github.com/helmuthdu</List.Item>
+              <List.Item><strong>Location</strong> Brazil - Brasília/DF</List.Item>
+            </List>
+          </Grid.Column>
+          <Grid.Column>
+            {/* MY EXPERTISE */}
+            <Header>My Expertise</Header>
+            <List relaxed>
+              <List.Item>
+                <List.Icon name='computer' size='large' verticalAlign='middle' />
+                <List.Content>
+                  <List.Header as='a'>Web Design</List.Header>
+                  <List.Description as='a'>Progressive Web Pages Experience</List.Description>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Icon name='fork' size='large' verticalAlign='middle' />
+                <List.Content>
+                  <List.Header as='a'>Web Development</List.Header>
+                  <List.Description as='a'>Frontend and Backend Experience</List.Description>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Icon name='world' size='large' verticalAlign='middle' />
+                <List.Content>
+                  <List.Header as='a'>GIS</List.Header>
+                  <List.Description as='a'>Geographic Information Systems Experience</List.Description>
+                </List.Content>
+              </List.Item>
+            </List>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -98,4 +122,4 @@ export default (props: IndexPageProps) =>
         </Grid.Row>
       </Grid>
     </Segment>
-  </div>;
+  </Fragment>;

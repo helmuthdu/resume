@@ -3,8 +3,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Dispatch } from 'redux';
+import { Container, Menu } from 'semantic-ui-react';
 import { toggleSidebar } from '../../store/modules/ui';
-import { Container, Icon, Menu } from 'semantic-ui-react';
 import { MenuProps } from '../Menu';
 
 interface HeaderMenuProps extends MenuProps {
@@ -18,7 +18,7 @@ export const HeaderMenu = ({ items, pathname, inverted, dispatch }: HeaderMenuPr
   <Container>
     <Menu size="large" pointing secondary inverted={inverted}>
       <Menu.Item as="a" className="mobile only" icon="sidebar" onClick={() => dispatch(toggleSidebar())}/>
-      <Menu.Item className="mobile hidden"><Icon name="spy" size="big"/></Menu.Item>
+      {/*<Menu.Item className="mobile hidden"><Icon name="spy" size="big"/></Menu.Item>*/}
       {items.map((item) => {
         const active = (item.exact) ? pathname === item.path : pathname.startsWith(item.path);
         return <Menu.Item
