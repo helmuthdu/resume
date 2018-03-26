@@ -31,22 +31,27 @@ export default (props: IndexPageProps) =>
       <HeaderMenu pathname={props.location.pathname} items={menuItems} inverted/>
       <Container text>
         <Header inverted as="h1">Helmuth Saatkamp</Header>
+        <Divider/>
         <Header inverted as="h2">Web Developer</Header>
         <Button primary size="large">Download My CV</Button>
       </Container>
     </Segment>
 
     {/* About this starter */}
-    <Segment vertical className="stripe">
-      <Grid columns="3" divided relaxed stackable className="container">
+    <Segment vertical className="stripe" textAlign="center">
+      <Header size="large">
+        ABOUT ME
+        <Header sub>
+          <cite>A talented Web Developer/Designer Located in Our Lovely Earth<br/></cite>
+        </Header>
+      </Header>
+      <Divider hidden section/>
+      <Grid columns="3" divided relaxed stackable textAlign="left" className="container">
         <Grid.Row>
           <Grid.Column>
             {/* WHO AM I? */}
             <Header>Who am I?</Header>
-            <em>
-              A talented Web Developer / Designer Located in Our Lovely Earth<br/>
-            </em>
-            Advanced web developer with expertise in designing, architecture, developing and implementing interactive
+            Prolific, full stack web developer with expertise in designing, architecture, developing and implementing interactive
             websites.
             Creative and innovate, love learning new technologies and fixing little details that matters.
             Also, I like working in a team, you'll learn faster and much more.
@@ -94,13 +99,15 @@ export default (props: IndexPageProps) =>
     </Segment>
 
     {/* Key features */}
-    <Segment vertical className="stripe alternate feature">
-      <Grid columns="3" stackable className="container">
-        <Grid className="Row">
-          <Grid.Column>
-            <Header>My Resume</Header>
-          </Grid.Column>
-        </Grid>
+    <Segment vertical textAlign="center" className="stripe alternate feature">
+      <Header size="large">
+        RESUME
+        <Header sub>
+          <cite>"Life without knowledge is death in disguise." - Talib Kweli</cite>
+        </Header>
+      </Header>
+      <Divider hidden section/>
+      <Grid columns="3" stackable textAlign="left" className="container">
         <Grid.Row>
           <Grid.Column>
             <Segment>
@@ -199,6 +206,30 @@ export default (props: IndexPageProps) =>
             </Segment>
             <Segment>
               <Header icon>
+                Courses
+              </Header>
+              <Icon name="book" size="large" color="grey" className="pull-right"/>
+              <Feed>
+                <Feed.Event>
+                  <Feed.Content>
+                    <Feed.Summary>Codeschool</Feed.Summary>
+                    <Feed.Extra text>
+                      https://www.codeschool.com/users/helmuthdu
+                    </Feed.Extra>
+                  </Feed.Content>
+                </Feed.Event>
+                <Feed.Event>
+                  <Feed.Content>
+                    <Feed.Summary>Udemy</Feed.Summary>
+                    <Feed.Extra text>
+                      https://www.udemy.com/user/helmuthsaatkamp/
+                    </Feed.Extra>
+                  </Feed.Content>
+                </Feed.Event>
+              </Feed>
+            </Segment>
+            <Segment>
+              <Header icon>
                 Assets
               </Header>
               <Icon name="tags" size="large" color="grey" className="pull-right"/>
@@ -223,9 +254,9 @@ export default (props: IndexPageProps) =>
               <Feed>
                 <Feed.Event>
                   <Feed.Content>
-                    <Feed.Summary>HTML / CSS</Feed.Summary>
+                    <Feed.Summary>HTML / CSS / SASS</Feed.Summary>
                     <Feed.Extra>
-                      <Progress percent={100} size='tiny' color="blue"/>
+                      <Progress percent={90} size='tiny' color="blue"/>
                     </Feed.Extra>
                   </Feed.Content>
                 </Feed.Event>

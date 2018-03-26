@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Dispatch } from 'redux';
-import { Container, Menu } from 'semantic-ui-react';
+import { Container, Icon, Menu } from 'semantic-ui-react';
 import { toggleSidebar } from '../../store/modules/ui';
 import { MenuProps } from '../Menu';
 
@@ -16,9 +16,9 @@ interface HeaderMenuProps extends MenuProps {
 
 export const HeaderMenu = ({ items, pathname, inverted, dispatch }: HeaderMenuProps) =>
   <Container>
-    <Menu size="large" pointing secondary inverted={inverted}>
+    {console.log(items, pathname)}
+    <Menu size="large" pointing secondary inverted={inverted} style={{borderWidth: '1px'}}>
       <Menu.Item as="a" className="mobile only" icon="sidebar" onClick={() => dispatch(toggleSidebar())}/>
-      {/*<Menu.Item className="mobile hidden"><Icon name="spy" size="big"/></Menu.Item>*/}
       {items.map((item) => {
         const active = (item.exact) ? pathname === item.path : pathname.startsWith(item.path);
         return <Menu.Item
