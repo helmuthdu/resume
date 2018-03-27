@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './AppPage';
+import App from '../../components/ContactMap/ContactMap';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');

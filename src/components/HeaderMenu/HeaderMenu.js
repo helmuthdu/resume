@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Dispatch } from 'redux';
-import { Container, Icon, Menu } from 'semantic-ui-react';
+import { Container, Menu } from 'semantic-ui-react';
 import { toggleSidebar } from '../../store/modules/ui';
 import { MenuProps } from '../Menu';
 

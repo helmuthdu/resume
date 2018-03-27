@@ -5,6 +5,7 @@ import {
   Container,
   Divider,
   Feed,
+  Form,
   Grid,
   Header,
   Icon,
@@ -13,10 +14,11 @@ import {
   Progress,
   Segment
 } from 'semantic-ui-react';
+import { ContactMap } from '../../components/ContactMap/ContactMap';
 import HeaderMenu from '../../components/HeaderMenu/HeaderMenu';
 import { menuItems } from '../../layouts/DefaultLayout';
 
-import './AppPage.css';
+import '../../pages/AppPage/AppPage.css';
 
 interface IndexPageProps {
   location: {
@@ -51,9 +53,8 @@ export default (props: IndexPageProps) =>
           <Grid.Column>
             {/* WHO AM I? */}
             <Header>Who am I?</Header>
-            Prolific, full stack web developer with expertise in designing, architecture, developing and implementing interactive
-            websites.
-            Creative and innovate, love learning new technologies and fixing little details that matters.
+            Full stack web developer with a passion for programming, with expertise in designing, architecture and developing.
+            Creative and innovative, I love learning new technologies and fixing small details that matter.
             Also, I like working in a team, you'll learn faster and much more.
           </Grid.Column>
           <Grid.Column>
@@ -124,12 +125,12 @@ export default (props: IndexPageProps) =>
                       <List relaxed>
                         <List.Item>
                           <List.Content>
-                            Performed design, architecture and development of web app for market analysis
+                            Performed design, architecture and development of webapp for market analysis and reports
                           </List.Content>
                         </List.Item>
                         <List.Item>
                           <List.Content>
-                            Create rest api services and provide integration into the platform
+                            Create micro services and provide integration into the current platform
                           </List.Content>
                         </List.Item>
                       </List>
@@ -145,12 +146,43 @@ export default (props: IndexPageProps) =>
                       <List relaxed>
                         <List.Item>
                           <List.Content>
-                            Create and develop a deforestation management system in Brazil
+                            Full stack web developer responsible for end-to-end web app development
                           </List.Content>
                         </List.Item>
                         <List.Item>
                           <List.Content>
-                            Development team leader with 3-4 developers
+                            Create an online GIS to show deforestation and hazards in Brazil
+                          </List.Content>
+                        </List.Item>
+                        <List.Item>
+                          <List.Content>
+                            Development team leader with 2-3 developers
+                          </List.Content>
+                        </List.Item>
+                      </List>
+                    </Feed.Extra>
+                  </Feed.Content>
+                </Feed.Event>
+                <Divider hidden/>
+                <Feed.Event>
+                  <Feed.Content>
+                    <Feed.Date>dez 2013 - <Label size="small" color="blue">Current</Label></Feed.Date>
+                    <Feed.Summary>Freelance Web Developer</Feed.Summary>
+                    <Feed.Extra text>
+                      <List relaxed>
+                        <List.Item>
+                          <List.Content>
+                            Developed an check-in webapp for a local church's children's department
+                          </List.Content>
+                        </List.Item>
+                        <List.Item>
+                          <List.Content>
+                            Built a gis webapp to show earthquakes in brazil for the seismological observatory
+                          </List.Content>
+                        </List.Item>
+                        <List.Item>
+                          <List.Content>
+                            Created a webapp to show where buses are on a map and estimate when they will arrive at your stop.
                           </List.Content>
                         </List.Item>
                       </List>
@@ -158,32 +190,6 @@ export default (props: IndexPageProps) =>
                   </Feed.Content>
                 </Feed.Event>
               </Feed>
-            </Segment>
-            <Segment>
-              <Header icon>
-                Interests
-              </Header>
-              <Icon name="rss" size="large" color="grey" className="pull-right"/>
-              <List horizontal>
-                <List.Item>
-                  <Icon circular name='music'/>
-                  <List.Content>
-                    <List.Header>Music</List.Header>
-                  </List.Content>
-                </List.Item>
-                <List.Item>
-                  <Icon circular name='game'/>
-                  <List.Content>
-                    <List.Header>Gaming</List.Header>
-                  </List.Content>
-                </List.Item>
-                <List.Item>
-                  <Icon circular name='tv'/>
-                  <List.Content>
-                    <List.Header>Anime</List.Header>
-                  </List.Content>
-                </List.Item>
-              </List>
             </Segment>
           </Grid.Column>
           <Grid.Column>
@@ -196,7 +202,7 @@ export default (props: IndexPageProps) =>
                 <Feed.Event>
                   <Feed.Content>
                     <Feed.Date>2008 - 2013</Feed.Date>
-                    <Feed.Summary>Degree in Computer Science</Feed.Summary>
+                    <Feed.Summary>Degree in Computer Science - UnB</Feed.Summary>
                     <Feed.Extra text>
                       Coursework in Programming, Data Structures, and Computer Architecture
                     </Feed.Extra>
@@ -243,6 +249,33 @@ export default (props: IndexPageProps) =>
                 <Label>Initiative</Label>
                 <Label>Funny</Label>
               </Label.Group>
+            </Segment>
+            <Segment>
+              <Header icon>
+                Interests
+              </Header>
+              <Icon name="rss" size="large" color="grey" className="pull-right"/>
+              <Divider hidden/>
+              <List horizontal>
+                <List.Item>
+                  <Icon circular name='music'/>
+                  <List.Content>
+                    <List.Header>Music</List.Header>
+                  </List.Content>
+                </List.Item>
+                <List.Item>
+                  <Icon circular name='game'/>
+                  <List.Content>
+                    <List.Header>Gaming</List.Header>
+                  </List.Content>
+                </List.Item>
+                <List.Item>
+                  <Icon circular name='tv'/>
+                  <List.Content>
+                    <List.Header>Anime</List.Header>
+                  </List.Content>
+                </List.Item>
+              </List>
             </Segment>
           </Grid.Column>
           <Grid.Column>
@@ -325,6 +358,46 @@ export default (props: IndexPageProps) =>
                   </Feed.Content>
                 </Feed.Event>
               </Feed>
+            </Segment>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </Segment>
+    {/* Key features */}
+    <Segment vertical inverted textAlign="center" className="stripe feature">
+      <Header size="large" inverted>
+        CONTACT
+        <Header sub>
+          <cite>"Here is a powerful yet simple rule. Always give people more than they expect to get." – Nelson Boswell</cite>
+        </Header>
+      </Header>
+      <Divider hidden section/>
+      <Grid stackable textAlign="left" className="container">
+        <Grid.Row>
+          <Grid.Column width="11">
+            <ContactMap isMarkerShown></ContactMap>
+          </Grid.Column>
+          <Grid.Column width="5">
+            <Segment piled>
+              <Form>
+                <Form.Field required>
+                  <label>Email</label>
+                  <input placeholder='Email'/>
+                </Form.Field>
+                <Form.Field required>
+                  <label>Name</label>
+                  <input placeholder='Name'/>
+                </Form.Field>
+                <Form.Field required>
+                  <label>Title</label>
+                  <input placeholder='Title'/>
+                </Form.Field>
+                <Form.Field required>
+                  <label>Message</label>
+                  <textarea placeholder='Message' rows="3"/>
+                </Form.Field>
+                <Button type='submit'>Submit</Button>
+              </Form>
             </Segment>
           </Grid.Column>
         </Grid.Row>
