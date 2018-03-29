@@ -2,6 +2,7 @@
 import React, { Fragment } from 'react';
 import {
   Button,
+  Card,
   Container,
   Divider,
   Feed,
@@ -11,6 +12,7 @@ import {
   Icon,
   Label,
   List,
+  Menu,
   Progress,
   Segment
 } from 'semantic-ui-react';
@@ -26,20 +28,59 @@ interface IndexPageProps {
   };
 }
 
+let activeItem = 'all';
+const profileItems = [
+  {
+    header: 'Project Report - April',
+    image: 'https://react.semantic-ui.com/assets/images/avatar/large/matthew.png',
+    description: 'Leverage agile frameworks to provide a robust synopsis for high level overviews.',
+  },
+  {
+    header: 'Project Report - May',
+    image: 'https://react.semantic-ui.com/assets/images/avatar/large/matthew.png',
+    description: 'Bring to the table win-win survival strategies to ensure proactive domination.',
+  },
+  {
+    header: 'Project Report - May',
+    image: 'https://react.semantic-ui.com/assets/images/avatar/large/matthew.png',
+    description: 'Bring to the table win-win survival strategies to ensure proactive domination.',
+  },
+  {
+    header: 'Project Report - May',
+    image: 'https://react.semantic-ui.com/assets/images/avatar/large/matthew.png',
+    description: 'Bring to the table win-win survival strategies to ensure proactive domination.',
+  },
+  {
+    header: 'Project Report - May',
+    image: 'https://react.semantic-ui.com/assets/images/avatar/large/matthew.png',
+    description: 'Bring to the table win-win survival strategies to ensure proactive domination.',
+  },
+  {
+    header: 'Project Report - May',
+    image: 'https://react.semantic-ui.com/assets/images/avatar/large/matthew.png',
+    description: 'Bring to the table win-win survival strategies to ensure proactive domination.',
+  },
+  {
+    header: 'Project Report - May',
+    image: 'https://react.semantic-ui.com/assets/images/avatar/large/matthew.png',
+    description: 'Bring to the table win-win survival strategies to ensure proactive domination.',
+  }
+];
+
 export default (props: IndexPageProps) =>
   <Fragment>
-    {/* Master head */}
+    {/* MASTER HEAD */}
     <Segment vertical inverted textAlign="center" className="masthead">
       <HeaderMenu pathname={props.location.pathname} items={menuItems} inverted/>
       <Container text>
-        <Header inverted as="h1">Helmuth Saatkamp</Header>
+        <Header inverted as="h1">I'm Helmuth Saatkamp</Header>
         <Divider/>
-        <Header inverted as="h2">Web Developer</Header>
+        <Header inverted as="h2">Web Developer/Designer</Header>
         <Button primary size="large">Download My CV</Button>
       </Container>
     </Segment>
 
-    {/* About this starter */}
+    {/* ABOUT */}
     <Segment vertical className="stripe" textAlign="center">
       <Header size="large">
         ABOUT ME
@@ -61,11 +102,11 @@ export default (props: IndexPageProps) =>
             {/* PERSONAL INFO */}
             <Header>Personal Info</Header>
             <List>
-              <List.Item><strong>Phone</strong> +55 61 98105-6014</List.Item>
               <List.Item><strong>Email</strong> helmuthdu@gmail.com</List.Item>
               <List.Item><strong>Skype</strong> helmuthdu</List.Item>
-              <List.Item><strong>Github</strong> https://github.com/helmuthdu</List.Item>
-              <List.Item><strong>Location</strong> Brazil - Brasília/DF</List.Item>
+              <List.Item><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/helmuth-saatkamp-a92a038a/">Helmuth Saatkamp</a></List.Item>
+              <List.Item><strong>Github</strong> <a href="https://github.com/helmuthdu">helmuthdu</a></List.Item>
+              <List.Item><strong>Location</strong> Brasília/DF - Brazil</List.Item>
             </List>
           </Grid.Column>
           <Grid.Column>
@@ -73,17 +114,17 @@ export default (props: IndexPageProps) =>
             <Header>My Expertise</Header>
             <List relaxed>
               <List.Item>
-                <List.Icon name='computer' size='large' verticalAlign='middle'/>
-                <List.Content>
-                  <List.Header as='a'>Web Design</List.Header>
-                  <List.Description as='a'>Progressive Web Pages Experience</List.Description>
-                </List.Content>
-              </List.Item>
-              <List.Item>
                 <List.Icon name='fork' size='large' verticalAlign='middle'/>
                 <List.Content>
                   <List.Header as='a'>Web Development</List.Header>
                   <List.Description as='a'>Frontend and Backend Experience</List.Description>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Icon name='computer' size='large' verticalAlign='middle'/>
+                <List.Content>
+                  <List.Header as='a'>Web Design</List.Header>
+                  <List.Description as='a'>Progressive Web Pages Experience</List.Description>
                 </List.Content>
               </List.Item>
               <List.Item>
@@ -99,7 +140,7 @@ export default (props: IndexPageProps) =>
       </Grid>
     </Segment>
 
-    {/* Key features */}
+    {/* RESUME */}
     <Segment vertical textAlign="center" className="stripe alternate feature">
       <Header size="large">
         RESUME
@@ -125,12 +166,12 @@ export default (props: IndexPageProps) =>
                       <List relaxed>
                         <List.Item>
                           <List.Content>
-                            Performed design, architecture and development of webapp for market analysis and reports
+                            Performed design, front-end architecture and development for market analysis and online reports for big car companies (ex: Toyota, Hyndai, Fiat, Ford)
                           </List.Content>
                         </List.Item>
                         <List.Item>
                           <List.Content>
-                            Create micro services and provide integration into the current platform
+                            Meeting with customers and end users to analyse their needs.
                           </List.Content>
                         </List.Item>
                       </List>
@@ -151,7 +192,7 @@ export default (props: IndexPageProps) =>
                         </List.Item>
                         <List.Item>
                           <List.Content>
-                            Create an online GIS to show deforestation and hazards in Brazil
+                            Create an online GIS to show deforestation and hazards in Brazil for IBAMA
                           </List.Content>
                         </List.Item>
                         <List.Item>
@@ -172,12 +213,12 @@ export default (props: IndexPageProps) =>
                       <List relaxed>
                         <List.Item>
                           <List.Content>
-                            Developed an check-in webapp for a local church's children's department
+                            Developed and deployed in azure a check-in webapp for children's department in a local church
                           </List.Content>
                         </List.Item>
                         <List.Item>
                           <List.Content>
-                            Built a gis webapp to show earthquakes in brazil for the seismological observatory
+                            Built a gis webapp to show earthquakes in brazil for the Seismological Observatory, Brasília
                           </List.Content>
                         </List.Item>
                         <List.Item>
@@ -201,7 +242,7 @@ export default (props: IndexPageProps) =>
               <Feed>
                 <Feed.Event>
                   <Feed.Content>
-                    <Feed.Date>2008 - 2013</Feed.Date>
+                    <Feed.Date>2007 - 2013</Feed.Date>
                     <Feed.Summary>Degree in Computer Science - UnB</Feed.Summary>
                     <Feed.Extra text>
                       Coursework in Programming, Data Structures, and Computer Architecture
@@ -248,6 +289,7 @@ export default (props: IndexPageProps) =>
                 <Label>Rigor</Label>
                 <Label>Initiative</Label>
                 <Label>Funny</Label>
+                <Label>Visual Thinking</Label>
               </Label.Group>
             </Segment>
             <Segment>
@@ -289,7 +331,7 @@ export default (props: IndexPageProps) =>
                   <Feed.Content>
                     <Feed.Summary>HTML / CSS / SASS</Feed.Summary>
                     <Feed.Extra>
-                      <Progress percent={90} size='tiny' color="blue"/>
+                      <Progress percent={100} size='tiny' color="blue"/>
                     </Feed.Extra>
                   </Feed.Content>
                 </Feed.Event>
@@ -363,7 +405,35 @@ export default (props: IndexPageProps) =>
         </Grid.Row>
       </Grid>
     </Segment>
-    {/* Key features */}
+
+    {/* PROFILE */}
+    <Segment vertical textAlign="center" className="stripe feature">
+      <Header size="large">
+        PROFILE
+        <Header sub>
+          <cite>"If you can dream it you can do it." - Walt Disney</cite>
+        </Header>
+      </Header>
+      <Divider hidden section/>
+      <Grid stackable textAlign="left" className="container">
+        <Grid.Row>
+          <Grid.Column width="16">
+            <Menu secondary>
+              <Menu.Item name='All' active={activeItem === 'all'} onClick={() => activeItem = 'all'} />
+              <Menu.Item name='Sites' active={activeItem === 'sites'} onClick={() => activeItem = 'sites'} />
+              <Menu.Item name='Mockups' active={activeItem === 'mockups'} onClick={() => activeItem = 'mockups'} />
+            </Menu>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column width="16">
+            <Card.Group centered items={profileItems} itemsPerRow="4"/>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </Segment>
+
+    {/* CONTACT */}
     <Segment vertical inverted textAlign="center" className="stripe feature">
       <Header size="large" inverted>
         CONTACT

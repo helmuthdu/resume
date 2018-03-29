@@ -34,7 +34,7 @@ export default class DefaultLayout extends PureComponent<DefaultLayoutProps> {
           {isHome ? null : <HeaderMenu pathname={pathname} items={menuItems}/>}
 
           {/* Render children pages */}
-          <div style={{ paddingBottom: 60 }}>
+          <div style={{ paddingBottom: 47 }}>
             {this.props.children}
           </div>
 
