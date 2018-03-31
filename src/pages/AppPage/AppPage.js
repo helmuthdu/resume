@@ -292,33 +292,6 @@ export default (props: IndexPageProps) =>
                 <Label>Visual Thinking</Label>
               </Label.Group>
             </Segment>
-            <Segment>
-              <Header icon>
-                Interests
-              </Header>
-              <Icon name="rss" size="large" color="grey" className="pull-right"/>
-              <Divider hidden/>
-              <List horizontal>
-                <List.Item>
-                  <Icon circular name='music'/>
-                  <List.Content>
-                    <List.Header>Music</List.Header>
-                  </List.Content>
-                </List.Item>
-                <List.Item>
-                  <Icon circular name='game'/>
-                  <List.Content>
-                    <List.Header>Gaming</List.Header>
-                  </List.Content>
-                </List.Item>
-                <List.Item>
-                  <Icon circular name='tv'/>
-                  <List.Content>
-                    <List.Header>Anime</List.Header>
-                  </List.Content>
-                </List.Item>
-              </List>
-            </Segment>
           </Grid.Column>
           <Grid.Column>
             <Segment>
