@@ -73,10 +73,10 @@ export default (props: IndexPageProps) =>
     <Segment vertical inverted textAlign="center" className="masthead">
       <HeaderMenu pathname={props.location.pathname} items={menuItems} inverted/>
       <Container text>
-        <Header inverted as="h1">I'm Helmuth Saatkamp</Header>
+        <Header inverted as="h1">Helmuth Saatkamp</Header>
         <Divider/>
-        <Header inverted as="h2">Web Developer/Designer</Header>
-        <Button primary size="large">Download My CV</Button>
+        <Header inverted as="h2">Web Developer / Designer</Header>
+        <Button primary size="large" as="a" href="docs/helmuth_saatkamp_resume.docx">Download My CV</Button>
       </Container>
     </Segment>
 
@@ -95,7 +95,7 @@ export default (props: IndexPageProps) =>
             {/* WHO AM I? */}
             <Header>Who am I?</Header>
             Full stack web developer with a passion for programming, with expertise in designing, architecture and developing.
-            Creative and innovative, I love learning new technologies and fixing small details that matter.
+            Creative and innovative, I love learning new technologies.
             Also, I like working in a team, you'll learn faster and much more.
           </Grid.Column>
           <Grid.Column>
@@ -166,12 +166,12 @@ export default (props: IndexPageProps) =>
                       <List relaxed>
                         <List.Item>
                           <List.Content>
-                            Performed design, front-end architecture and development for market analysis and online reports for big car companies (ex: Toyota, Hyndai, Fiat, Ford)
+                            Performed design, front-end architecture, and development for market analysis and reports using Vue and node for car companies (ex: Toyota, Hyundai, Ford).
                           </List.Content>
                         </List.Item>
                         <List.Item>
                           <List.Content>
-                            Meeting with customers and end users to analyse their needs.
+                            Assisted in development of back-end features in ASP.NET.
                           </List.Content>
                         </List.Item>
                       </List>
@@ -181,23 +181,19 @@ export default (props: IndexPageProps) =>
                 <Divider hidden/>
                 <Feed.Event>
                   <Feed.Content>
-                    <Feed.Date>dez 2012 - nov 2013</Feed.Date>
+                    <Feed.Date>jan 2013 - nov 2013</Feed.Date>
                     <Feed.Summary>Programmer - Hex</Feed.Summary>
                     <Feed.Extra text>
                       <List relaxed>
                         <List.Item>
                           <List.Content>
-                            Full stack web developer responsible for end-to-end web app development
+                            Full stack web developer responsible for end-to-end web app development of an online GIS
+                            to show deforestation and hazards in Brazil for <a href="http://www.ibama.gov.br/">IBAMA</a> using PHP and JQuery.
                           </List.Content>
                         </List.Item>
                         <List.Item>
                           <List.Content>
-                            Create an online GIS to show deforestation and hazards in Brazil for IBAMA
-                          </List.Content>
-                        </List.Item>
-                        <List.Item>
-                          <List.Content>
-                            Development team leader with 2-3 developers
+                            Development team leader with 2-3 developers.
                           </List.Content>
                         </List.Item>
                       </List>
@@ -213,17 +209,12 @@ export default (props: IndexPageProps) =>
                       <List relaxed>
                         <List.Item>
                           <List.Content>
-                            Developed and deployed in azure a check-in webapp for children's department in a local church
+                            Developed a check-in web app for children's department in a local church using Angular, ASP.NET Core and SQL Server with deploy in Azure.
                           </List.Content>
                         </List.Item>
                         <List.Item>
                           <List.Content>
-                            Built a gis webapp to show earthquakes in brazil for the Seismological Observatory, Brasília
-                          </List.Content>
-                        </List.Item>
-                        <List.Item>
-                          <List.Content>
-                            Created a webapp to show where buses are on a map and estimate when they will arrive at your stop.
+                            Built a gis web app to show earthquakes in brazil for the Seismological Observatory, Brasília using Meteor and MongoDB.
                           </List.Content>
                         </List.Item>
                       </List>
@@ -261,7 +252,7 @@ export default (props: IndexPageProps) =>
                   <Feed.Content>
                     <Feed.Summary>Codeschool</Feed.Summary>
                     <Feed.Extra text>
-                      https://www.codeschool.com/users/helmuthdu
+                      <a href="https://www.codeschool.com/users/helmuthdu">https://www.codeschool.com/users/helmuthdu</a>
                     </Feed.Extra>
                   </Feed.Content>
                 </Feed.Event>
@@ -269,7 +260,7 @@ export default (props: IndexPageProps) =>
                   <Feed.Content>
                     <Feed.Summary>Udemy</Feed.Summary>
                     <Feed.Extra text>
-                      https://www.udemy.com/user/helmuthsaatkamp/
+                      <a href="https://www.udemy.com/user/helmuthsaatkamp">https://www.udemy.com/user/helmuthsaatkamp</a>
                     </Feed.Extra>
                   </Feed.Content>
                 </Feed.Event>
@@ -302,42 +293,32 @@ export default (props: IndexPageProps) =>
               <Feed>
                 <Feed.Event>
                   <Feed.Content>
-                    <Feed.Summary>HTML / CSS / SASS</Feed.Summary>
-                    <Feed.Extra>
-                      <Progress percent={100} size='tiny' color="blue"/>
-                    </Feed.Extra>
+                    <Feed.Summary>HTML / CSS / SASS <Progress percent={100} size='tiny' color="blue" className="skill-bar"/></Feed.Summary>
                   </Feed.Content>
                 </Feed.Event>
                 <Feed.Event>
                   <Feed.Content>
-                    <Feed.Summary>Javascript / Node</Feed.Summary>
-                    <Feed.Extra>
-                      <Progress percent={100} size='tiny' color="blue"/>
-                    </Feed.Extra>
+                    <Feed.Summary>Javascript / Node <Progress percent={100} size='tiny' color="blue" className="skill-bar"/></Feed.Summary>
                   </Feed.Content>
                 </Feed.Event>
                 <Feed.Event>
                   <Feed.Content>
-                    <Feed.Summary>JQuery / Vue / Angular / React</Feed.Summary>
-                    <Feed.Extra>
-                      <Progress percent={100} size='tiny' color="blue"/>
-                    </Feed.Extra>
+                    <Feed.Summary>Vue / Angular / React <Progress percent={100} size='tiny' color="blue" className="skill-bar"/></Feed.Summary>
                   </Feed.Content>
                 </Feed.Event>
                 <Feed.Event>
                   <Feed.Content>
-                    <Feed.Summary>C# / Asp.Net Core</Feed.Summary>
-                    <Feed.Extra>
-                      <Progress percent={70} size='tiny' color="blue"/>
-                    </Feed.Extra>
+                    <Feed.Summary>C# / Asp.Net Core <Progress percent={80} size='tiny' color="blue" className="skill-bar"/></Feed.Summary>
                   </Feed.Content>
                 </Feed.Event>
                 <Feed.Event>
                   <Feed.Content>
-                    <Feed.Summary>Affinity Design</Feed.Summary>
-                    <Feed.Extra>
-                      <Progress percent={100} size='tiny' color="blue"/>
-                    </Feed.Extra>
+                    <Feed.Summary>SQL Server / PostgreSQL / MongoDB <Progress percent={80} size='tiny' color="blue" className="skill-bar"/></Feed.Summary>
+                  </Feed.Content>
+                </Feed.Event>
+                <Feed.Event>
+                  <Feed.Content>
+                    <Feed.Summary>Affinity Design <Progress percent={100} size='tiny' color="blue" className="skill-bar"/></Feed.Summary>
                   </Feed.Content>
                 </Feed.Event>
               </Feed>
@@ -350,26 +331,12 @@ export default (props: IndexPageProps) =>
               <Feed>
                 <Feed.Event>
                   <Feed.Content>
-                    <Feed.Summary>Portuguese</Feed.Summary>
-                    <Feed.Extra>
-                      <Progress percent={100} size='tiny' color="blue"/>
-                    </Feed.Extra>
+                    <Feed.Summary>Portuguese <Progress percent={100} size='tiny' color="blue" className="skill-bar"/></Feed.Summary>
                   </Feed.Content>
                 </Feed.Event>
                 <Feed.Event>
                   <Feed.Content>
-                    <Feed.Summary>English</Feed.Summary>
-                    <Feed.Extra>
-                      <Progress percent={70} size='tiny' color="blue"/>
-                    </Feed.Extra>
-                  </Feed.Content>
-                </Feed.Event>
-                <Feed.Event>
-                  <Feed.Content>
-                    <Feed.Summary>German</Feed.Summary>
-                    <Feed.Extra>
-                      <Progress percent={20} size='tiny' color="blue"/>
-                    </Feed.Extra>
+                    <Feed.Summary>English <Progress percent={70} size='tiny' color="blue" className="skill-bar"/></Feed.Summary>
                   </Feed.Content>
                 </Feed.Event>
               </Feed>
