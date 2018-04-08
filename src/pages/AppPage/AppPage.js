@@ -2,7 +2,6 @@
 import React, { Fragment } from 'react';
 import {
   Button,
-  Card,
   Container,
   Divider,
   Feed,
@@ -12,12 +11,12 @@ import {
   Icon,
   Label,
   List,
-  Menu,
   Progress,
   Segment
 } from 'semantic-ui-react';
 import { ContactMap } from '../../components/ContactMap/ContactMap';
 import HeaderMenu from '../../components/HeaderMenu/HeaderMenu';
+import { Profile } from '../../components/Profile/Profile';
 import { menuItems } from '../../layouts/DefaultLayout';
 
 import '../../pages/AppPage/AppPage.css';
@@ -28,45 +27,6 @@ interface IndexPageProps {
   };
 }
 
-let activeItem = 'all';
-const profileItems = [
-  {
-    header: 'Project Report - April',
-    image: 'https://react.semantic-ui.com/assets/images/avatar/large/matthew.png',
-    description: 'Leverage agile frameworks to provide a robust synopsis for high level overviews.',
-  },
-  {
-    header: 'Project Report - May',
-    image: 'https://react.semantic-ui.com/assets/images/avatar/large/matthew.png',
-    description: 'Bring to the table win-win survival strategies to ensure proactive domination.',
-  },
-  {
-    header: 'Project Report - May',
-    image: 'https://react.semantic-ui.com/assets/images/avatar/large/matthew.png',
-    description: 'Bring to the table win-win survival strategies to ensure proactive domination.',
-  },
-  {
-    header: 'Project Report - May',
-    image: 'https://react.semantic-ui.com/assets/images/avatar/large/matthew.png',
-    description: 'Bring to the table win-win survival strategies to ensure proactive domination.',
-  },
-  {
-    header: 'Project Report - May',
-    image: 'https://react.semantic-ui.com/assets/images/avatar/large/matthew.png',
-    description: 'Bring to the table win-win survival strategies to ensure proactive domination.',
-  },
-  {
-    header: 'Project Report - May',
-    image: 'https://react.semantic-ui.com/assets/images/avatar/large/matthew.png',
-    description: 'Bring to the table win-win survival strategies to ensure proactive domination.',
-  },
-  {
-    header: 'Project Report - May',
-    image: 'https://react.semantic-ui.com/assets/images/avatar/large/matthew.png',
-    description: 'Bring to the table win-win survival strategies to ensure proactive domination.',
-  }
-];
-
 export default (props: IndexPageProps) =>
   <Fragment>
     {/* MASTER HEAD */}
@@ -75,7 +35,7 @@ export default (props: IndexPageProps) =>
       <Container text>
         <Header inverted as="h1">Helmuth Saatkamp</Header>
         <Divider/>
-        <Header inverted as="h2">Web Developer / Designer</Header>
+        <Header inverted as="h2">Web Developer</Header>
         <Button primary size="large" as="a" href="docs/helmuth_saatkamp_resume.docx">Download My CV</Button>
       </Container>
     </Segment>
@@ -85,7 +45,7 @@ export default (props: IndexPageProps) =>
       <Header size="large">
         ABOUT ME
         <Header sub>
-          <cite>A talented Web Developer/Designer Located in Our Lovely Earth<br/></cite>
+          <cite>A talented Web Developer Located in Our Lovely Earth<br/></cite>
         </Header>
       </Header>
       <Divider hidden section/>
@@ -124,7 +84,7 @@ export default (props: IndexPageProps) =>
                 <List.Icon name='computer' size='large' verticalAlign='middle'/>
                 <List.Content>
                   <List.Header as='a'>Web Design</List.Header>
-                  <List.Description as='a'>Progressive Web Pages Experience</List.Description>
+                  <List.Description as='a'>Progressive web pages, wireframes and mockups Experience</List.Description>
                 </List.Content>
               </List.Item>
               <List.Item>
@@ -346,32 +306,7 @@ export default (props: IndexPageProps) =>
       </Grid>
     </Segment>
 
-    {/* PROFILE */}
-    <Segment vertical textAlign="center" className="stripe feature">
-      <Header size="large">
-        PROFILE
-        <Header sub>
-          <cite>"If you can dream it you can do it." - Walt Disney</cite>
-        </Header>
-      </Header>
-      <Divider hidden section/>
-      <Grid stackable textAlign="left" className="container">
-        <Grid.Row>
-          <Grid.Column width="16">
-            <Menu secondary>
-              <Menu.Item name='All' active={activeItem === 'all'} onClick={() => activeItem = 'all'} />
-              <Menu.Item name='Sites' active={activeItem === 'sites'} onClick={() => activeItem = 'sites'} />
-              <Menu.Item name='Mockups' active={activeItem === 'mockups'} onClick={() => activeItem = 'mockups'} />
-            </Menu>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column width="16">
-            <Card.Group centered items={profileItems} itemsPerRow="4"/>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
+    <Profile/>
 
     {/* CONTACT */}
     <Segment vertical inverted textAlign="center" className="stripe feature">
@@ -385,7 +320,7 @@ export default (props: IndexPageProps) =>
       <Grid stackable textAlign="left" className="container">
         <Grid.Row>
           <Grid.Column width="11">
-            <ContactMap isMarkerShown></ContactMap>
+            <ContactMap isMarkerShown/>
           </Grid.Column>
           <Grid.Column width="5">
             <Segment piled>

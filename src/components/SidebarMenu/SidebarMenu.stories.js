@@ -1,4 +1,4 @@
-const withReadme = (require('storybook-readme/with-readme') as any).default;
+const withReadme = (require('storybook-readme/with-readme')).default;
 const SidebarMenuReadme = require('./README.md');
 
 import React from 'react';
