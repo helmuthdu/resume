@@ -1,9 +1,12 @@
 {
-  "name": "awesome-resume",
-  "version": "0.1.0",
+  "name": "resume",
+  "homepage": "http://helmuthdu.github.io/resume",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build-storybook": "build-storybook -s public",
     "eject": "react-scripts eject",
     "flow": "flow",
@@ -13,6 +16,7 @@
     "test": "react-scripts test --env=jsdom"
   },
   "dependencies": {
+    "anchorate": "^1.2.3",
     "history": "^4.7.2",
     "lodash": "^4.17.5",
     "prismjs": "^1.13.0",
@@ -51,6 +55,7 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
     "flow-bin": "^0.69.0",
+    "gh-pages": "^1.1.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.4",
     "prettier": "^1.11.1",

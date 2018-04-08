@@ -16,7 +16,6 @@ interface HeaderMenuProps extends MenuProps {
 
 export const HeaderMenu = ({ items, pathname, inverted, dispatch }: HeaderMenuProps) =>
   <Container>
-    {console.log(items, pathname)}
     <Menu size="large" pointing secondary inverted={inverted} style={{borderWidth: '1px'}}>
       <Menu.Item as="a" className="mobile only" icon="sidebar" onClick={() => dispatch(toggleSidebar())}/>
       {items.map((item) => {

@@ -1,6 +1,7 @@
 import React from 'react';
+import { anchorate } from 'anchorate';
 import { render } from 'react-dom';
-import { Provider } from 'react-redux';
+import { connect, Provider } from 'react-redux';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux';
 
@@ -14,17 +15,25 @@ import store, { history } from './store';
 
 const target = document.querySelector('#root');
 
+history.listen(() => {
+  anchorate();
+});
+
+const ConnectedSwitch = connect(state => ({
+  location: state.location
+}))(Switch);
+
 render(
   <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <Switch>
+    <ConnectedRouter history={history} basename={process.env.PUBLIC_URL}>
+      <ConnectedSwitch>
         <Route exact path="/">
           <Redirect to="/home"/>
         </Route>
         <DefaultLayoutRoute path="/home" component={App}/>
         <DefaultLayoutRoute path="/about" component={AboutPage}/>
         <Route path="*" component={NotFoundPage}/>
-      </Switch>
+      </ConnectedSwitch>
     </ConnectedRouter>
   </Provider>,
   target

@@ -97,7 +97,11 @@ const portfolioTagStyle = {
   lineHeight: '1.75rem'
 };
 
-export class Profile extends Component {
+interface IProfile {
+  id: string;
+}
+
+export class Profile extends Component <IProfile> {
   state = {
     active: 'all'
   };
@@ -108,7 +112,7 @@ export class Profile extends Component {
 
   render () {
     return (
-      <Segment vertical textAlign="center" className="stripe feature">
+      <Segment id={this.props.id} vertical textAlign="center" className="stripe feature">
         <Header size="large">
           PROFILE / RECENT WORK
           <Header sub>

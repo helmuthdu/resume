@@ -41,7 +41,7 @@ export default (props: IndexPageProps) =>
     </Segment>
 
     {/* ABOUT */}
-    <Segment vertical className="stripe" textAlign="center">
+    <Segment id="about" vertical className="stripe" textAlign="center">
       <Header size="large">
         ABOUT ME
         <Header sub>
@@ -101,7 +101,7 @@ export default (props: IndexPageProps) =>
     </Segment>
 
     {/* RESUME */}
-    <Segment vertical textAlign="center" className="stripe alternate feature">
+    <Segment id="resume" vertical textAlign="center" className="stripe alternate feature">
       <Header size="large">
         RESUME
         <Header sub>
@@ -306,10 +306,10 @@ export default (props: IndexPageProps) =>
       </Grid>
     </Segment>
 
-    <Profile/>
+    <Profile id="portfolio"/>
 
     {/* CONTACT */}
-    <Segment vertical inverted textAlign="center" className="stripe feature">
+    <Segment id="contact" vertical inverted textAlign="center" className="stripe feature">
       <Header size="large" inverted>
         CONTACT
         <Header sub>
