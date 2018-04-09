@@ -124,14 +124,10 @@ export class Profile extends Component <IProfile> {
           <Grid.Row>
             <Grid.Column width="16">
               <Menu secondary>
-                <Menu.Item name='All' active={this.state.active === 'all'}
-                           onClick={() => this._setCurrentActive('all')}/>
-                <Menu.Item name='Sites' active={this.state.active === 'site'}
-                           onClick={() => this._setCurrentActive('site')}/>
-                <Menu.Item name='Mockups' active={this.state.active === 'mockup'}
-                           onClick={() => this._setCurrentActive('mockup')}/>
-                <Menu.Item name='Wireframes' active={this.state.active === 'wireframe'}
-                           onClick={() => this._setCurrentActive('wireframe')}/>
+                <Menu.Item name='All' active={this.state.active === 'all'} onClick={() => this._setCurrentActive('all')}/>
+                <Menu.Item name='Sites' active={this.state.active === 'site'} onClick={() => this._setCurrentActive('site')}/>
+                <Menu.Item name='Mockups' active={this.state.active === 'mockup'} onClick={() => this._setCurrentActive('mockup')}/>
+                <Menu.Item name='Wireframes' active={this.state.active === 'wireframe'} onClick={() => this._setCurrentActive('wireframe')}/>
               </Menu>
             </Grid.Column>
           </Grid.Row>
@@ -139,7 +135,8 @@ export class Profile extends Component <IProfile> {
             <Grid.Column width="14">
               <Gallery
                 images={this.state.active === 'all' ? portfolioImages : portfolioImages.filter(i => i.tags.some(t => t.value === this.state.active))}
-                enableImageSelection={false} tagStyle={portfolioTagStyle}/>
+                enableImageSelection={false}
+                tagStyle={portfolioTagStyle}/>
             </Grid.Column>
           </Grid.Row>
         </Grid>

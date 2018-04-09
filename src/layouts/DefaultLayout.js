@@ -24,7 +24,7 @@ interface DefaultLayoutProps {
 export default class DefaultLayout extends PureComponent<DefaultLayoutProps> {
   render () {
     const { pathname } = this.props.children.props.location;
-    const isHome = pathname === '/home';
+    const isHome = pathname === '/';
 
     return (
       <Sidebar.Pushable as={Segment}>

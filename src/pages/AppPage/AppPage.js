@@ -27,6 +27,8 @@ interface IndexPageProps {
   };
 }
 
+const curriculumDocFile = require('../../assets/docs/helmuth_saatkamp_resume.docx');
+
 export default (props: IndexPageProps) =>
   <Fragment>
     {/* MASTER HEAD */}
@@ -36,7 +38,7 @@ export default (props: IndexPageProps) =>
         <Header inverted as="h1">Helmuth Saatkamp</Header>
         <Divider/>
         <Header inverted as="h2">Web Developer</Header>
-        <Button primary size="large" as="a" href="docs/helmuth_saatkamp_resume.docx">Download My CV</Button>
+        <Button primary size="large" as="a" href={curriculumDocFile}>Download My CV</Button>
       </Container>
     </Segment>
 
@@ -45,7 +47,7 @@ export default (props: IndexPageProps) =>
       <Header size="large">
         ABOUT ME
         <Header sub>
-          <cite>A talented Web Developer Located in Our Lovely Earth<br/></cite>
+          <cite>A talented web developer located on our lovely planet<br/></cite>
         </Header>
       </Header>
       <Divider hidden section/>
@@ -54,9 +56,9 @@ export default (props: IndexPageProps) =>
           <Grid.Column>
             {/* WHO AM I? */}
             <Header>Who am I?</Header>
-            Full stack web developer with a passion for programming, with expertise in designing, architecture and developing.
+            Full stack web developer with a passion for programming and expertise in designing, architecture and developing.
             Creative and innovative, I love learning new technologies.
-            Also, I like working in a team, you'll learn faster and much more.
+            I greatly value working in a team, where one can learn faster and much more.
           </Grid.Column>
           <Grid.Column>
             {/* PERSONAL INFO */}
@@ -194,7 +196,7 @@ export default (props: IndexPageProps) =>
                 <Feed.Event>
                   <Feed.Content>
                     <Feed.Date>2007 - 2013</Feed.Date>
-                    <Feed.Summary>Degree in Computer Science - UnB</Feed.Summary>
+                    <Feed.Summary>B.Sc. in Computer Science - University of Brasília</Feed.Summary>
                     <Feed.Extra text>
                       Coursework in Programming, Data Structures, and Computer Architecture
                     </Feed.Extra>

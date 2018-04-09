@@ -5,7 +5,7 @@
 .masthead.segment {
     min-height: 800px;
     padding: 1em 0;
-    background: url("/images/bg.jpg") no-repeat fixed center !important;
+    background: url("../assets/images/bg.jpg") no-repeat fixed center !important;
 }
 
 .masthead .logo.item img {
