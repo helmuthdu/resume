@@ -4,4 +4,4 @@ Profile Section.
 
 ## Source
 
-    <Profile/>
+    <Profile id={string}/>
