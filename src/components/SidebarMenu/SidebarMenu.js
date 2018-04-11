@@ -17,7 +17,7 @@ export const SidebarMenu = ({ items, pathname, visible }: SidebarMenuProps) => {
   const isActive = (item: MenuItem) => (item.exact) ? pathname === item.path : pathname.startsWith(item.path);
   const activeItem = items.find((item: MenuItem) => isActive(item)) || {};
   return (
-    <Sidebar as={Menu} animation="slide along" width="thin" visible={visible} icon="labeled" vertical inverted={activeItem.inverted}>
+    <Sidebar as={Menu} visible={visible} vertical animation='uncover' inverted={activeItem.inverted}>
       {items.map((item) => {
         const active = isActive(item);
         return (
@@ -32,7 +32,7 @@ export const SidebarMenu = ({ items, pathname, visible }: SidebarMenuProps) => {
 };
 
 const mapStateToProps = (state: UIStoreState) => ({
-  visible: state.isSidebarVisible
+  visible: state.ui.isSidebarVisible
 });
 
 export default connect(mapStateToProps)(SidebarMenu);

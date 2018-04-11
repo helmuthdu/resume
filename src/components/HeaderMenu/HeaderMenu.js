@@ -14,9 +14,9 @@ interface HeaderMenuProps extends MenuProps {
   pathname: string;
 }
 
-export const HeaderMenu = ({ items, pathname, inverted, dispatch }: HeaderMenuProps) =>
-  <Container>
-    <Menu size="large" pointing secondary inverted={inverted} style={{borderWidth: '1px'}}>
+export const HeaderMenu = ({ items, pathname, inverted, dispatch, visible, fixed, pointing, secondary }: HeaderMenuProps) =>
+  <Menu size="large" pointing={pointing} secondary={secondary} inverted={inverted} style={{ borderWidth: '0px' }} fixed={fixed} className={visible ? '' : 'hidden'}>
+    <Container>
       <Menu.Item as="a" className="mobile only" icon="sidebar" onClick={() => dispatch(toggleSidebar())}/>
       {items.map((item) => {
         const active = (item.exact) ? pathname === item.path : pathname.startsWith(item.path);
@@ -29,7 +29,7 @@ export const HeaderMenu = ({ items, pathname, inverted, dispatch }: HeaderMenuPr
           active={active}
         />;
       })}
-    </Menu>
-  </Container>;
+    </Container>
+  </Menu>;
 
 export default connect()(HeaderMenu);

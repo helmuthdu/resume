@@ -5,7 +5,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, text, withKnobs } from '@storybook/addon-knobs';
-import { SidebarMenu } from './SidebarMenu';
+import SidebarMenu from './SidebarMenu';
 
 const items = [
   { name: 'Home', path: '/', exact: true, icon: 'home' },

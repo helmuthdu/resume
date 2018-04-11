@@ -20,48 +20,54 @@ export const About = ({ id }: IAbout) =>
       <Grid.Row>
         <Grid.Column>
           {/* WHO AM I? */}
-          <Header>Who am I?</Header>
-          Full stack web developer with a passion for programming and expertise in designing, architecture and developing.
-          Creative and innovative, I love learning new technologies.
-          I greatly value working in a team, where one can learn faster and much more.
+          <Segment basic>
+            <Header>Who am I?</Header>
+            Full stack web developer with a passion for programming and expertise in designing, architecture and developing.
+            Creative and innovative, I love learning new technologies.
+            I greatly value working in a team, where one can learn faster and much more.
+          </Segment>
         </Grid.Column>
         <Grid.Column>
           {/* PERSONAL INFO */}
-          <Header>Personal Info</Header>
-          <List>
-            <List.Item><strong>Email</strong> helmuthdu@gmail.com</List.Item>
-            <List.Item><strong>Skype</strong> helmuthdu</List.Item>
-            <List.Item><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/helmuth-saatkamp-a92a038a/">Helmuth Saatkamp</a></List.Item>
-            <List.Item><strong>Github</strong> <a href="https://github.com/helmuthdu">helmuthdu</a></List.Item>
-            <List.Item><strong>Location</strong> Brasília/DF - Brazil</List.Item>
-          </List>
+          <Segment basic>
+            <Header>Personal Info</Header>
+            <List>
+              <List.Item><strong>Email</strong> helmuthdu@gmail.com</List.Item>
+              <List.Item><strong>Skype</strong> helmuthdu</List.Item>
+              <List.Item><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/helmuth-saatkamp-a92a038a/">Helmuth Saatkamp</a></List.Item>
+              <List.Item><strong>Github</strong> <a href="https://github.com/helmuthdu">helmuthdu</a></List.Item>
+              <List.Item><strong>Location</strong> Brasília/DF - Brazil</List.Item>
+            </List>
+          </Segment>
         </Grid.Column>
         <Grid.Column>
           {/* MY EXPERTISE */}
-          <Header>My Expertise</Header>
-          <List relaxed>
-            <List.Item>
-              <List.Icon name='fork' size='large' verticalAlign='middle'/>
-              <List.Content>
-                <List.Header as='a'>Web Development</List.Header>
-                <List.Description as='a'>Frontend and Backend Experience</List.Description>
-              </List.Content>
-            </List.Item>
-            <List.Item>
-              <List.Icon name='computer' size='large' verticalAlign='middle'/>
-              <List.Content>
-                <List.Header as='a'>Web Design</List.Header>
-                <List.Description as='a'>Progressive web pages, wireframes and mockups Experience</List.Description>
-              </List.Content>
-            </List.Item>
-            <List.Item>
-              <List.Icon name='world' size='large' verticalAlign='middle'/>
-              <List.Content>
-                <List.Header as='a'>GIS</List.Header>
-                <List.Description as='a'>Geographic Information Systems Experience</List.Description>
-              </List.Content>
-            </List.Item>
-          </List>
+          <Segment basic>
+            <Header>My Expertise</Header>
+            <List relaxed>
+              <List.Item>
+                <List.Icon name='fork' size='large' verticalAlign='middle'/>
+                <List.Content>
+                  <List.Header as='a'>Web Development</List.Header>
+                  <List.Description as='a'>Frontend and Backend Experience</List.Description>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Icon name='computer' size='large' verticalAlign='middle'/>
+                <List.Content>
+                  <List.Header as='a'>Web Design</List.Header>
+                  <List.Description as='a'>Progressive web pages, wireframes and mockups Experience</List.Description>
+                </List.Content>
+              </List.Item>
+              <List.Item>
+                <List.Icon name='world' size='large' verticalAlign='middle'/>
+                <List.Content>
+                  <List.Header as='a'>GIS</List.Header>
+                  <List.Description as='a'>Geographic Information Systems Experience</List.Description>
+                </List.Content>
+              </List.Item>
+            </List>
+          </Segment>
         </Grid.Column>
       </Grid.Row>
     </Grid>

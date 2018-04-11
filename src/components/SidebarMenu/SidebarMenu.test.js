@@ -1,7 +1,7 @@
 import { configure, render } from 'enzyme';
 import 'jest';
 import React from 'react';
-import { SidebarMenu } from './SidebarMenu';
+import SidebarMenu from './SidebarMenu';
 
 // Configure enzyme with react 16 adapter
 const Adapter: any = require('enzyme-adapter-react-16');
