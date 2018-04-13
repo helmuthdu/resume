@@ -42,7 +42,6 @@ export default class DefaultLayout extends PureComponent<DefaultLayoutProps> {
 
   handleUpdate = (e, { calculations }) => {
     this.setState({ calculations });
-    console.log(calculations);
   };
 
   render () {
