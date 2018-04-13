@@ -97,7 +97,7 @@ export default class AppPage extends Component<IndexPageProps> {
                             <List.Item>
                               <List.Content>
                                 Full stack web developer responsible for end-to-end web app development of an online GIS
-                                to show deforestation and hazards in Brazil for <a href="http://www.ibama.gov.br/">IBAMA</a> using PHP and JQuery.
+                                to show deforestation and hazards in Brazil for <a href="http://www.ibama.gov.br/" target="_blank" rel="noopener noreferrer">IBAMA</a> using PHP and JQuery.
                               </List.Content>
                             </List.Item>
                             <List.Item>
@@ -118,12 +118,12 @@ export default class AppPage extends Component<IndexPageProps> {
                           <List relaxed>
                             <List.Item>
                               <List.Content>
-                                Developed a check-in web app for children's department in a local church using Angular, ASP.NET Core and SQL Server with deploy in Azure.
+                                Developed a <a href="http://cn-events.azurewebsites.net/e" target="_blank" rel="noopener noreferrer">check-in web app</a> for children's department in a local church using Angular, ASP.NET Core and SQL Server and Azure.
                               </List.Content>
                             </List.Item>
                             <List.Item>
                               <List.Content>
-                                Built a gis web app to show earthquakes in brazil for the Seismological Observatory, Brasília using Meteor and MongoDB.
+                                Built a gis web app to show earthquakes in brazil for the <a href="http://obsis.unb.br/sisbra" target="_blank" rel="noopener noreferrer">Seismological Observatory</a> using Meteor and MongoDB.
                               </List.Content>
                             </List.Item>
                           </List>
@@ -159,17 +159,31 @@ export default class AppPage extends Component<IndexPageProps> {
                   <Feed>
                     <Feed.Event>
                       <Feed.Content>
-                        <Feed.Summary>Codeschool</Feed.Summary>
+                        <Feed.Summary>
+                          <a href="https://www.codeschool.com/users/helmuthdu" target="_blank" rel="noopener noreferrer">Codeschool</a>
+                        </Feed.Summary>
                         <Feed.Extra text>
-                          <a href="https://www.codeschool.com/users/helmuthdu">https://www.codeschool.com/users/helmuthdu</a>
+                          <strong>36</strong> Courses completed & <strong>180</strong> Levels completed
                         </Feed.Extra>
                       </Feed.Content>
                     </Feed.Event>
                     <Feed.Event>
                       <Feed.Content>
-                        <Feed.Summary>Udemy</Feed.Summary>
+                        <Feed.Summary>
+                          <a href="https://egghead.io" target="_blank" rel="noopener noreferrer">Egghead.io</a>
+                        </Feed.Summary>
                         <Feed.Extra text>
-                          <a href="https://www.udemy.com/user/helmuthsaatkamp">https://www.udemy.com/user/helmuthsaatkamp</a>
+                          <strong>22</strong> Courses completed & <strong>319</strong> Lessons watched
+                        </Feed.Extra>
+                      </Feed.Content>
+                    </Feed.Event>
+                    <Feed.Event>
+                      <Feed.Content>
+                        <Feed.Summary>
+                          <a href="https://www.udemy.com/user/helmuthsaatkamp" target="_blank" rel="noopener noreferrer">Udemy</a>
+                        </Feed.Summary>
+                        <Feed.Extra text>
+                          <strong>8</strong> Courses completed
                         </Feed.Extra>
                       </Feed.Content>
                     </Feed.Event>
