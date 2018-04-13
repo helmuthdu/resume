@@ -28,7 +28,7 @@ export default class AppPage extends Component<IndexPageProps> {
           <HeaderMenu pathname={this.props.location.pathname} items={menuItems} pointing secondary inverted visible/>
           <Container text>
             <Header inverted as="h1">Helmuth Saatkamp</Header>
-            <Divider/>
+            <Divider hidden/>
             <Header inverted as="h2">Web Developer</Header>
             <Button primary inverted size="large" as="a" href={curriculumDocFile}>Download My CV</Button>
           </Container>
