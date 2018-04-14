@@ -23,7 +23,7 @@ export const Resume = ({ id }: IResume) =>
             <Header icon>
               Expertise
             </Header>
-            <Icon name="briefcase" size="large" color="grey" className="pull-right"/>
+            <Icon name="briefcase" color="grey" className="pull-right"/>
             <Feed>
               <Feed.Event>
                 <Feed.Content>
@@ -96,7 +96,7 @@ export const Resume = ({ id }: IResume) =>
             <Header icon>
               Education
             </Header>
-            <Icon name="pencil" size="large" color="grey" className="pull-right"/>
+            <Icon name="pencil" color="grey" className="pull-right"/>
             <Feed>
               <Feed.Event>
                 <Feed.Content>
@@ -113,7 +113,7 @@ export const Resume = ({ id }: IResume) =>
             <Header icon>
               Courses
             </Header>
-            <Icon name="book" size="large" color="grey" className="pull-right"/>
+            <Icon name="book" color="grey" className="pull-right"/>
             <Feed>
               <Feed.Event>
                 <Feed.Content>
@@ -151,7 +151,7 @@ export const Resume = ({ id }: IResume) =>
             <Header icon>
               Assets
             </Header>
-            <Icon name="tags" size="large" color="grey" className="pull-right"/>
+            <Icon name="tags" color="grey" className="pull-right"/>
             <Divider hidden/>
             <Label.Group size='large'>
               <Label>Responsible</Label>
@@ -170,7 +170,7 @@ export const Resume = ({ id }: IResume) =>
             <Header icon>
               Skills
             </Header>
-            <Icon name="configure" size="large" color="grey" className="pull-right"/>
+            <Icon name="configure" color="grey" className="pull-right"/>
             <Feed>
               <Feed.Event>
                 <Feed.Content>
@@ -208,7 +208,7 @@ export const Resume = ({ id }: IResume) =>
             <Header icon>
               Languages
             </Header>
-            <Icon name="microphone" size="large" color="grey" className="pull-right"/>
+            <Icon name="microphone" color="grey" className="pull-right"/>
             <Feed>
               <Feed.Event>
                 <Feed.Content>
