@@ -1,7 +1,7 @@
-# About component
+# Contact component
 
-About Section.
+Contact Section.
 
 ## Source
 
-    <About id={name}/>
+    <Contact id={name}/>

@@ -11,6 +11,6 @@ storiesOf('Contact', module)
   .addDecorator(withReadme(ContactReadme))
   .add('default', () => {
     return (
-      <Contact id="about"/>
+      <Contact id="contact"/>
     );
   });

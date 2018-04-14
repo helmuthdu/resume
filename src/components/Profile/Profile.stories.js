@@ -11,6 +11,6 @@ storiesOf('Profile', module)
   .addDecorator(withReadme(ProfileReadme))
   .add('default', () => {
     return (
-      <Profile/>
+      <Profile id="profile"/>
     );
   });

@@ -11,6 +11,6 @@ storiesOf('Resume', module)
   .addDecorator(withReadme(ResumeReadme))
   .add('default', () => {
     return (
-      <Resume id="Resume"/>
+      <Resume id="resume"/>
     );
   });

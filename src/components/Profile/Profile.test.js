@@ -10,40 +10,20 @@ configure({ adapter: new Adapter() });
 describe('Profile component', () => {
   let id = 'profile';
 
-  it('should nothing active', () => {
-    const wrapper = shallow(
-      <Profile id={id}/>
-    );
-    expect(wrapper.find({ active: true }).length).toBe(1);
+  it('should have id defined', () => {
+    const wrapper = shallow(<Profile id={id}/>);
+    expect(wrapper.find({ id }).prop('id')).toBe(id);
   });
 
-  it('should have about as active (match exact)', () => {
-    const wrapper = shallow(
-      <Profile id={id}/>
-    );
-    expect(wrapper.find({ active: 'About' }).prop('active')).toBeTruthy();
+  it('should have "All" as active in menu', () => {
+    const wrapper = shallow(<Profile id={id}/>);
+    expect(wrapper.find({ name: 'All' }).prop('active')).toBeTruthy();
   });
 
-  it('should have blog as active (match not exact)', () => {
-    const wrapper = shallow(
-      <Profile id={id}/>
-    );
-    expect(wrapper.find({ name: 'Blog' }).prop('active')).toBeTruthy();
-  });
-
-  it('should have inverted style', () => {
-    const wrapper = shallow(
-      <Profile id={id}/>
-    );
-    expect(wrapper.find({ inverted: true }).length).toBe(1);
-  });
-
-  it('should dispatch the correct message on burger click', () => {
-    const dispatchMock: any = jest.fn();
-    const wrapper = shallow(
-      <Profile id={id}/>
-    );
-    wrapper.find('.mobile .only').simulate('click');
-    expect(dispatchMock.mock.calls.length).toBe(1);
+  it('should change the active menu to "Sites"', () => {
+    const wrapper = shallow(<Profile id={id}/>);
+    wrapper.find({ name: 'Sites' }).simulate('click');
+    expect(wrapper.find({ name: 'All' }).prop('active')).toBeFalsy();
+    expect(wrapper.find({ name: 'Sites' }).prop('active')).toBeTruthy();
   });
 });

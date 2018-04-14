@@ -9,11 +9,10 @@ import { toggleSidebar, UIStoreState } from '../../store/modules/ui';
 import { Icon, Menu, Sidebar } from 'semantic-ui-react';
 
 interface SidebarMenuProps extends MenuProps {
-  visible?: boolean;
-  dispatch?: Dispatch<any>;
-  visible: boolean;
-  toggleSidebar: Function,
   pathname: any;
+  toggleSidebar: Dispatch,
+  visible: boolean;
+  visible?: boolean;
 }
 
 export const SidebarMenu = ({ items, pathname, visible, toggleSidebar }: SidebarMenuProps) => {
@@ -38,7 +37,7 @@ const mapStateToProps = (state: UIStoreState) => ({
   visible: state.ui.isSidebarVisible
 });
 
-const mapDispatchToProps = dispatch =>
+const mapDispatchToProps = (dispatch: Dispatch) =>
   bindActionCreators(
     {
       toggleSidebar

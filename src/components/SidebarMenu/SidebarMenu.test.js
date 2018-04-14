@@ -1,7 +1,8 @@
 import { configure, render } from 'enzyme';
 import 'jest';
 import React from 'react';
-import SidebarMenu from './SidebarMenu';
+import { withRouter } from 'react-router';
+import { SidebarMenu } from './SidebarMenu';
 
 // Configure enzyme with react 16 adapter
 const Adapter: any = require('enzyme-adapter-react-16');
@@ -13,12 +14,12 @@ const items = [
   { name: 'Blog', path: '/blog/', exact: false }
 ];
 
-const LinkStub: any = (props: any) => <div {...props} />;
-
 describe('SidebarMenu component', () => {
   it('should render correctly', () => {
 
-    const wrapper = render(<SidebarMenu Link={LinkStub} pathname="/" items={items} visible/>);
+    let visible = true;
+    const toggleSidebar = () => visible = !visible;
+    const wrapper = render(withRouter(<SidebarMenu pathname="/" items={items} visible={visible} toggleSidebar={toggleSidebar}/>));
     expect(wrapper).toMatchSnapshot();
   });
 });

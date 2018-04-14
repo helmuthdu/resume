@@ -9,7 +9,7 @@ interface IContact {
 }
 
 export const Contact = ({ id }: IContact) =>
-  <Segment id="contact" vertical inverted textAlign="center" className="stripe feature">
+  <Segment id={id} vertical inverted textAlign="center" className="stripe feature">
     <Header size="large" inverted>
       CONTACT
       <Header sub>

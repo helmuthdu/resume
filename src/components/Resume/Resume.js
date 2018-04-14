@@ -8,7 +8,7 @@ interface IResume {
 }
 
 export const Resume = ({ id }: IResume) =>
-  <Segment id="resume" vertical textAlign="center" className="stripe alternate feature">
+  <Segment id={id} vertical textAlign="center" className="stripe alternate feature">
     <Header size="large">
       RESUME
       <Header sub>
