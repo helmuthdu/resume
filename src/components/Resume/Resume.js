@@ -28,7 +28,7 @@ export const Resume = ({ id }: IResume) =>
               <Feed.Event>
                 <Feed.Content>
                   <Feed.Date>nov 2013 - <Label size="small" color="blue">Current</Label></Feed.Date>
-                  <Feed.Summary>Senior Web Developer - Neocom</Feed.Summary>
+                  <Feed.Summary>Senior Programmer - Neocom</Feed.Summary>
                   <Feed.Extra text>
                     <List relaxed>
                       <List.Item>
@@ -49,7 +49,7 @@ export const Resume = ({ id }: IResume) =>
               <Feed.Event>
                 <Feed.Content>
                   <Feed.Date>jan 2013 - nov 2013</Feed.Date>
-                  <Feed.Summary>Programmer - Hex</Feed.Summary>
+                  <Feed.Summary>Systems Analyst - Hex</Feed.Summary>
                   <Feed.Extra text>
                     <List relaxed>
                       <List.Item>
@@ -81,7 +81,7 @@ export const Resume = ({ id }: IResume) =>
                       </List.Item>
                       <List.Item>
                         <List.Content>
-                          Built a gis web app to show earthquakes in brazil for the <a href="http://obsis.unb.br/sisbra" target="_blank" rel="noopener noreferrer">Seismological Observatory</a> using Meteor and MongoDB.
+                          Built a gis web app to show earthquakes in brazil for the <a href="http://obsis.unb.br/sisbra" target="_blank" rel="noopener noreferrer">Seismological Observatory</a> at the University of Brasilia using Meteor and MongoDB.
                         </List.Content>
                       </List.Item>
                     </List>

@@ -37,9 +37,9 @@ export const Contact = ({ id }: IContact) =>
                 <label>Title</label>
                 <input type="text" name="title" maxLength="100" placeholder='Title'/>
               </Form.Field>
-              <Form.Field required name="message" maxLength="600">
+              <Form.Field required>
                 <label>Message</label>
-                <textarea placeholder='Message' rows="3"/>
+                <textarea name="message" maxLength="600" placeholder='Message' rows="3"/>
               </Form.Field>
               <Button type='submit'>Submit</Button>
             </Form>
