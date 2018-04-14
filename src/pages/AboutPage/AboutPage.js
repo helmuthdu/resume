@@ -21,7 +21,7 @@ export default () => {
           For any question, I'm on <a href="mailto:helmuthdu@gmail.com" target="blank">helmuthdu@gmail.com</a>
         </p>
         <p>
-          For any issues, any PR are welcoming<a href="https://github.com/helmuthdu/toystory" target="blank"> on this repository</a>
+          For any issues, any PR are welcoming<a href="https://github.com/helmuthdu/resume" target="blank"> on this repository</a>
         </p>
       </Segment>
     </Container>
