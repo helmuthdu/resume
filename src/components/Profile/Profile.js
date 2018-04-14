@@ -12,13 +12,6 @@ const portfolioImages = [{
   tags: [{ value: 'wireframe', title: 'wireframe' }],
   caption: 'NeoGIG - Control Panel'
 }, {
-  src: 'images/neogig_start_page.png',
-  thumbnail: 'images/neogig_start_page.png',
-  thumbnailWidth: 288,
-  thumbnailHeight: 180,
-  tags: [{ value: 'wireframe', title: 'wireframe' }],
-  caption: 'NeoGIG - Start Page'
-}, {
   src: 'images/neogig.png',
   thumbnail: 'images/neogig.png',
   thumbnailWidth: 288,
@@ -39,6 +32,13 @@ const portfolioImages = [{
   thumbnailHeight: 180,
   tags: [{ value: 'wireframe', title: 'wireframe' }],
   caption: 'NeoDash - Files Upload'
+}, {
+  src: 'images/neogig_start_page.png',
+  thumbnail: 'images/neogig_start_page.png',
+  thumbnailWidth: 288,
+  thumbnailHeight: 180,
+  tags: [{ value: 'wireframe', title: 'wireframe' }],
+  caption: 'NeoGIG - Start Page'
 }, {
   src: 'images/evenths_mobile_ui_1.png',
   thumbnail: 'images/evenths_mobile_ui_1.png',

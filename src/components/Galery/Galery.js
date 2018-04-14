@@ -80,7 +80,7 @@ class Gallery extends Component<IGallery> {
           onClick={(e) => this.openLightbox(i, e)}
         >
           <img src={obj.thumbnail} className={css(classes.source)} alt=''
-               style={{ width: obj.thumbnailWidth, height: obj.thumbnailHeight }}/>
+               style={{ width: 'auto', height: 'auto', maxHeight: 180 }}/>
         </a>
       );
     });
