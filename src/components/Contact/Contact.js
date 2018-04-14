@@ -24,20 +24,20 @@ export const Contact = ({ id }: IContact) =>
         </Grid.Column>
         <Grid.Column width="5">
           <Segment piled>
-            <Form>
+            <Form method="POST" action="https://formspree.io/helmuthdu@gmail.com">
               <Form.Field required>
                 <label>Email</label>
-                <input placeholder='Email'/>
+                <input type="email" name="email" maxLength="100" placeholder='Email'/>
               </Form.Field>
               <Form.Field required>
                 <label>Name</label>
-                <input placeholder='Name'/>
+                <input type="text" name="name" maxLength="100" placeholder='Name'/>
               </Form.Field>
               <Form.Field required>
                 <label>Title</label>
-                <input placeholder='Title'/>
+                <input type="text" name="title" maxLength="100" placeholder='Title'/>
               </Form.Field>
-              <Form.Field required>
+              <Form.Field required name="message" maxLength="600">
                 <label>Message</label>
                 <textarea placeholder='Message' rows="3"/>
               </Form.Field>
