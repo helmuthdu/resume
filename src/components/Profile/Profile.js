@@ -1,101 +1,87 @@
 // @flow
 import React, { Component } from 'react';
-import Gallery from 'react-grid-gallery';
 import { connect } from 'react-redux';
 import { Divider, Grid, Header, Menu, Segment } from 'semantic-ui-react';
+import Gallery from '../Galery/Galery';
 
 const portfolioImages = [{
   src: 'images/system_control_panel.png',
   thumbnail: 'images/system_control_panel.png',
-  thumbnailWidth: 370,
-  thumbnailHeight: 240,
+  thumbnailWidth: 288,
+  thumbnailHeight: 180,
   tags: [{ value: 'wireframe', title: 'wireframe' }],
   caption: 'NeoGIG - Control Panel'
 }, {
   src: 'images/neogig_start_page.png',
   thumbnail: 'images/neogig_start_page.png',
-  thumbnailWidth: 370,
-  thumbnailHeight: 240,
+  thumbnailWidth: 288,
+  thumbnailHeight: 180,
   tags: [{ value: 'wireframe', title: 'wireframe' }],
   caption: 'NeoGIG - Start Page'
 }, {
   src: 'images/neogig.png',
   thumbnail: 'images/neogig.png',
-  thumbnailWidth: 370,
-  thumbnailHeight: 240,
+  thumbnailWidth: 288,
+  thumbnailHeight: 180,
   tags: [{ value: 'mockup', title: 'mockup' }],
   caption: 'NeoGIG - Stores Layer'
 }, {
   src: 'images/neodash_dashboard_project.png',
   thumbnail: 'images/neodash_dashboard_project.png',
-  thumbnailWidth: 370,
-  thumbnailHeight: 240,
+  thumbnailWidth: 288,
+  thumbnailHeight: 180,
   tags: [{ value: 'wireframe', title: 'wireframe' }],
   caption: 'NeoDash - Reports overview'
 }, {
   src: 'images/neodash_upload.png',
   thumbnail: 'images/neodash_upload.png',
-  thumbnailWidth: 370,
-  thumbnailHeight: 240,
+  thumbnailWidth: 288,
+  thumbnailHeight: 180,
   tags: [{ value: 'wireframe', title: 'wireframe' }],
   caption: 'NeoDash - Files Upload'
 }, {
   src: 'images/evenths_mobile_ui_1.png',
   thumbnail: 'images/evenths_mobile_ui_1.png',
-  thumbnailWidth: 200,
-  thumbnailHeight: 360,
+  thumbnailWidth: 100,
+  thumbnailHeight: 180,
   tags: [{ value: 'wireframe', title: 'wireframe' }],
   caption: 'Evenths - Navigation'
 }, {
   src: 'images/evenths_mobile_ui_2.png',
   thumbnail: 'images/evenths_mobile_ui_2.png',
-  thumbnailWidth: 200,
-  thumbnailHeight: 360,
+  thumbnailWidth: 100,
+  thumbnailHeight: 180,
   tags: [{ value: 'wireframe', title: 'wireframe' }],
   caption: 'Evenths - Events'
 }, {
   src: 'images/evenths_mobile_ui_3.png',
   thumbnail: 'images/evenths_mobile_ui_3.png',
-  thumbnailWidth: 200,
-  thumbnailHeight: 360,
+  thumbnailWidth: 100,
+  thumbnailHeight: 180,
   tags: [{ value: 'wireframe', title: 'wireframe' }],
   caption: 'Evenths - Notifications'
 }, {
   src: 'images/obsis_sisbra.png',
   thumbnail: 'images/obsis_sisbra.png',
-  thumbnailWidth: 260,
-  thumbnailHeight: 370,
+  thumbnailWidth: 120,
+  thumbnailHeight: 180,
   tags: [{ value: 'site', title: 'site' }],
   caption: 'Sisbra - Observatório Sismológico de Brasília - http://obsis.unb.br/sisbra'
 }, {
   src: 'images/cn_events_entrance.png',
   thumbnail: 'images/cn_events_entrance.png',
-  thumbnailWidth: 260,
-  thumbnailHeight: 420,
+  thumbnailWidth: 111,
+  thumbnailHeight: 180,
   tags: [{ value: 'site', title: 'site' }],
   caption: 'CN Kids - Entrance'
 }, {
   src: 'images/cn_events_report.png',
   thumbnail: 'images/cn_events_report.png',
-  thumbnailWidth: 260,
-  thumbnailHeight: 420,
+  thumbnailWidth: 123,
+  thumbnailHeight: 180,
   tags: [{ value: 'site', title: 'site' }],
   caption: 'CN Kids - Report'
 }];
-
-const portfolioTagStyle = {
-  fontSize: '0.78571429rem',
-  verticalAlign: 'baseline',
-  backgroundColor: '#E8E8E8',
-  backgroundImage: 'none',
-  padding: '0.5833em 0.833em',
-  color: 'rgba(0, 0, 0, 0.6)',
-  textTransform: 'none',
-  fontWeight: 'bold',
-  border: '0px solid transparent',
-  transition: 'background 0.1s ease',
-  lineHeight: '1.75rem'
-};
 
 interface IProfile {
   id: string;
@@ -133,10 +119,7 @@ export class Profile extends Component <IProfile> {
           </Grid.Row>
           <Grid.Row>
             <Grid.Column width="14">
-              <Gallery
-                images={this.state.active === 'all' ? portfolioImages : portfolioImages.filter(i => i.tags.some(t => t.value === this.state.active))}
-                enableImageSelection={false}
-                tagStyle={portfolioTagStyle}/>
+              <Gallery images={this.state.active === 'all' ? portfolioImages : portfolioImages.filter(i => i.tags.some(t => t.value === this.state.active))} showThumbnails/>
             </Grid.Column>
           </Grid.Row>
         </Grid>
