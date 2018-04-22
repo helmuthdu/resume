@@ -33,12 +33,17 @@ export const Resume = ({ id }: IResume) =>
                     <List relaxed>
                       <List.Item>
                         <List.Content>
-                          Performed design, front-end architecture, and development for market analysis and reports using Vue and node for car companies (ex: Toyota, Hyundai, Ford).
+                          Performed design, front-end architecture, and development of market analysis and reporting systems for automobile manufacturers using Vue, Kendo-UI and Node
                         </List.Content>
                       </List.Item>
                       <List.Item>
                         <List.Content>
                           Assisted in development of back-end features in ASP.NET.
+                        </List.Content>
+                      </List.Item>
+                      <List.Item>
+                        <List.Content>
+                          Prototyped an average of 24 new product features per year.
                         </List.Content>
                       </List.Item>
                     </List>
@@ -54,7 +59,7 @@ export const Resume = ({ id }: IResume) =>
                     <List relaxed>
                       <List.Item>
                         <List.Content>
-                          Full stack web developer responsible for end-to-end web app development of an online GIS
+                          Full stack web developer responsible for end-to-end development of an online GIS solution
                           to show deforestation and hazards in Brazil for <a href="http://www.ibama.gov.br/" target="_blank" rel="noopener noreferrer">IBAMA</a> using PHP and JQuery.
                         </List.Content>
                       </List.Item>
@@ -76,12 +81,12 @@ export const Resume = ({ id }: IResume) =>
                     <List relaxed>
                       <List.Item>
                         <List.Content>
-                          Developed a <a href="http://cn-events.azurewebsites.net/e" target="_blank" rel="noopener noreferrer">check-in web app</a> for children's department in a local church using Angular, ASP.NET Core and SQL Server and Azure.
+                          Developed a <a href="http://cn-events.azurewebsites.net/e" target="_blank" rel="noopener noreferrer">check-in web app</a> for a large local church using Angular, ASP.NET Core and SQL Server and Azure.
                         </List.Content>
                       </List.Item>
                       <List.Item>
                         <List.Content>
-                          Built a gis web app to show earthquakes in brazil for the <a href="http://obsis.unb.br/sisbra" target="_blank" rel="noopener noreferrer">Seismological Observatory</a> at the University of Brasilia using Meteor and MongoDB.
+                          Built a gis web app to show earthquakes in Brazil for the <a href="http://obsis.unb.br/sisbra" target="_blank" rel="noopener noreferrer">Seismological Observatory</a> at the University of Brasilia using Meteor and MongoDB.
                         </List.Content>
                       </List.Item>
                     </List>
