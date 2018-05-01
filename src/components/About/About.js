@@ -34,7 +34,7 @@ export const About = ({ id }: IAbout) =>
             <List>
               <List.Item><strong>Email</strong> helmuthdu@gmail.com</List.Item>
               <List.Item><strong>Skype</strong> helmuthdu</List.Item>
-              <List.Item><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/helmuth-saatkamp-a92a038a/">Helmuth Saatkamp</a></List.Item>
+              <List.Item><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/helmuthdu">Helmuth Saatkamp</a></List.Item>
               <List.Item><strong>Github</strong> <a href="https://github.com/helmuthdu">helmuthdu</a></List.Item>
               <List.Item><strong>Location</strong> Brasília/DF - Brazil</List.Item>
             </List>
