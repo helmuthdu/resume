@@ -118,7 +118,7 @@ export class Profile extends Component <IProfile> {
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
-            <Grid.Column width="14">
+            <Grid.Column width="14" textAlign="center">
               <Gallery images={this.state.active === 'all' ? portfolioImages : portfolioImages.filter(i => i.tags.some(t => t.value === this.state.active))} showThumbnails/>
             </Grid.Column>
           </Grid.Row>
