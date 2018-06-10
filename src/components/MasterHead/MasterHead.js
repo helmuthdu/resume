@@ -7,7 +7,7 @@ import HeaderMenu from '../HeaderMenu/HeaderMenu';
 
 const curriculumDocFile = require('../../assets/docs/helmuth_saatkamp_resume_en.pdf');
 
-export const MasterHead = ({ pathname }) =>
+export const MasterHead = ({ pathname }: any) =>
   <Segment vertical inverted textAlign="center" className="masthead">
     <HeaderMenu pathname={pathname} items={menuItems} pointing secondary inverted visible/>
     <Container text>

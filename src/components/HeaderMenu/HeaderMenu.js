@@ -12,6 +12,10 @@ interface HeaderMenuProps extends MenuProps {
   inverted?: boolean;
   link: any;
   pathname: string;
+  visible?: boolean;
+  fixed?: boolean;
+  pointing?: boolean;
+  secondary?: boolean;
 }
 
 export const HeaderMenu = ({ items, pathname, inverted, dispatch, visible, fixed, pointing, secondary }: HeaderMenuProps) =>

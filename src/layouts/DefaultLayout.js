@@ -1,3 +1,4 @@
+// @flow
 import 'prismjs/themes/prism-okaidia.css';
 import React, { Fragment, PureComponent } from 'react';
 import { Route } from 'react-router-dom';

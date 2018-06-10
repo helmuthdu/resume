@@ -33,33 +33,19 @@ const portfolioImages = [{
   tags: [{ value: 'wireframe', title: 'wireframe' }],
   caption: 'NeoDash - Files Upload'
 }, {
+  src: 'images/neodash_dap.png',
+  thumbnail: 'images/neodash_dap.png',
+  thumbnailWidth: 288,
+  thumbnailHeight: 180,
+  tags: [{ value: 'mockup', title: 'mockup' }],
+  caption: 'NeoDash - DAP'
+}, {
   src: 'images/neogig_start_page.png',
   thumbnail: 'images/neogig_start_page.png',
   thumbnailWidth: 288,
   thumbnailHeight: 180,
   tags: [{ value: 'wireframe', title: 'wireframe' }],
   caption: 'NeoGIG - Start Page'
-}, {
-  src: 'images/evenths_mobile_ui_1.png',
-  thumbnail: 'images/evenths_mobile_ui_1.png',
-  thumbnailWidth: 100,
-  thumbnailHeight: 180,
-  tags: [{ value: 'wireframe', title: 'wireframe' }],
-  caption: 'Evenths - Navigation'
-}, {
-  src: 'images/evenths_mobile_ui_2.png',
-  thumbnail: 'images/evenths_mobile_ui_2.png',
-  thumbnailWidth: 100,
-  thumbnailHeight: 180,
-  tags: [{ value: 'wireframe', title: 'wireframe' }],
-  caption: 'Evenths - Events'
-}, {
-  src: 'images/evenths_mobile_ui_3.png',
-  thumbnail: 'images/evenths_mobile_ui_3.png',
-  thumbnailWidth: 100,
-  thumbnailHeight: 180,
-  tags: [{ value: 'wireframe', title: 'wireframe' }],
-  caption: 'Evenths - Notifications'
 }, {
   src: 'images/obsis_sisbra.png',
   thumbnail: 'images/obsis_sisbra.png',
@@ -81,18 +67,43 @@ const portfolioImages = [{
   thumbnailHeight: 180,
   tags: [{ value: 'site', title: 'site' }],
   caption: 'CN Kids - Report'
+}, {
+  src: 'images/evenths_mobile_ui_1.png',
+  thumbnail: 'images/evenths_mobile_ui_1.png',
+  thumbnailWidth: 100,
+  thumbnailHeight: 180,
+  tags: [{ value: 'wireframe', title: 'wireframe' }],
+  caption: 'Evenths - Navigation'
+}, {
+  src: 'images/evenths_mobile_ui_2.png',
+  thumbnail: 'images/evenths_mobile_ui_2.png',
+  thumbnailWidth: 100,
+  thumbnailHeight: 180,
+  tags: [{ value: 'wireframe', title: 'wireframe' }],
+  caption: 'Evenths - Events'
+}, {
+  src: 'images/evenths_mobile_ui_3.png',
+  thumbnail: 'images/evenths_mobile_ui_3.png',
+  thumbnailWidth: 100,
+  thumbnailHeight: 180,
+  tags: [{ value: 'wireframe', title: 'wireframe' }],
+  caption: 'Evenths - Notifications'
 }];
+
+interface IProfileState {
+  active: string;
+}
 
 interface IProfile {
   id: string;
 }
 
-export class Profile extends Component <IProfile> {
+export class Profile extends Component <IProfile, IProfileState> {
   state = {
     active: 'all'
   };
 
-  _setCurrentActive (name) {
+  _setCurrentActive (name: string) {
     this.setState({ active: name });
   }
 

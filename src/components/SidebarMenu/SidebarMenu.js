@@ -11,7 +11,6 @@ import { Icon, Menu, Sidebar } from 'semantic-ui-react';
 interface SidebarMenuProps extends MenuProps {
   pathname: any;
   toggleSidebar: Dispatch,
-  visible: boolean;
   visible?: boolean;
 }
 
