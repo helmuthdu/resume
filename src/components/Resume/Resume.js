@@ -28,7 +28,7 @@ export const Resume = ({ id }: IResume) =>
               <Feed.Event>
                 <Feed.Content>
                   <Feed.Date>nov 2013 - <Label size="small" color="blue">Current</Label></Feed.Date>
-                  <Feed.Summary>Senior Programmer - Neocom</Feed.Summary>
+                  <Feed.Summary>Senior Front End Developer - Neocom</Feed.Summary>
                   <Feed.Extra text>
                     <List relaxed>
                       <List.Item>
@@ -43,7 +43,7 @@ export const Resume = ({ id }: IResume) =>
                       </List.Item>
                       <List.Item>
                         <List.Content>
-                          Prototyped an average of 24 new product features per year.
+                          Prototyped an average of 20 new product features per year.
                         </List.Content>
                       </List.Item>
                     </List>

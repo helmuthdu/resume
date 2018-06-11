@@ -5,6 +5,13 @@ import { Divider, Grid, Header, Menu, Segment } from 'semantic-ui-react';
 import Gallery from '../Galery/Galery';
 
 const portfolioImages = [{
+  src: 'images/neogig_start_page.png',
+  thumbnail: 'images/neogig_start_page.png',
+  thumbnailWidth: 288,
+  thumbnailHeight: 180,
+  tags: [{ value: 'wireframe', title: 'wireframe' }],
+  caption: 'NeoGIG - Start Page'
+}, {
   src: 'images/system_control_panel.png',
   thumbnail: 'images/system_control_panel.png',
   thumbnailWidth: 288,
@@ -40,12 +47,26 @@ const portfolioImages = [{
   tags: [{ value: 'mockup', title: 'mockup' }],
   caption: 'NeoDash - DAP'
 }, {
-  src: 'images/neogig_start_page.png',
-  thumbnail: 'images/neogig_start_page.png',
+  src: 'images/cn_events_entrance_cards.png',
+  thumbnail: 'images/cn_events_entrance_cards.png',
   thumbnailWidth: 288,
   thumbnailHeight: 180,
-  tags: [{ value: 'wireframe', title: 'wireframe' }],
-  caption: 'NeoGIG - Start Page'
+  tags: [{ value: 'site', title: 'site' }],
+  caption: 'CN Kids - Entrance Cards'
+}, {
+  src: 'images/cn_events_entrance_list.png',
+  thumbnail: 'images/cn_events_entrance_list.png',
+  thumbnailWidth: 288,
+  thumbnailHeight: 180,
+  tags: [{ value: 'site', title: 'site' }],
+  caption: 'CN Kids - Entrance List'
+}, {
+  src: 'images/cn_events_report.png',
+  thumbnail: 'images/cn_events_report.png',
+  thumbnailWidth: 123,
+  thumbnailHeight: 180,
+  tags: [{ value: 'site', title: 'site' }],
+  caption: 'CN Kids - Reports'
 }, {
   src: 'images/obsis_sisbra.png',
   thumbnail: 'images/obsis_sisbra.png',
@@ -53,20 +74,6 @@ const portfolioImages = [{
   thumbnailHeight: 180,
   tags: [{ value: 'site', title: 'site' }],
   caption: 'Sisbra - Observatório Sismológico de Brasília - http://obsis.unb.br/sisbra'
-}, {
-  src: 'images/cn_events_entrance.png',
-  thumbnail: 'images/cn_events_entrance.png',
-  thumbnailWidth: 111,
-  thumbnailHeight: 180,
-  tags: [{ value: 'site', title: 'site' }],
-  caption: 'CN Kids - Entrance'
-}, {
-  src: 'images/cn_events_report.png',
-  thumbnail: 'images/cn_events_report.png',
-  thumbnailWidth: 123,
-  thumbnailHeight: 180,
-  tags: [{ value: 'site', title: 'site' }],
-  caption: 'CN Kids - Report'
 }, {
   src: 'images/evenths_mobile_ui_1.png',
   thumbnail: 'images/evenths_mobile_ui_1.png',
@@ -121,21 +128,26 @@ export class Profile extends Component <IProfile, IProfileState> {
           <Grid.Row>
             <Grid.Column width="16">
               <Menu secondary>
-                <Menu.Item name='All' active={this.state.active === 'all'} onClick={() => this._setCurrentActive('all')}/>
-                <Menu.Item name='Sites' active={this.state.active === 'site'} onClick={() => this._setCurrentActive('site')}/>
-                <Menu.Item name='Mockups' active={this.state.active === 'mockup'} onClick={() => this._setCurrentActive('mockup')}/>
-                <Menu.Item name='Wireframes' active={this.state.active === 'wireframe'} onClick={() => this._setCurrentActive('wireframe')}/>
+                <Menu.Item name='All' active={this.state.active === 'all'}
+                           onClick={() => this._setCurrentActive('all')}/>
+                <Menu.Item name='Sites' active={this.state.active === 'site'}
+                           onClick={() => this._setCurrentActive('site')}/>
+                <Menu.Item name='Mockups' active={this.state.active === 'mockup'}
+                           onClick={() => this._setCurrentActive('mockup')}/>
+                <Menu.Item name='Wireframes' active={this.state.active === 'wireframe'}
+                           onClick={() => this._setCurrentActive('wireframe')}/>
               </Menu>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
             <Grid.Column width="14" textAlign="center">
-              <Gallery images={this.state.active === 'all' ? portfolioImages : portfolioImages.filter(i => i.tags.some(t => t.value === this.state.active))} showThumbnails/>
+              <Gallery
+                images={this.state.active === 'all' ? portfolioImages : portfolioImages.filter(i => i.tags.some(t => t.value === this.state.active))} showThumbnails/>
             </Grid.Column>
           </Grid.Row>
         </Grid>
       </Segment>
-    )
+    );
   }
 }
 
