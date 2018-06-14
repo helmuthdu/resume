@@ -9,6 +9,7 @@ import { toggleSidebar, UIStoreState } from '../../store/modules/ui';
 import { Icon, Menu, Sidebar } from 'semantic-ui-react';
 
 interface SidebarMenuProps extends MenuProps {
+  items: MenuItem[],
   pathname: any;
   toggleSidebar: Dispatch,
   visible?: boolean;

@@ -1,13 +1,8 @@
-import { configure, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import 'jest';
 import React from 'react';
-import TagsCard from './TagsCard';
-
 import { List } from 'semantic-ui-react';
-
-// Configure enzyme with react 16 adapter
-const Adapter: any = require('enzyme-adapter-react-16');
-configure({ adapter: new Adapter() });
+import TagsCard from './TagsCard';
 
 describe('TagsCard component', () => {
   let LinkStub: any;

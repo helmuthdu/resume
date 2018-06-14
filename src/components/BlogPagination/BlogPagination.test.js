@@ -1,11 +1,7 @@
-import { configure, render } from 'enzyme';
+import { render } from 'enzyme';
 import 'jest';
 import React from 'react';
 import BlogPagination from './BlogPagination';
-
-// Configure enzyme with react 16 adapter
-const Adapter: any = require('enzyme-adapter-react-16');
-configure({ adapter: new Adapter() });
 
 const LinkStub = ((props: any) => <div {...props} />);
 

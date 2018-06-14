@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MasterHead component should be an instance 1`] = `
+exports[`MasterHead component should render correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -82,9 +82,10 @@ ShallowWrapper {
           </Header>
           <Button
                     as="a"
-                    href="helmuth_saatkamp_resume_en.pdf"
+                    href="/docs/helmuth_saatkamp_resume_en.pdf"
                     inverted={true}
                     primary={true}
+                    role="button"
                     size="large"
           >
                     Download My CV
@@ -169,9 +170,10 @@ ShallowWrapper {
 </Header>,
             <Button
               as="a"
-              href="helmuth_saatkamp_resume_en.pdf"
+              href="/docs/helmuth_saatkamp_resume_en.pdf"
               inverted={true}
               primary={true}
+              role="button"
               size="large"
 >
               Download My CV
@@ -225,9 +227,10 @@ ShallowWrapper {
             "props": Object {
               "as": "a",
               "children": "Download My CV",
-              "href": "helmuth_saatkamp_resume_en.pdf",
+              "href": "/docs/helmuth_saatkamp_resume_en.pdf",
               "inverted": true,
               "primary": true,
+              "role": "button",
               "size": "large",
             },
             "ref": null,
@@ -309,9 +312,10 @@ ShallowWrapper {
             </Header>
             <Button
                         as="a"
-                        href="helmuth_saatkamp_resume_en.pdf"
+                        href="/docs/helmuth_saatkamp_resume_en.pdf"
                         inverted={true}
                         primary={true}
+                        role="button"
                         size="large"
             >
                         Download My CV
@@ -396,9 +400,10 @@ ShallowWrapper {
 </Header>,
               <Button
                 as="a"
-                href="helmuth_saatkamp_resume_en.pdf"
+                href="/docs/helmuth_saatkamp_resume_en.pdf"
                 inverted={true}
                 primary={true}
+                role="button"
                 size="large"
 >
                 Download My CV
@@ -452,9 +457,10 @@ ShallowWrapper {
               "props": Object {
                 "as": "a",
                 "children": "Download My CV",
-                "href": "helmuth_saatkamp_resume_en.pdf",
+                "href": "/docs/helmuth_saatkamp_resume_en.pdf",
                 "inverted": true,
                 "primary": true,
+                "role": "button",
                 "size": "large",
               },
               "ref": null,

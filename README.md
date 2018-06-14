@@ -6,19 +6,19 @@
 
 ``` bash
 # install dependencies
-yarn
+npm install
 
 # serve with hot reload at localhost:3000
-yarn run start
+npm run start
 
 # build for production with minification
-yarn run build
+npm run build
 
 # run tests
-yarn test
+npm test
 
 # deploy
-yarn run deploy
+npm run deploy
 ```
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
