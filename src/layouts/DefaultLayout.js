@@ -22,7 +22,11 @@ interface DefaultLayoutProps {
   children: any;
 }
 
-export default class DefaultLayout extends PureComponent<DefaultLayoutProps> {
+interface DefaultLayoutState {
+  calculations: any;
+}
+
+export default class DefaultLayout extends PureComponent<DefaultLayoutProps, DefaultLayoutState> {
   state = {
     calculations: {
       direction: 'none',
@@ -41,7 +45,7 @@ export default class DefaultLayout extends PureComponent<DefaultLayoutProps> {
     }
   };
 
-  handleUpdate = (e, { calculations }) => {
+  handleUpdate = (e: Event, { calculations }: any) => {
     this.setState({ calculations });
   };
 
@@ -78,7 +82,7 @@ export default class DefaultLayout extends PureComponent<DefaultLayoutProps> {
   }
 }
 
-export const DefaultLayoutRoute = ({ component: Component, ...rest }) => {
+export const DefaultLayoutRoute = ({ component: Component, ...rest }: any) => {
   return (
     <Route {...rest} render={matchProps => (
       <DefaultLayout>
