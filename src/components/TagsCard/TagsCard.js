@@ -11,20 +11,18 @@ export default (props: TagsCardProps) => {
   return (
     <Card>
       <Card.Content>
-        <Card.Header>
-          Tags
-        </Card.Header>
+        <Card.Header>Tags</Card.Header>
       </Card.Content>
       <Card.Content>
         <List>
-          {props.tags.map((tag) => {
+          {props.tags.map(tag => {
             const isActive = tag.fieldValue === props.tag;
             const activeStyle = {
               fontWeight: '700'
             };
             return (
               <List.Item as="a" key={tag.fieldValue}>
-                <List.Icon name="tag" color={isActive ? 'blue' : null}/>
+                <List.Icon name="tag" color={isActive ? 'blue' : null} />
                 <List.Content style={isActive ? activeStyle : null}>
                   <props.Link to={`/blog/tags/${tag.fieldValue}/`}>
                     {tag.fieldValue} ({tag.totalCount})

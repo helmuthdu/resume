@@ -26,7 +26,7 @@ interface DefaultLayoutState {
   calculations: any;
 }
 
-export default class DefaultLayout extends PureComponent<DefaultLayoutProps, DefaultLayoutState> {
+export class DefaultLayout extends PureComponent<DefaultLayoutProps, DefaultLayoutState> {
   state = {
     calculations: {
       direction: 'none',
@@ -49,29 +49,34 @@ export default class DefaultLayout extends PureComponent<DefaultLayoutProps, Def
     this.setState({ calculations });
   };
 
-  render () {
+  render() {
     const { pathname } = this.props.children.props.location;
     const isHome = pathname === '/';
 
     return (
       <Fragment>
-        <HeaderMenu pathname={pathname} items={menuItems.filter((item, index) => index > 0)} fixed="top" visible={this.state.calculations.pixelsPassed >= 300 && this.state.calculations.width > 748}/>
+        <HeaderMenu
+          pathname={pathname}
+          items={menuItems.filter((item, index) => index > 0)}
+          fixed="top"
+          visible={this.state.calculations.pixelsPassed >= 300 && this.state.calculations.width > 748}
+        />
         <Sidebar.Pushable as={Segment}>
-          <SidebarMenu pathname={pathname} items={menuItems}/>
+          <SidebarMenu pathname={pathname} items={menuItems} />
           <Sidebar.Pusher style={{ minHeight: '100vh' }}>
             <Visibility onUpdate={this.handleUpdate}>
               {/* Header */}
-              {isHome ? null : <HeaderMenu pathname={pathname} items={menuItems}/>}
+              {isHome ? null : <HeaderMenu pathname={pathname} items={menuItems} />}
 
               {/* Render children pages */}
-              <div style={{ paddingBottom: 47 }}>
-                {this.props.children}
-              </div>
+              <div style={{ paddingBottom: 47 }}>{this.props.children}</div>
 
               {/* Footer */}
               <Segment inverted vertical style={{ position: 'absolute', bottom: 0, width: '100%' }}>
                 <Container textAlign="center">
-                  <p>Powered with <Icon name="heart"/> by React</p>
+                  <p>
+                    Powered with <Icon name="heart" /> by React
+                  </p>
                 </Container>
               </Segment>
             </Visibility>
@@ -84,10 +89,15 @@ export default class DefaultLayout extends PureComponent<DefaultLayoutProps, Def
 
 export const DefaultLayoutRoute = ({ component: Component, ...rest }: any) => {
   return (
-    <Route {...rest} render={matchProps => (
-      <DefaultLayout>
-        <Component {...matchProps} />
-      </DefaultLayout>
-    )}/>
+    <Route
+      {...rest}
+      render={matchProps => (
+        <DefaultLayout>
+          <Component {...matchProps} />
+        </DefaultLayout>
+      )}
+    />
   );
 };
+
+export default DefaultLayoutRoute;

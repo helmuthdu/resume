@@ -3,14 +3,14 @@ import 'jest';
 import React from 'react';
 import BlogPagination from './BlogPagination';
 
-const LinkStub = ((props: any) => <div {...props} />);
+const LinkStub = (props: any) => <div {...props} />;
 
 describe('BlogPagination component', () => {
   it('should render nothing if only 1 page', () => {
     const pathname: string = '/blog/page/1/';
     const pageCount: number = 1;
 
-    const wrapper = render(<BlogPagination pathname={pathname} Link={LinkStub} pageCount={pageCount}/>);
+    const wrapper = render(<BlogPagination pathname={pathname} Link={LinkStub} pageCount={pageCount} />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -18,7 +18,7 @@ describe('BlogPagination component', () => {
     const pathname: string = '/blog/page/2/';
     const pageCount: number = 5;
 
-    const wrapper = render(<BlogPagination pathname={pathname} Link={LinkStub} pageCount={pageCount}/>);
+    const wrapper = render(<BlogPagination pathname={pathname} Link={LinkStub} pageCount={pageCount} />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -26,7 +26,7 @@ describe('BlogPagination component', () => {
     const pathname: string = '/blog/page/5/';
     const pageCount: number = 10;
 
-    const wrapper = render(<BlogPagination pathname={pathname} Link={LinkStub} pageCount={pageCount}/>);
+    const wrapper = render(<BlogPagination pathname={pathname} Link={LinkStub} pageCount={pageCount} />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -34,7 +34,7 @@ describe('BlogPagination component', () => {
     const pathname: string = '/blog/page/5/';
     const pageCount: number = 20;
 
-    const wrapper = render(<BlogPagination pathname={pathname} Link={LinkStub} pageCount={pageCount}/>);
+    const wrapper = render(<BlogPagination pathname={pathname} Link={LinkStub} pageCount={pageCount} />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -42,7 +42,7 @@ describe('BlogPagination component', () => {
     const pathname: string = '/plop';
     const pageCount: number = 10;
 
-    const wrapper = render(<BlogPagination pathname={pathname} Link={LinkStub} pageCount={pageCount}/>);
+    const wrapper = render(<BlogPagination pathname={pathname} Link={LinkStub} pageCount={pageCount} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -8,8 +8,7 @@ describe('TagsCard component', () => {
   let LinkStub: any;
 
   beforeEach(() => {
-    LinkStub = (props: any) =>
-      <div>{props.children}</div>;
+    LinkStub = (props: any) => <div>{props.children}</div>;
   });
 
   it('should list all the tags', () => {
@@ -19,7 +18,7 @@ describe('TagsCard component', () => {
       { fieldValue: 'tag03', totalCount: 6 }
     ];
 
-    const wrapper = shallow(<TagsCard tags={tags} Link={LinkStub}/>);
+    const wrapper = shallow(<TagsCard tags={tags} Link={LinkStub} />);
 
     expect(wrapper.find(List.Item)).toHaveLength(3);
   });
@@ -31,7 +30,7 @@ describe('TagsCard component', () => {
       { fieldValue: 'tag03', totalCount: 6 }
     ];
 
-    const wrapper = shallow(<TagsCard tags={tags} Link={LinkStub} tag="tag01"/>);
+    const wrapper = shallow(<TagsCard tags={tags} Link={LinkStub} tag="tag01" />);
 
     expect(wrapper).toMatchSnapshot();
   });

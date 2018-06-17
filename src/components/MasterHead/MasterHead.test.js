@@ -5,7 +5,7 @@ import { MasterHead } from './MasterHead';
 
 describe('MasterHead component', () => {
   it('should render correctly', () => {
-    const wrapper = shallow(<MasterHead pathname="/"/>);
+    const wrapper = shallow(<MasterHead pathname="/" />);
     expect(wrapper).toMatchSnapshot();
   });
 });

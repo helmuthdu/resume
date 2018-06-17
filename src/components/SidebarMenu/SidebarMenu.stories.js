@@ -1,10 +1,10 @@
-const withReadme = (require('storybook-readme/with-readme')).default;
+const withReadme = require('storybook-readme/with-readme').default;
 const SidebarMenuReadme = require('./README.md');
 
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { boolean, text, withKnobs } from '@storybook/addon-knobs';
+import { text, withKnobs } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+import React from 'react';
 import SidebarMenu from './SidebarMenu';
 
 const items = [
@@ -13,8 +13,11 @@ const items = [
   { name: 'Blog', path: '/blog/', exact: false, icon: 'newspaper' }
 ];
 
-const LinkStub: any = (props: any) =>
-  <div {...props} onClick={action(props.to.toString())}>{props.children}</div>;
+const LinkStub: any = (props: any) => (
+  <div {...props} onClick={action(props.to.toString())}>
+    {props.children}
+  </div>
+);
 
 storiesOf('SidebarMenu', module)
   .addDecorator(withKnobs)
@@ -22,7 +25,5 @@ storiesOf('SidebarMenu', module)
   .add('default', () => {
     const pathname = text('pathname', '/');
 
-    return (
-      <SidebarMenu Link={LinkStub} items={items} pathname={pathname} visible/>
-    );
+    return <SidebarMenu Link={LinkStub} items={items} pathname={pathname} visible />;
   });

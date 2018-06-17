@@ -4,20 +4,21 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "test:debug": "react-app-rewired --inspect-brk test --runInBand --env=jsdom",
+    "eject": "react-app-rewired eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build-storybook": "build-storybook -s public",
-    "eject": "react-scripts eject",
     "flow": "flow",
-    "lint:css": "stylelint \"src/**/*.css\"",
-    "start": "react-scripts start",
-    "storybook": "start-storybook -p 9009 -s public",
-    "test": "react-scripts test --env=jsdom"
+    "build-storybook": "build-storybook -s public",
+    "storybook": "start-storybook -p 9009 -s public"
   },
   "dependencies": {
     "anchorate": "^1.2.3",
     "aphrodite": "^2.2.2",
+    "connected-react-router": "^4.3.0",
     "history": "^4.7.2",
     "lodash": "^4.17.10",
     "prismjs": "^1.14.0",
@@ -29,7 +30,6 @@
     "react-redux": "^5.0.7",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-router-redux": "next",
     "recompose": "^0.27.1",
     "redux": "^4.0.0",
     "redux-immutable-state-invariant": "^2.1.0",
@@ -45,8 +45,6 @@
     "@storybook/react": "^3.4.7",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-react-app": "^3.1.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
@@ -54,37 +52,27 @@
     "eslint-config-react-app": "^2.1.0",
     "eslint-plugin-flowtype": "^2.49.3",
     "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.9.1",
     "flow-bin": "^0.74.0",
     "gh-pages": "^1.2.0",
-    "husky": "^0.14.3",
     "lint-staged": "^7.2.0",
     "prettier": "^1.13.5",
+    "react-app-rewire-eslint": "^0.2.3",
+    "react-app-rewire-hot-loader": "^1.0.1",
+    "react-app-rewire-styled-components": "^3.0.2",
+    "react-app-rewired": "^1.5.2",
+    "react-hot-loader": "^4.3.3",
     "react-scripts": "^1.1.4",
     "react-test-renderer": "^16.4.1",
-    "storybook-readme": "^3.3.0",
-    "stylelint": "^9.2.1",
-    "stylelint-config-standard": "^18.2.0"
+    "redux-mock-store": "^1.5.3",
+    "storybook-readme": "^3.3.0"
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
       "prettier --write",
       "git add"
-    ],
-    "*.{js,jsx}": [
-      "xo --fix",
-      "git add"
-    ],
-    "*.md": [
-      "remark -o",
-      "git add"
-    ],
-    "*.css": [
-      "stylelint"
     ]
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard"
   }
 }

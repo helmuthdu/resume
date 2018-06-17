@@ -10,20 +10,19 @@ import '../../pages/AppPage/AppPage.css';
 
 interface IndexPageProps {
   location: {
-    pathname: string;
+    pathname: string
   };
 }
 
 export default class AppPage extends Component<IndexPageProps> {
-
-  render () {
+  render() {
     return (
       <Fragment>
-        <MasterHead pathname={this.props.location.pathname}/>
-        <About id="about"/>
-        <Resume id="resume"/>
-        <Profile id="portfolio"/>
-        <Contact id="contact"/>
+        <MasterHead pathname={this.props.location.pathname} />
+        <About id="about" />
+        <Resume id="resume" />
+        <Profile id="portfolio" />
+        <Contact id="contact" />
       </Fragment>
     );
   }

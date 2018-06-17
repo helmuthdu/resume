@@ -7,7 +7,7 @@ describe('About component', () => {
   let id = 'contact';
 
   it('should have id defined', () => {
-    const wrapper = shallow(<Contact id={id}/>);
+    const wrapper = shallow(<Contact id={id} />);
     expect(wrapper.find({ id }).prop('id')).toBe(id);
   });
 });

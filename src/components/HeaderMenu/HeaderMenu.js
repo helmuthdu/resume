@@ -18,22 +18,41 @@ interface HeaderMenuProps extends MenuProps {
   secondary?: boolean;
 }
 
-export const HeaderMenu = ({ items, pathname, inverted, dispatch, visible, fixed, pointing, secondary }: HeaderMenuProps) =>
-  <Menu size="large" pointing={pointing} secondary={secondary} inverted={inverted} style={{ borderWidth: '0px' }} fixed={fixed} className={visible ? '' : 'hidden'}>
+export const HeaderMenu = ({
+  items,
+  pathname,
+  inverted,
+  dispatch,
+  visible,
+  fixed,
+  pointing,
+  secondary
+}: HeaderMenuProps) => (
+  <Menu
+    size="large"
+    pointing={pointing}
+    secondary={secondary}
+    inverted={inverted}
+    style={{ borderWidth: '0px' }}
+    fixed={fixed}
+    className={visible ? '' : 'hidden'}>
     <Container>
-      <Menu.Item as="a" className="mobile only" icon="sidebar" onClick={() => dispatch(toggleSidebar())}/>
-      {items.map((item) => {
-        const active = (item.exact) ? pathname === item.path : pathname.startsWith(item.path);
-        return <Menu.Item
-          as={Link}
-          className="mobile hidden"
-          name={item.name}
-          to={item.path}
-          key={item.path}
-          active={active}
-        />;
+      <Menu.Item as="a" className="mobile only" icon="sidebar" onClick={() => dispatch(toggleSidebar())} />
+      {items.map(item => {
+        const active = item.exact ? pathname === item.path : pathname.startsWith(item.path);
+        return (
+          <Menu.Item
+            as={Link}
+            className="mobile hidden"
+            name={item.name}
+            to={item.path}
+            key={item.path}
+            active={active}
+          />
+        );
       })}
     </Container>
-  </Menu>;
+  </Menu>
+);
 
 export default connect()(HeaderMenu);

@@ -1,34 +1,31 @@
 {
-  "parser": "babel-eslint",
   "extends": [
     "react-app",
     "prettier",
-    "prettier/react"
+    "prettier/react",
+    "plugin:flowtype/recommended"
   ],
   "plugins": [
-    "react",
-    "prettier",
-    "flowtype"
+    "prettier"
   ],
-  "parserOptions": {
-    "ecmaVersion": 2016,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "env": {
-    "es6": true,
-    "node": true
-  },
   "rules": {
+    "jsx-a11y/href-no-hash": [0],
     "prettier/prettier": [
       "error",
       {
-        "trailingComma": "es5",
+        "printWidth": 120,
+        "bracketSpacing": true,
         "singleQuote": true,
-        "semi": false
+        "trailingComma": "none",
+        "semi": true,
+        "arrowParens": "avoid",
+        "jsxBracketSameLine": true
       }
     ]
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
   }
 }

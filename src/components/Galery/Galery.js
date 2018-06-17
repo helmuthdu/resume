@@ -10,8 +10,13 @@ interface IGallery {
   showThumbnails?: boolean;
 }
 
-class Gallery extends Component<IGallery> {
-  constructor () {
+interface IGalleryState {
+  lightboxIsOpen: boolean;
+  currentImage: number;
+}
+
+class Gallery extends Component<IGallery, IGalleryState> {
+  constructor() {
     super();
 
     this.state = {
@@ -27,7 +32,7 @@ class Gallery extends Component<IGallery> {
     this.openLightbox = this.openLightbox.bind(this);
   }
 
-  openLightbox (index, event) {
+  openLightbox(index, event) {
     event.preventDefault();
     this.setState({
       currentImage: index,
@@ -35,38 +40,38 @@ class Gallery extends Component<IGallery> {
     });
   }
 
-  closeLightbox () {
+  closeLightbox() {
     this.setState({
       currentImage: 0,
       lightboxIsOpen: false
     });
   }
 
-  gotoPrevious () {
+  gotoPrevious() {
     this.setState({
       currentImage: this.state.currentImage - 1
     });
   }
 
-  gotoNext () {
+  gotoNext() {
     this.setState({
       currentImage: this.state.currentImage + 1
     });
   }
 
-  gotoImage (index) {
+  gotoImage(index) {
     this.setState({
       currentImage: index
     });
   }
 
-  handleClickImage () {
+  handleClickImage() {
     if (this.state.currentImage === this.props.images.length - 1) return;
 
     this.gotoNext();
   }
 
-  renderGallery () {
+  renderGallery() {
     const { images } = this.props;
 
     if (!images) return;
@@ -77,22 +82,21 @@ class Gallery extends Component<IGallery> {
           href={obj.src}
           className={css(classes.thumbnail, classes[obj.orientation])}
           key={i}
-          onClick={(e) => this.openLightbox(i, e)}
-        >
-          <img src={obj.thumbnail} className={css(classes.source)} alt=''
-               style={{ width: 'auto', height: 'auto', maxHeight: 180 }}/>
+          onClick={e => this.openLightbox(i, e)}>
+          <img
+            src={obj.thumbnail}
+            className={css(classes.source)}
+            alt=""
+            style={{ width: 'auto', height: 'auto', maxHeight: 180 }}
+          />
         </a>
       );
     });
 
-    return (
-      <div className={css(classes.gallery)}>
-        {gallery}
-      </div>
-    );
+    return <div className={css(classes.gallery)}>{gallery}</div>;
   }
 
-  render () {
+  render() {
     return (
       <div className="section">
         {this.props.heading && <h2>{this.props.heading}</h2>}

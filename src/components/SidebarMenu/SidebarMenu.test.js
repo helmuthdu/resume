@@ -12,10 +12,11 @@ const items = [
 
 describe('SidebarMenu component', () => {
   it('should render correctly', () => {
-
     let visible = true;
     const toggleSidebar = jest.fn();
-    const wrapper = render(withRouter(<SidebarMenu pathname="/" items={items} visible={visible} toggleSidebar={toggleSidebar}/>));
+    const wrapper = render(
+      withRouter(<SidebarMenu pathname="/" items={items} visible={visible} toggleSidebar={toggleSidebar} />)
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -1,4 +1,4 @@
-const withReadme = (require('storybook-readme/with-readme')).default;
+const withReadme = require('storybook-readme/with-readme').default;
 const ResumeReadme = require('./README.md');
 
 import { withKnobs } from '@storybook/addon-knobs';
@@ -10,7 +10,5 @@ storiesOf('Resume', module)
   .addDecorator(withKnobs)
   .addDecorator(withReadme(ResumeReadme))
   .add('default', () => {
-    return (
-      <Resume id="resume"/>
-    );
+    return <Resume id="resume" />;
   });
