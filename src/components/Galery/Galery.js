@@ -20,7 +20,7 @@ interface IGalleryState {
   currentImage: number;
 }
 
-class Gallery extends Component<IGallery, IGalleryState> {
+export class Gallery extends Component<IGallery, IGalleryState> {
   constructor() {
     super();
 
