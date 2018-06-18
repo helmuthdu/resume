@@ -13,7 +13,8 @@
     "deploy": "gh-pages -d build",
     "flow": "flow",
     "build-storybook": "build-storybook -s public",
-    "storybook": "start-storybook -p 9009 -s public"
+    "storybook": "start-storybook -p 9009 -s public",
+    "coveralls": "react-app-rewired test --env=jsdom --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {
     "anchorate": "^1.2.3",
@@ -45,6 +46,7 @@
     "@storybook/react": "^3.4.7",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
+    "coveralls": "^3.0.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",

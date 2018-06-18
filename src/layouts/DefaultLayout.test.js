@@ -1,0 +1,18 @@
+import { shallow } from 'enzyme';
+import React from 'react';
+import { DefaultLayout, DefaultLayoutRoute } from './DefaultLayout';
+
+it('renders without crashing', () => {
+  const children = {
+    props: {
+      location: '/'
+    }
+  };
+  const wrapper = shallow(<DefaultLayout children={children} />);
+  expect(wrapper.instance() instanceof React.PureComponent).toBeTruthy();
+});
+
+it('renders without crashing', () => {
+  const wrapper = shallow(<DefaultLayoutRoute />);
+  expect(wrapper.instance()).toBeNull();
+});

@@ -1,4 +1,4 @@
-# Helmuth's resume
+## Helmuth's resume [![Build Status](https://travis-ci.org/helmuthdu/resume.svg?branch=master)](https://travis-ci.org/helmuthdu/resume) [![Coverage Status](https://coveralls.io/repos/github/helmuthdu/resume/badge.svg?branch=master)](https://coveralls.io/github/helmuthdu/resume?branch=master)
 
 > My resume powered by React and Redux: [https://helmuthdu.github.io/resume/](https://helmuthdu.github.io/resume/)
 

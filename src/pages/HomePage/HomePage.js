@@ -6,7 +6,7 @@ import MasterHead from '../../components/MasterHead/MasterHead';
 import Profile from '../../components/Profile/Profile';
 import Resume from '../../components/Resume/Resume';
 
-import '../../pages/AppPage/AppPage.css';
+import './HomePage.css';
 
 interface IndexPageProps {
   location: {
@@ -14,7 +14,7 @@ interface IndexPageProps {
   };
 }
 
-export default class AppPage extends Component<IndexPageProps> {
+export default class HomePage extends Component<IndexPageProps> {
   render() {
     return (
       <Fragment>

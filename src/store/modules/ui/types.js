@@ -1,4 +1,5 @@
 // Getters (GET*)
+// [CONTEXT]_[ACTION]_[PROPERTY]
 
 // Mutations (SET*, ADD*, REMOVE*)
 // [CONTEXT]_[ACTION]_[PROPERTY]
