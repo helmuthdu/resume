@@ -3,7 +3,7 @@ import 'jest';
 import React from 'react';
 import { Resume } from './Resume';
 
-describe('About component', () => {
+describe('Resume component', () => {
   let id = 'about';
 
   it('should have id defined', () => {
