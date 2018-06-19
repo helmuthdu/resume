@@ -10,7 +10,7 @@ describe('Gallery component', () => {
       thumbnailWidth: 288,
       thumbnailHeight: 180,
       tags: [{ value: 'wireframe', title: 'wireframe' }],
-      caption: 'Test'q
+      caption: 'Test'
     }]
   };
 
