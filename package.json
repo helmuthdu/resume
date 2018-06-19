@@ -77,5 +77,14 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.stories.js",
+      "!src/index.js",
+      "!src/registerServiceWorker.js",
+      "!<rootDir>/node_modules/"
+    ]
   }
 }
