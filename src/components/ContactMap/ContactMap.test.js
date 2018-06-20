@@ -1,15 +1,19 @@
 import { shallow } from 'enzyme/build/index';
 import React from 'react';
-import configureMockStore from 'redux-mock-store';
-import ContactMap from './ContactMap';
+import { ContactMap, GMaps } from './ContactMap';
 
 describe('ContactMap component', () => {
   const props = {
-    store: configureMockStore()({})
+    isMarkerShown: true
   };
 
   it('renders without crashing', () => {
     const wrapper = shallow(<ContactMap {...props}/>);
-    expect(wrapper.instance() instanceof React.Component).toBeTruthy();
+    expect(wrapper.instance()).toBeNull();
+  });
+
+  it('renders without crashing', () => {
+    const wrapper = shallow(<GMaps {...props}/>);
+    expect(wrapper.props().defaultZoom).toBe(12);
   });
 });

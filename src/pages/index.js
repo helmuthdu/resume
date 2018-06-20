@@ -13,16 +13,14 @@ const ConnectedSwitch = connect(state => ({
   location: state.location
 }))(Switch);
 
-const App = ({ history }) => {
-  return (
-    <ConnectedRouter history={history}>
-      <ConnectedSwitch>
-        <DefaultLayoutRoute exact path="/" component={HomePage} />
-        <DefaultLayoutRoute path="/about" component={AboutPage} />
-        <Route path="*" component={NotFoundPage} />
-      </ConnectedSwitch>
-    </ConnectedRouter>
-  );
-};
+export const App = ({ history }) => (
+  <ConnectedRouter history={history}>
+    <ConnectedSwitch>
+      <DefaultLayoutRoute exact path="/" component={HomePage} />
+      <DefaultLayoutRoute path="/about" component={AboutPage} />
+      <Route path="*" component={NotFoundPage} />
+    </ConnectedSwitch>
+  </ConnectedRouter>
+);
 
 export default hot(module)(App);
