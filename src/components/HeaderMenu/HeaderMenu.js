@@ -2,31 +2,31 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Dispatch } from 'redux';
+import { bindActionCreators, Dispatch } from 'redux';
 import { Container, Menu } from 'semantic-ui-react';
 import { toggleSidebar } from '../../store/modules/ui';
-import { MenuProps } from '../Menu';
+import { MenuProps } from '../Menu/Menu';
 
 interface HeaderMenuProps extends MenuProps {
-  dispatch: Dispatch<any>;
+  fixed?: boolean;
   inverted?: boolean;
   link: any;
   pathname: string;
-  visible?: boolean;
-  fixed?: boolean;
   pointing?: boolean;
   secondary?: boolean;
+  toggleSidebar: Dispatch<any>;
+  visible?: boolean;
 }
 
 export const HeaderMenu = ({
+  fixed,
+  inverted,
   items,
   pathname,
-  inverted,
-  dispatch,
-  visible,
-  fixed,
   pointing,
-  secondary
+  secondary,
+  toggleSidebar,
+  visible
 }: HeaderMenuProps) => (
   <Menu
     size="large"
@@ -37,7 +37,7 @@ export const HeaderMenu = ({
     fixed={fixed}
     className={visible ? '' : 'hidden'}>
     <Container>
-      <Menu.Item as="a" className="mobile only" icon="sidebar" onClick={() => dispatch(toggleSidebar())} />
+      <Menu.Item as="a" className="mobile only" icon="sidebar" onClick={toggleSidebar} />
       {items.map(item => {
         const active = item.exact ? pathname === item.path : pathname.startsWith(item.path);
         return (
@@ -55,4 +55,15 @@ export const HeaderMenu = ({
   </Menu>
 );
 
-export default connect()(HeaderMenu);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      toggleSidebar
+    },
+    dispatch
+  );
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(HeaderMenu);

@@ -1,6 +1,5 @@
 // @flow
 import React from 'react';
-import { connect } from 'react-redux';
 import { Divider, Grid, Header, List, Segment } from 'semantic-ui-react';
 
 interface IAbout {
@@ -55,7 +54,7 @@ export const About = ({ id }: IAbout) => (
         <Grid.Column>
           {/* MY EXPERTISE */}
           <Segment basic>
-            <Header>My Expertise</Header>
+            <Header>My Experiences</Header>
             <List relaxed>
               <List.Item>
                 <List.Icon name="fork" size="large" verticalAlign="middle" />
@@ -86,4 +85,4 @@ export const About = ({ id }: IAbout) => (
   </Segment>
 );
 
-export default connect()(About);
+export default About;

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { bindActionCreators, Dispatch } from 'redux';
 import { Icon, Menu, Sidebar } from 'semantic-ui-react';
 import { toggleSidebar, UIStoreState } from '../../store/modules/ui';
-import { MenuItem, MenuProps } from '../Menu';
+import { MenuItem, MenuProps } from '../Menu/Menu';
 
 interface SidebarMenuProps extends MenuProps {
   items: MenuItem[];

@@ -7,7 +7,7 @@ interface TagsCardProps {
   tag?: string;
 }
 
-export default (props: TagsCardProps) => {
+const TagCard = (props: TagsCardProps) => {
   return (
     <Card>
       <Card.Content>
@@ -36,3 +36,5 @@ export default (props: TagsCardProps) => {
     </Card>
   );
 };
+
+export default TagCard;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { GoogleMap, Marker, withGoogleMap, withScriptjs } from 'react-google-maps';
-import { connect } from 'react-redux';
 import { compose, withProps } from 'recompose';
 
 const apiKey = 'AIzaSyBUDsKbbMvYm2uGIqKmYn6lxkpPycr5KcY';
@@ -23,4 +22,4 @@ export const ContactMap = compose(
   withGoogleMap
 )(props => <GMaps {...props} />);
 
-export default connect()(ContactMap);
+export default ContactMap;

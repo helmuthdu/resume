@@ -1,5 +1,5 @@
 // @flow
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import About from '../../components/About/About';
 import Contact from '../../components/Contact/Contact';
 import MasterHead from '../../components/MasterHead/MasterHead';
@@ -14,16 +14,14 @@ interface IndexPageProps {
   };
 }
 
-export default class HomePage extends Component<IndexPageProps> {
-  render() {
-    return (
-      <Fragment>
-        <MasterHead pathname={this.props.location.pathname} />
-        <About id="about" />
-        <Resume id="resume" />
-        <Profile id="portfolio" />
-        <Contact id="contact" />
-      </Fragment>
-    );
-  }
-}
+const HomePage = (props: IndexPageProps) => (
+  <Fragment>
+    <MasterHead pathname={props.location.pathname} />
+    <About id="about" />
+    <Resume id="resume" />
+    <Profile id="portfolio" />
+    <Contact id="contact" />
+  </Fragment>
+);
+
+export default HomePage;

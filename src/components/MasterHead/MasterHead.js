@@ -1,6 +1,5 @@
 // @flow
 import React from 'react';
-import { connect } from 'react-redux';
 import { Button, Container, Divider, Header, Segment } from 'semantic-ui-react';
 import { menuItems } from '../../layouts/DefaultLayout';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
@@ -28,4 +27,4 @@ export const MasterHead = ({ pathname }: any) => (
   </Segment>
 );
 
-export default connect()(MasterHead);
+export default MasterHead;

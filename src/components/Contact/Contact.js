@@ -1,6 +1,5 @@
 // @flow
 import React from 'react';
-import { connect } from 'react-redux';
 import { Button, Divider, Form, Grid, Header, Segment } from 'semantic-ui-react';
 import ContactMap from '../ContactMap/ContactMap';
 
@@ -52,4 +51,4 @@ export const Contact = ({ id }: IContact) => (
   </Segment>
 );
 
-export default connect()(Contact);
+export default Contact;

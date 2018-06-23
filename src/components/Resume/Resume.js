@@ -212,7 +212,7 @@ export const Resume = ({ id }: IResume) => (
               <Feed.Event>
                 <Feed.Content>
                   <Feed.Summary>
-                    C# / Asp.Net Core <Progress percent={80} size="tiny" color="blue" className="skill-bar" />
+                    C# / Asp.Net Core <Progress percent={75} size="tiny" color="blue" className="skill-bar" />
                   </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
@@ -220,7 +220,7 @@ export const Resume = ({ id }: IResume) => (
                 <Feed.Content>
                   <Feed.Summary>
                     SQL Server / PostgreSQL / MongoDB{' '}
-                    <Progress percent={80} size="tiny" color="blue" className="skill-bar" />
+                    <Progress percent={75} size="tiny" color="blue" className="skill-bar" />
                   </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
@@ -247,7 +247,7 @@ export const Resume = ({ id }: IResume) => (
               <Feed.Event>
                 <Feed.Content>
                   <Feed.Summary>
-                    English <Progress percent={70} size="tiny" color="blue" className="skill-bar" />
+                    English <Progress percent={75} size="tiny" color="blue" className="skill-bar" />
                   </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>

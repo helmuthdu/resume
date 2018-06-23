@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Header, Icon } from 'semantic-ui-react';
 
-export default () => (
+const NotFoundPage = () => (
   <Grid centered verticalAlign="middle" style={{ minHeight: '700px' }}>
     <Grid.Column>
       <Grid.Row style={{ textAlign: 'center' }}>
@@ -12,3 +12,5 @@ export default () => (
     </Grid.Column>
   </Grid>
 );
+
+export default NotFoundPage;
