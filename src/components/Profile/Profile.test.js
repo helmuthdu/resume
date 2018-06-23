@@ -3,7 +3,7 @@ import 'jest';
 import React from 'react';
 import { Profile } from './Profile';
 
-describe('Profile component', () => {
+describe('component -> Profile', () => {
   let id = 'profile';
 
   it('should have id defined', () => {

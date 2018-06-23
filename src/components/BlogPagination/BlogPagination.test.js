@@ -5,7 +5,7 @@ import BlogPagination from './BlogPagination';
 
 const LinkStub = (props: any) => <div {...props} />;
 
-describe('BlogPagination component', () => {
+describe('component -> BlogPagination', () => {
   it('should render nothing if only 1 page', () => {
     const pathname: string = '/blog/page/1/';
     const pageCount: number = 1;

@@ -2,7 +2,7 @@ import { shallow } from 'enzyme/build/index';
 import React from 'react';
 import { ContactMap, GMaps } from './ContactMap';
 
-describe('ContactMap component', () => {
+describe('component -> ContactMap', () => {
   const props = {
     isMarkerShown: true
   };

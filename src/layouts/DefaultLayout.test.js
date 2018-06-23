@@ -2,7 +2,7 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import { DefaultLayout, DefaultLayoutRoute } from './DefaultLayout';
 
-describe('DefaultLayout component', () => {
+describe('layout -> DefaultLayout', () => {
   const children = {
     props: {
       location: '/'

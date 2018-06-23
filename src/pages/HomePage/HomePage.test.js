@@ -2,9 +2,9 @@ import { shallow } from 'enzyme/build/index';
 import React from 'react';
 import HomePage from './HomePage';
 
-describe('HomePage component', () => {
+describe('pages -> HomePage component', () => {
   it('renders without crashing', () => {
     const wrapper = shallow(<HomePage location="/" />);
-    expect(wrapper.instance() instanceof React.Component).toBeTruthy();
+    expect(wrapper.instance()).toBeNull();
   });
 });

@@ -12,7 +12,7 @@ const items = [
 const LinkStub = (props: any) => <div {...props} />;
 const dispatchStub = (a: any) => a;
 
-describe('HeaderMenu component', () => {
+describe('component -> HeaderMenu', () => {
   it('should nothing active', () => {
     const wrapper = shallow(<HeaderMenu Link={LinkStub} items={items} pathname="/plop" dispatch={dispatchStub} />);
     expect(wrapper.find({ active: true }).length).toBe(0);
@@ -37,7 +37,7 @@ describe('HeaderMenu component', () => {
 
   it('should dispatch the correct message on burger click', () => {
     const dispatchMock: any = jest.fn();
-    const wrapper = shallow(<HeaderMenu Link={LinkStub} items={items} pathname="" dispatch={dispatchMock} />);
+    const wrapper = shallow(<HeaderMenu Link={LinkStub} items={items} pathname="" toggleSidebar={dispatchMock} />);
     wrapper.find('.mobile .only').simulate('click');
     expect(dispatchMock.mock.calls.length).toBe(1);
   });

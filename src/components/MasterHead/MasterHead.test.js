@@ -3,7 +3,7 @@ import 'jest';
 import React from 'react';
 import { MasterHead } from './MasterHead';
 
-describe('MasterHead component', () => {
+describe('component -> MasterHead', () => {
   it('should render correctly', () => {
     const wrapper = shallow(<MasterHead pathname="/" />);
     expect(wrapper).toMatchSnapshot();

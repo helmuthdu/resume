@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BlogPagination component should have first link active if no match 1`] = `
+exports[`component -> BlogPagination should have first link active if no match 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
@@ -796,7 +796,7 @@ initialize {
 }
 `;
 
-exports[`BlogPagination component should render correctly 5 pages 1`] = `
+exports[`component -> BlogPagination should render correctly 5 pages 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
@@ -1622,7 +1622,7 @@ initialize {
 }
 `;
 
-exports[`BlogPagination component should render correctly 10 pages 1`] = `
+exports[`component -> BlogPagination should render correctly 10 pages 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
@@ -4080,7 +4080,7 @@ initialize {
 }
 `;
 
-exports[`BlogPagination component should render correctly 20 pages 1`] = `
+exports[`component -> BlogPagination should render correctly 20 pages 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
@@ -6538,7 +6538,7 @@ initialize {
 }
 `;
 
-exports[`BlogPagination component should render nothing if only 1 page 1`] = `
+exports[`component -> BlogPagination should render nothing if only 1 page 1`] = `
 initialize {
   "options": Object {
     "decodeEntities": true,

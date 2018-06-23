@@ -2,7 +2,7 @@ import { shallow } from 'enzyme/build/index';
 import React from 'react';
 import Gallery from './Galery';
 
-describe('Gallery component', () => {
+describe('component -> Gallery', () => {
   const props = {
     images: [
       {

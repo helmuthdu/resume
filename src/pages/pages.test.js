@@ -2,7 +2,7 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import { App } from './index';
 
-describe('App component', () => {
+describe('pages -> App', () => {
   const history = {
     location: {
       path: '/'

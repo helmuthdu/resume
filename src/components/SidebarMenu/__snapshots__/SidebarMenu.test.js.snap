@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SidebarMenu component should render correctly 1`] = `
+exports[`component -> SidebarMenu should render correctly 1`] = `
 initialize {
   "options": Object {
     "decodeEntities": true,

@@ -4,7 +4,7 @@ import React from 'react';
 import { List } from 'semantic-ui-react';
 import TagsCard from './TagsCard';
 
-describe('TagsCard component', () => {
+describe('component -> TagsCard', () => {
   let LinkStub: any;
 
   beforeEach(() => {

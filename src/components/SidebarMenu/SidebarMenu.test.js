@@ -5,7 +5,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import { SidebarMenu } from './SidebarMenu';
 
-describe('SidebarMenu component', () => {
+describe('component -> SidebarMenu', () => {
   const props = {
     pathname: '/',
     items: [
