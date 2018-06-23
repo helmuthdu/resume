@@ -149,7 +149,7 @@ export const Resume = ({ id }: IResume) => (
                     </a>
                   </Feed.Summary>
                   <Feed.Extra text>
-                    <strong>22</strong> Courses completed & <strong>319</strong> Lessons watched
+                    <strong>29</strong> Courses completed & <strong>395</strong> Lessons watched
                   </Feed.Extra>
                 </Feed.Content>
               </Feed.Event>
