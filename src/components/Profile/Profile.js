@@ -1,6 +1,5 @@
 // @flow
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Divider, Grid, Header, Menu, Segment } from 'semantic-ui-react';
 import Gallery from '../Galery/Galery';
 
@@ -54,20 +53,20 @@ const portfolioImages = [
     caption: 'NeoDash - DAP'
   },
   {
+    src: 'images/neodash_direct_sales.png',
+    thumbnail: 'images/neodash_direct_sales.png',
+    thumbnailWidth: 190,
+    thumbnailHeight: 180,
+    tags: [{ value: 'mockup', title: 'mockup' }],
+    caption: 'NeoDash - Direct Sales'
+  },
+  {
     src: 'images/cn_events_entrance_cards.png',
     thumbnail: 'images/cn_events_entrance_cards.png',
     thumbnailWidth: 288,
     thumbnailHeight: 180,
     tags: [{ value: 'site', title: 'site' }],
     caption: 'CN Kids - Entrance Cards'
-  },
-  {
-    src: 'images/cn_events_entrance_list.png',
-    thumbnail: 'images/cn_events_entrance_list.png',
-    thumbnailWidth: 288,
-    thumbnailHeight: 180,
-    tags: [{ value: 'site', title: 'site' }],
-    caption: 'CN Kids - Entrance List'
   },
   {
     src: 'images/cn_events_report.png',
@@ -183,4 +182,4 @@ export class Profile extends Component<IProfile, IProfileState> {
   }
 }
 
-export default connect()(Profile);
+export default Profile;
