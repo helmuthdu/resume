@@ -37,7 +37,7 @@ export const Resume = ({ id }: IResume) => (
                       <List.Item>
                         <List.Content>
                           Performed design, front-end architecture, and development of market analysis and reporting
-                          systems for automobile manufacturers using Vue, Kendo-UI and Node
+                          systems for automobile manufacturers using Vue, Kendo-UI, and Node
                         </List.Content>
                       </List.Item>
                       <List.Item>
@@ -92,7 +92,11 @@ export const Resume = ({ id }: IResume) => (
                           <a href="http://cn-events.azurewebsites.net/e" target="_blank" rel="noopener noreferrer">
                             check-in web app
                           </a>{' '}
-                          for a large local church using Angular, ASP.NET Core and SQL Server and Azure.
+                          for the kid’s department at{' '}
+                          <a href="http://comunidadedasnacoes.com.br" target="_blank" rel="noopener noreferrer">
+                            Community of Nations
+                          </a>{' '}
+                          using Angular, ASP.NET Core, SQL Server, and Azure.
                         </List.Content>
                       </List.Item>
                       <List.Item>

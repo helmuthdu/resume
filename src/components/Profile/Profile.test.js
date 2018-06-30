@@ -17,7 +17,7 @@ describe('component -> Profile', () => {
   });
 
   it('should change the active menu item when clicked', () => {
-    const getActiveProperty = (name) => wrapper.find({ name }).prop('active');
+    const getActiveProperty = name => wrapper.find({ name }).prop('active');
     const expected = [false, false, false];
     const wrapper = shallow(<Profile id={id} />);
 

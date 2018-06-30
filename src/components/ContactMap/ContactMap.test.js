@@ -8,12 +8,12 @@ describe('component -> ContactMap', () => {
   };
 
   it('renders without crashing', () => {
-    const wrapper = shallow(<ContactMap {...props}/>);
+    const wrapper = shallow(<ContactMap {...props} />);
     expect(wrapper.instance()).toBeNull();
   });
 
   it('renders without crashing', () => {
-    const wrapper = shallow(<GMaps {...props}/>);
+    const wrapper = shallow(<GMaps {...props} />);
     expect(wrapper.props().defaultZoom).toBe(12);
   });
 });

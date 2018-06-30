@@ -23,9 +23,7 @@ describe('component -> SidebarMenu', () => {
   });
 
   it('should render correctly', () => {
-    const wrapper = render(
-      withRouter(<SidebarMenu {...props} />)
-    );
+    const wrapper = render(withRouter(<SidebarMenu {...props} />));
     expect(wrapper).toMatchSnapshot();
   });
 });
