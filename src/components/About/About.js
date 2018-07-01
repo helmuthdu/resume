@@ -6,6 +6,24 @@ interface IAbout {
   id: string;
 }
 
+const EXPERIENCES = [
+  {
+    icon: 'fork',
+    header: 'Web Development',
+    description: 'Frontend and Backend Experience'
+  },
+  {
+    icon: 'computer',
+    header: 'Web Design',
+    description: 'Progressive web pages, wireframes and mockups Experience'
+  },
+  {
+    icon: 'world',
+    header: 'GIS',
+    description: 'Geographic Information Systems Experience'
+  }
+];
+
 export const About = ({ id }: IAbout) => (
   <Segment id={id} vertical className="stripe" textAlign="center">
     <Header size="large">
@@ -52,31 +70,19 @@ export const About = ({ id }: IAbout) => (
           </Segment>
         </Grid.Column>
         <Grid.Column>
-          {/* MY EXPERTISE */}
+          {/* EXPERIENCES */}
           <Segment basic>
             <Header>My Experiences</Header>
             <List relaxed>
-              <List.Item>
-                <List.Icon name="fork" size="large" verticalAlign="middle" />
-                <List.Content>
-                  <List.Header as="a">Web Development</List.Header>
-                  <List.Description as="a">Frontend and Backend Experience</List.Description>
-                </List.Content>
-              </List.Item>
-              <List.Item>
-                <List.Icon name="computer" size="large" verticalAlign="middle" />
-                <List.Content>
-                  <List.Header as="a">Web Design</List.Header>
-                  <List.Description as="a">Progressive web pages, wireframes and mockups Experience</List.Description>
-                </List.Content>
-              </List.Item>
-              <List.Item>
-                <List.Icon name="world" size="large" verticalAlign="middle" />
-                <List.Content>
-                  <List.Header as="a">GIS</List.Header>
-                  <List.Description as="a">Geographic Information Systems Experience</List.Description>
-                </List.Content>
-              </List.Item>
+              {EXPERIENCES.map(experience => (
+                <List.Item>
+                  <List.Icon name={experience.icon} size="large" verticalAlign="middle" />
+                  <List.Content>
+                    <List.Header>{experience.header}</List.Header>
+                    <List.Description>{experience.description}</List.Description>
+                  </List.Content>
+                </List.Item>
+              ))}
             </List>
           </Segment>
         </Grid.Column>
