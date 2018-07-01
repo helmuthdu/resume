@@ -82,7 +82,7 @@ ShallowWrapper {
           </Header>
           <Button
                     as="a"
-                    href="/docs/helmuth_saatkamp_resume_en.pdf"
+                    href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
                     inverted={true}
                     primary={true}
                     role="button"
@@ -170,7 +170,7 @@ ShallowWrapper {
 </Header>,
             <Button
               as="a"
-              href="/docs/helmuth_saatkamp_resume_en.pdf"
+              href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
               inverted={true}
               primary={true}
               role="button"
@@ -227,7 +227,7 @@ ShallowWrapper {
             "props": Object {
               "as": "a",
               "children": "Download My CV",
-              "href": "/docs/helmuth_saatkamp_resume_en.pdf",
+              "href": "https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf",
               "inverted": true,
               "primary": true,
               "role": "button",
@@ -312,7 +312,7 @@ ShallowWrapper {
             </Header>
             <Button
                         as="a"
-                        href="/docs/helmuth_saatkamp_resume_en.pdf"
+                        href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
                         inverted={true}
                         primary={true}
                         role="button"
@@ -400,7 +400,7 @@ ShallowWrapper {
 </Header>,
               <Button
                 as="a"
-                href="/docs/helmuth_saatkamp_resume_en.pdf"
+                href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
                 inverted={true}
                 primary={true}
                 role="button"
@@ -457,7 +457,7 @@ ShallowWrapper {
               "props": Object {
                 "as": "a",
                 "children": "Download My CV",
-                "href": "/docs/helmuth_saatkamp_resume_en.pdf",
+                "href": "https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf",
                 "inverted": true,
                 "primary": true,
                 "role": "button",
