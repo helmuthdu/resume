@@ -7,6 +7,49 @@ interface IContact {
   id: string;
 }
 
+const FIELDS = [
+  {
+    label: 'Email',
+    type: 'input',
+    props: {
+      type: 'email',
+      name: 'email',
+      maxLength: '100',
+      placeholder: 'Email'
+    }
+  },
+  {
+    label: 'Name',
+    type: 'input',
+    props: {
+      type: 'text',
+      name: 'name',
+      maxLength: '100',
+      placeholder: 'Name'
+    }
+  },
+  {
+    label: 'Title',
+    type: 'input',
+    props: {
+      type: 'text',
+      name: 'title',
+      maxLength: '100',
+      placeholder: 'Title'
+    }
+  },
+  {
+    label: 'Message',
+    type: 'textarea',
+    props: {
+      name: 'message',
+      maxLength: '600',
+      placeholder: 'Message',
+      rows: '3'
+    }
+  }
+];
+
 export const Contact = ({ id }: IContact) => (
   <Segment id={id} vertical inverted textAlign="center" className="stripe feature">
     <Header size="large" inverted>
@@ -26,22 +69,12 @@ export const Contact = ({ id }: IContact) => (
         <Grid.Column width="5">
           <Segment piled>
             <Form method="POST" action="https://formspree.io/helmuthdu@gmail.com">
-              <Form.Field required>
-                <label>Email</label>
-                <input type="email" name="email" maxLength="100" placeholder="Email" />
-              </Form.Field>
-              <Form.Field required>
-                <label>Name</label>
-                <input type="text" name="name" maxLength="100" placeholder="Name" />
-              </Form.Field>
-              <Form.Field required>
-                <label>Title</label>
-                <input type="text" name="title" maxLength="100" placeholder="Title" />
-              </Form.Field>
-              <Form.Field required>
-                <label>Message</label>
-                <textarea name="message" maxLength="600" placeholder="Message" rows="3" />
-              </Form.Field>
+              {FIELDS.map(field => (
+                <Form.Field required>
+                  <label>{field.label}</label>
+                  <field.type {...field.props} />
+                </Form.Field>
+              ))}
               <Button type="submit">Submit</Button>
             </Form>
           </Segment>
