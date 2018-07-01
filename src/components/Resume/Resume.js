@@ -1,11 +1,50 @@
 // @flow
 import React from 'react';
-import { connect } from 'react-redux';
 import { Divider, Feed, Grid, Header, Icon, Label, List, Progress, Segment } from 'semantic-ui-react';
 
 interface IResume {
   id: string;
 }
+
+const ASSETS = ['Responsible', 'Diligence', 'Labour', 'Creative', 'Rigor', 'Initiative', 'Funny', 'Visual Thinking'];
+
+const SKILLS = [
+  {
+    name: 'HTML / CSS / SASS',
+    level: 100
+  },
+  {
+    name: 'Javascript / Node',
+    level: 100
+  },
+  {
+    name: 'Vue / Angular / React',
+    level: 100
+  },
+  {
+    name: 'C# / Asp.Net Core',
+    level: 75
+  },
+  {
+    name: 'SQL Server / PostgreSQL / MongoDB',
+    level: 75
+  },
+  {
+    name: 'Affinity Design',
+    level: 100
+  }
+];
+
+const LANGUAGES = [
+  {
+    name: 'Portuguese',
+    level: 100
+  },
+  {
+    name: 'English',
+    level: 75
+  }
+];
 
 export const Resume = ({ id }: IResume) => (
   <Segment id={id} vertical textAlign="center" className="stripe alternate feature">
@@ -175,16 +214,7 @@ export const Resume = ({ id }: IResume) => (
             <Header icon>Assets</Header>
             <Icon name="tags" color="grey" className="pull-right" />
             <Divider hidden />
-            <Label.Group size="large">
-              <Label>Responsible</Label>
-              <Label>Diligence</Label>
-              <Label>Labour</Label>
-              <Label>Creative</Label>
-              <Label>Rigor</Label>
-              <Label>Initiative</Label>
-              <Label>Funny</Label>
-              <Label>Visual Thinking</Label>
-            </Label.Group>
+            <Label.Group size="large">{ASSETS.map(asset => <Label key={asset}>{asset}</Label>)}</Label.Group>
           </Segment>
         </Grid.Column>
         <Grid.Column>
@@ -192,69 +222,31 @@ export const Resume = ({ id }: IResume) => (
             <Header icon>Skills</Header>
             <Icon name="configure" color="grey" className="pull-right" />
             <Feed>
-              <Feed.Event>
-                <Feed.Content>
-                  <Feed.Summary>
-                    HTML / CSS / SASS <Progress percent={100} size="tiny" color="blue" className="skill-bar" />
-                  </Feed.Summary>
-                </Feed.Content>
-              </Feed.Event>
-              <Feed.Event>
-                <Feed.Content>
-                  <Feed.Summary>
-                    Javascript / Node <Progress percent={100} size="tiny" color="blue" className="skill-bar" />
-                  </Feed.Summary>
-                </Feed.Content>
-              </Feed.Event>
-              <Feed.Event>
-                <Feed.Content>
-                  <Feed.Summary>
-                    Vue / Angular / React <Progress percent={100} size="tiny" color="blue" className="skill-bar" />
-                  </Feed.Summary>
-                </Feed.Content>
-              </Feed.Event>
-              <Feed.Event>
-                <Feed.Content>
-                  <Feed.Summary>
-                    C# / Asp.Net Core <Progress percent={75} size="tiny" color="blue" className="skill-bar" />
-                  </Feed.Summary>
-                </Feed.Content>
-              </Feed.Event>
-              <Feed.Event>
-                <Feed.Content>
-                  <Feed.Summary>
-                    SQL Server / PostgreSQL / MongoDB{' '}
-                    <Progress percent={75} size="tiny" color="blue" className="skill-bar" />
-                  </Feed.Summary>
-                </Feed.Content>
-              </Feed.Event>
-              <Feed.Event>
-                <Feed.Content>
-                  <Feed.Summary>
-                    Affinity Design <Progress percent={100} size="tiny" color="blue" className="skill-bar" />
-                  </Feed.Summary>
-                </Feed.Content>
-              </Feed.Event>
+              {SKILLS.map(skill => (
+                <Feed.Event key={skill.name}>
+                  <Feed.Content>
+                    <Feed.Summary>
+                      {skill.name} <Progress percent={skill.level} size="tiny" color="blue" className="skill-bar" />
+                    </Feed.Summary>
+                  </Feed.Content>
+                </Feed.Event>
+              ))}
             </Feed>
           </Segment>
           <Segment>
             <Header icon>Languages</Header>
             <Icon name="microphone" color="grey" className="pull-right" />
             <Feed>
-              <Feed.Event>
-                <Feed.Content>
-                  <Feed.Summary>
-                    Portuguese <Progress percent={100} size="tiny" color="blue" className="skill-bar" />
-                  </Feed.Summary>
-                </Feed.Content>
-              </Feed.Event>
-              <Feed.Event>
-                <Feed.Content>
-                  <Feed.Summary>
-                    English <Progress percent={75} size="tiny" color="blue" className="skill-bar" />
-                  </Feed.Summary>
-                </Feed.Content>
-              </Feed.Event>
+              {LANGUAGES.map(language => (
+                <Feed.Event key={language.name}>
+                  <Feed.Content>
+                    <Feed.Summary>
+                      {language.name}{' '}
+                      <Progress percent={language.level} size="tiny" color="blue" className="skill-bar" />
+                    </Feed.Summary>
+                  </Feed.Content>
+                </Feed.Event>
+              ))}
             </Feed>
           </Segment>
         </Grid.Column>
@@ -263,4 +255,4 @@ export const Resume = ({ id }: IResume) => (
   </Segment>
 );
 
-export default connect()(Resume);
+export default Resume;

@@ -134,7 +134,7 @@ const classes = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    '@media (min-width: 200px)': {
+    '@media (min-width: 500px)': {
       marginRight: -gutter.large
     }
   },
