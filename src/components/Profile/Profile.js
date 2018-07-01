@@ -7,104 +7,78 @@ const portfolioImages = [
   {
     src: 'images/neogig_start_page.png',
     thumbnail: 'images/neogig_start_page.png',
-    thumbnailWidth: 288,
-    thumbnailHeight: 180,
     tags: [{ value: 'wireframe', title: 'wireframe' }],
     caption: 'NeoGIG - Start Page'
   },
   {
     src: 'images/system_control_panel.png',
     thumbnail: 'images/system_control_panel.png',
-    thumbnailWidth: 288,
-    thumbnailHeight: 180,
     tags: [{ value: 'wireframe', title: 'wireframe' }],
     caption: 'NeoGIG - Control Panel'
   },
   {
     src: 'images/neogig.png',
     thumbnail: 'images/neogig.png',
-    thumbnailWidth: 288,
-    thumbnailHeight: 180,
     tags: [{ value: 'mockup', title: 'mockup' }],
     caption: 'NeoGIG - Stores Layer'
   },
   {
     src: 'images/neodash_dashboard_project.png',
     thumbnail: 'images/neodash_dashboard_project.png',
-    thumbnailWidth: 288,
-    thumbnailHeight: 180,
     tags: [{ value: 'wireframe', title: 'wireframe' }],
     caption: 'NeoDash - Reports overview'
   },
   {
     src: 'images/neodash_upload.png',
     thumbnail: 'images/neodash_upload.png',
-    thumbnailWidth: 288,
-    thumbnailHeight: 180,
     tags: [{ value: 'wireframe', title: 'wireframe' }],
     caption: 'NeoDash - Files Upload'
   },
   {
     src: 'images/neodash_dap.png',
     thumbnail: 'images/neodash_dap.png',
-    thumbnailWidth: 288,
-    thumbnailHeight: 180,
     tags: [{ value: 'mockup', title: 'mockup' }],
     caption: 'NeoDash - DAP'
   },
   {
     src: 'images/neodash_direct_sales.png',
     thumbnail: 'images/neodash_direct_sales.png',
-    thumbnailWidth: 190,
-    thumbnailHeight: 180,
     tags: [{ value: 'mockup', title: 'mockup' }],
     caption: 'NeoDash - Direct Sales'
   },
   {
     src: 'images/cn_events_entrance_cards.png',
     thumbnail: 'images/cn_events_entrance_cards.png',
-    thumbnailWidth: 288,
-    thumbnailHeight: 180,
     tags: [{ value: 'site', title: 'site' }],
     caption: 'CN Kids - Entrance Cards'
   },
   {
     src: 'images/cn_events_report.png',
     thumbnail: 'images/cn_events_report.png',
-    thumbnailWidth: 123,
-    thumbnailHeight: 180,
     tags: [{ value: 'site', title: 'site' }],
     caption: 'CN Kids - Reports'
   },
   {
     src: 'images/obsis_sisbra.png',
     thumbnail: 'images/obsis_sisbra.png',
-    thumbnailWidth: 120,
-    thumbnailHeight: 180,
     tags: [{ value: 'site', title: 'site' }],
     caption: 'Sisbra - Observatório Sismológico de Brasília - http://obsis.unb.br/sisbra'
   },
   {
     src: 'images/evenths_mobile_ui_1.png',
     thumbnail: 'images/evenths_mobile_ui_1.png',
-    thumbnailWidth: 100,
-    thumbnailHeight: 180,
     tags: [{ value: 'wireframe', title: 'wireframe' }],
     caption: 'Evenths - Navigation'
   },
   {
     src: 'images/evenths_mobile_ui_2.png',
     thumbnail: 'images/evenths_mobile_ui_2.png',
-    thumbnailWidth: 100,
-    thumbnailHeight: 180,
     tags: [{ value: 'wireframe', title: 'wireframe' }],
     caption: 'Evenths - Events'
   },
   {
     src: 'images/evenths_mobile_ui_3.png',
     thumbnail: 'images/evenths_mobile_ui_3.png',
-    thumbnailWidth: 100,
-    thumbnailHeight: 180,
     tags: [{ value: 'wireframe', title: 'wireframe' }],
     caption: 'Evenths - Notifications'
   }

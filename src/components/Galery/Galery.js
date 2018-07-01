@@ -85,7 +85,7 @@ export class Gallery extends Component<IGallery, IGalleryState> {
             src={obj.thumbnail}
             className={css(classes.source)}
             alt=""
-            style={{ width: 'auto', height: 'auto', maxHeight: 180 }}
+            style={{ width: 'auto', height: 'auto', maxHeight: 165 }}
           />
         </a>
       );
@@ -134,8 +134,7 @@ const classes = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-
-    '@media (min-width: 500px)': {
+    '@media (min-width: 200px)': {
       marginRight: -gutter.large
     }
   },
