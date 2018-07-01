@@ -75,7 +75,7 @@ export const About = ({ id }: IAbout) => (
             <Header>My Experiences</Header>
             <List relaxed>
               {EXPERIENCES.map(experience => (
-                <List.Item>
+                <List.Item key={experience.icon}>
                   <List.Icon name={experience.icon} size="large" verticalAlign="middle" />
                   <List.Content>
                     <List.Header>{experience.header}</List.Header>

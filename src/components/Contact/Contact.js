@@ -70,7 +70,7 @@ export const Contact = ({ id }: IContact) => (
           <Segment piled>
             <Form method="POST" action="https://formspree.io/helmuthdu@gmail.com">
               {FIELDS.map(field => (
-                <Form.Field required>
+                <Form.Field key={field.label} required>
                   <label>{field.label}</label>
                   <field.type {...field.props} />
                 </Form.Field>
