@@ -20,7 +20,7 @@ export const MasterHead = ({ pathname }: any) => (
         inverted
         size="large"
         as="a"
-        href={`${process.env.PUBLIC_URL || ''}/docs/helmuth_saatkamp_resume_en.pdf`}>
+        href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf">
         Download My CV
       </Button>
     </Container>
