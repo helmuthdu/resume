@@ -65,7 +65,7 @@ export const About = ({ id }: IAbout) => (
                 <strong>Github</strong> <a href="https://github.com/helmuthdu">helmuthdu</a>
               </List.Item>
               <List.Item>
-                <strong>Location</strong> Brasília/DF - Brazil
+                <strong>Location</strong> Berlin - Germany
               </List.Item>
             </List>
           </Segment>

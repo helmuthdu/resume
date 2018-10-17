@@ -23,11 +23,11 @@ const SKILLS = [
   },
   {
     name: 'C# / Asp.Net Core',
-    level: 75
+    level: 65
   },
   {
     name: 'SQL Server / PostgreSQL / MongoDB',
-    level: 75
+    level: 65
   },
   {
     name: 'Affinity Design',
@@ -43,6 +43,10 @@ const LANGUAGES = [
   {
     name: 'English',
     level: 75
+  },
+  {
+    name: 'German',
+    level: 10
   }
 ];
 
@@ -59,17 +63,31 @@ export const Resume = ({ id }: IResume) => (
       <Grid.Row>
         <Grid.Column>
           <Segment>
-            <Header icon>Expertise</Header>
+            <Header icon>Work Experience</Header>
             <Icon name="briefcase" color="grey" className="pull-right" />
             <Feed>
               <Feed.Event>
                 <Feed.Content>
                   <Feed.Date>
-                    nov 2013 -{' '}
+                    set 2018 -{' '}
                     <Label size="small" color="blue">
                       Current
                     </Label>
                   </Feed.Date>
+                  <Feed.Summary>Senior Front End Engineer - Leverton</Feed.Summary>
+                  <Feed.Extra text>
+                    <List relaxed>
+                      <List.Item>
+                        <List.Content>Implement new features for AI based systems using ReactJS and Redux</List.Content>
+                      </List.Item>
+                    </List>
+                  </Feed.Extra>
+                </Feed.Content>
+              </Feed.Event>
+              <Divider hidden />
+              <Feed.Event>
+                <Feed.Content>
+                  <Feed.Date>nov 2013 - ago 2018</Feed.Date>
                   <Feed.Summary>Senior Front End Developer - Neocom</Feed.Summary>
                   <Feed.Extra text>
                     <List relaxed>
