@@ -30,7 +30,8 @@ export const About = ({ id }: IAbout) => (
       ABOUT ME
       <Header sub>
         <cite>
-          A talented web developer located on our lovely planet<br />
+          A talented web developer located on our lovely planet
+          <br />
         </cite>
       </Header>
     </Header>

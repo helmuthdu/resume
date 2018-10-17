@@ -20,7 +20,8 @@ const AboutPage = () => {
           </a>
         </p>
         <p>
-          For any issues, any PR are welcoming<a href="https://github.com/helmuthdu/resume" target="blank">
+          For any issues, any PR are welcoming
+          <a href="https://github.com/helmuthdu/resume" target="blank">
             {' '}
             on this repository
           </a>

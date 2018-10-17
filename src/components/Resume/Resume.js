@@ -214,7 +214,11 @@ export const Resume = ({ id }: IResume) => (
             <Header icon>Assets</Header>
             <Icon name="tags" color="grey" className="pull-right" />
             <Divider hidden />
-            <Label.Group size="large">{ASSETS.map(asset => <Label key={asset}>{asset}</Label>)}</Label.Group>
+            <Label.Group size="large">
+              {ASSETS.map(asset => (
+                <Label key={asset}>{asset}</Label>
+              ))}
+            </Label.Group>
           </Segment>
         </Grid.Column>
         <Grid.Column>
