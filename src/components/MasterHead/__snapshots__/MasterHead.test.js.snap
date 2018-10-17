@@ -2,15 +2,15 @@
 
 exports[`component -> MasterHead should render correctly 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown
+  Symbol(enzyme.__unrendered__): <MasterHead
     pathname="/"
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -20,77 +20,77 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
-        <Connect(Component)
+        <Connect(HeaderMenu)
           inverted={true}
           items={
-                    Array [
-                              Object {
-                                "exact": true,
-                                "icon": "home",
-                                "inverted": true,
-                                "name": "Home",
-                                "path": "/",
-                              },
-                              Object {
-                                "exact": false,
-                                "icon": "info circle",
-                                "name": "About",
-                                "path": "#about",
-                              },
-                              Object {
-                                "exact": false,
-                                "icon": "newspaper",
-                                "name": "Resume",
-                                "path": "#resume",
-                              },
-                              Object {
-                                "exact": false,
-                                "icon": "newspaper",
-                                "name": "Portfolio",
-                                "path": "#portfolio",
-                              },
-                              Object {
-                                "exact": false,
-                                "icon": "newspaper",
-                                "name": "Contact",
-                                "path": "#contact",
-                              },
-                            ]
+            Array [
+              Object {
+                "exact": true,
+                "icon": "home",
+                "inverted": true,
+                "name": "Home",
+                "path": "/",
+              },
+              Object {
+                "exact": false,
+                "icon": "info circle",
+                "name": "About",
+                "path": "#about",
+              },
+              Object {
+                "exact": false,
+                "icon": "newspaper",
+                "name": "Resume",
+                "path": "#resume",
+              },
+              Object {
+                "exact": false,
+                "icon": "newspaper",
+                "name": "Portfolio",
+                "path": "#portfolio",
+              },
+              Object {
+                "exact": false,
+                "icon": "newspaper",
+                "name": "Contact",
+                "path": "#contact",
+              },
+            ]
           }
           pathname="/"
           pointing={true}
           secondary={true}
           visible={true}
-/>,
+        />,
         <Container
           text={true}
->
+        >
           <Header
-                    as="h1"
-                    inverted={true}
+            as="h1"
+            inverted={true}
           >
-                    Helmuth Saatkamp
+            Helmuth Saatkamp
           </Header>
           <Divider
-                    hidden={true}
+            hidden={true}
           />
           <Header
-                    as="h2"
-                    inverted={true}
+            as="h2"
+            inverted={true}
           >
-                    Web Developer
+            Web Developer
           </Header>
           <Button
-                    as="a"
-                    href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
-                    inverted={true}
-                    primary={true}
-                    role="button"
-                    size="large"
+            as="a"
+            href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
+            inverted={true}
+            primary={true}
+            role="button"
+            size="large"
           >
-                    Download My CV
+            Download My CV
           </Button>
-</Container>,
+        </Container>,
       ],
       "className": "masthead",
       "inverted": true,
@@ -156,18 +156,18 @@ ShallowWrapper {
             <Header
               as="h1"
               inverted={true}
->
+            >
               Helmuth Saatkamp
-</Header>,
+            </Header>,
             <Divider
               hidden={true}
-/>,
+            />,
             <Header
               as="h2"
               inverted={true}
->
+            >
               Web Developer
-</Header>,
+            </Header>,
             <Button
               as="a"
               href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
@@ -175,9 +175,9 @@ ShallowWrapper {
               primary={true}
               role="button"
               size="large"
->
+            >
               Download My CV
-</Button>,
+            </Button>,
           ],
           "text": true,
         },
@@ -250,77 +250,77 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
-          <Connect(Component)
+          <Connect(HeaderMenu)
             inverted={true}
             items={
-                        Array [
-                                    Object {
-                                      "exact": true,
-                                      "icon": "home",
-                                      "inverted": true,
-                                      "name": "Home",
-                                      "path": "/",
-                                    },
-                                    Object {
-                                      "exact": false,
-                                      "icon": "info circle",
-                                      "name": "About",
-                                      "path": "#about",
-                                    },
-                                    Object {
-                                      "exact": false,
-                                      "icon": "newspaper",
-                                      "name": "Resume",
-                                      "path": "#resume",
-                                    },
-                                    Object {
-                                      "exact": false,
-                                      "icon": "newspaper",
-                                      "name": "Portfolio",
-                                      "path": "#portfolio",
-                                    },
-                                    Object {
-                                      "exact": false,
-                                      "icon": "newspaper",
-                                      "name": "Contact",
-                                      "path": "#contact",
-                                    },
-                                  ]
+              Array [
+                Object {
+                  "exact": true,
+                  "icon": "home",
+                  "inverted": true,
+                  "name": "Home",
+                  "path": "/",
+                },
+                Object {
+                  "exact": false,
+                  "icon": "info circle",
+                  "name": "About",
+                  "path": "#about",
+                },
+                Object {
+                  "exact": false,
+                  "icon": "newspaper",
+                  "name": "Resume",
+                  "path": "#resume",
+                },
+                Object {
+                  "exact": false,
+                  "icon": "newspaper",
+                  "name": "Portfolio",
+                  "path": "#portfolio",
+                },
+                Object {
+                  "exact": false,
+                  "icon": "newspaper",
+                  "name": "Contact",
+                  "path": "#contact",
+                },
+              ]
             }
             pathname="/"
             pointing={true}
             secondary={true}
             visible={true}
-/>,
+          />,
           <Container
             text={true}
->
+          >
             <Header
-                        as="h1"
-                        inverted={true}
+              as="h1"
+              inverted={true}
             >
-                        Helmuth Saatkamp
+              Helmuth Saatkamp
             </Header>
             <Divider
-                        hidden={true}
+              hidden={true}
             />
             <Header
-                        as="h2"
-                        inverted={true}
+              as="h2"
+              inverted={true}
             >
-                        Web Developer
+              Web Developer
             </Header>
             <Button
-                        as="a"
-                        href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
-                        inverted={true}
-                        primary={true}
-                        role="button"
-                        size="large"
+              as="a"
+              href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
+              inverted={true}
+              primary={true}
+              role="button"
+              size="large"
             >
-                        Download My CV
+              Download My CV
             </Button>
-</Container>,
+          </Container>,
         ],
         "className": "masthead",
         "inverted": true,
@@ -386,18 +386,18 @@ ShallowWrapper {
               <Header
                 as="h1"
                 inverted={true}
->
+              >
                 Helmuth Saatkamp
-</Header>,
+              </Header>,
               <Divider
                 hidden={true}
-/>,
+              />,
               <Header
                 as="h2"
                 inverted={true}
->
+              >
                 Web Developer
-</Header>,
+              </Header>,
               <Button
                 as="a"
                 href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
@@ -405,9 +405,9 @@ ShallowWrapper {
                 primary={true}
                 role="button"
                 size="large"
->
+              >
                 Download My CV
-</Button>,
+              </Button>,
             ],
             "text": true,
           },
@@ -478,6 +478,16 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
   },
