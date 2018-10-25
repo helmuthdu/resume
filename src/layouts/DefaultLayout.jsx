@@ -2,13 +2,12 @@
 import 'prismjs/themes/prism-okaidia.css';
 import React, { Fragment, PureComponent } from 'react';
 import { Route } from 'react-router-dom';
-
 import 'semantic-ui-css/semantic.css';
 import { Container, Icon, Segment, Sidebar, Visibility } from 'semantic-ui-react';
 import HeaderMenu from '../components/HeaderMenu/HeaderMenu';
 import SidebarMenu from '../components/SidebarMenu/SidebarMenu';
-import '../styles/responsive.css';
-import '../styles/site.css';
+import './DefaultLayout.css';
+import './ResponsiveLayout.css';
 
 export const menuItems = [
   { name: 'Home', path: '/', exact: true, icon: 'home', inverted: true },

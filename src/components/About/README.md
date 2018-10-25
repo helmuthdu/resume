@@ -4,4 +4,4 @@ About Section.
 
 ## Source
 
-    <About id={name}/>
+    <About id={string}/>

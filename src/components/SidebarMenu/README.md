@@ -4,4 +4,4 @@ Sidebar menu component.
 
 ## Source
 
-    <SidebarMenu visible={visible}  />
+    <SidebarMenu visible={boolean}  />

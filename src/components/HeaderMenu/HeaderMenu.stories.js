@@ -1,11 +1,12 @@
-const withReadme = require('storybook-readme/with-readme').default;
-const HeaderMenuReadme = require('./README.md');
-
+// @flow
 import { action } from '@storybook/addon-actions';
 import { boolean, text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import { HeaderMenu } from './HeaderMenu';
+
+const withReadme = require('storybook-readme/with-readme').default;
+const HeaderMenuReadme = require('./README.md');
 
 const items = [
   { name: 'Home', path: '/', exact: true },
@@ -27,5 +28,14 @@ storiesOf('HeaderMenu', module)
     const pathname = text('pathname', '/');
     const inverted = boolean('inverted', false);
 
-    return <HeaderMenu Link={LinkStub} items={items} pathname={pathname} inverted={inverted} dispatch={dispatchStub} />;
+    return (
+      <HeaderMenu
+        link={LinkStub}
+        items={items}
+        pathname={pathname}
+        inverted={inverted}
+        dispatch={dispatchStub}
+        toggleSidebar={action('toggleSidebar')}
+      />
+    );
   });

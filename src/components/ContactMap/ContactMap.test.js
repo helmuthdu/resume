@@ -1,3 +1,4 @@
+// @flow
 import { shallow } from 'enzyme/build/index';
 import React from 'react';
 import { ContactMap, GMaps } from './ContactMap';

@@ -4,7 +4,11 @@ Header menu component.
 
 ## Source
 
-    <HeaderMenu items={items}  pathname={pathname} Link={Link} inverted={inverted} />
+    <HeaderMenu
+        items={array}
+        pathname={string}
+        link={children}
+        inverted={boolean} />
 
 ## Example of items
 

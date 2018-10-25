@@ -1,7 +1,7 @@
-# About component
+# Resume component
 
-About Section.
+Resume Section.
 
 ## Source
 
-    <About id={name}/>
+    <Resume id={string}/>

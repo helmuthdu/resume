@@ -1,11 +1,12 @@
-const withReadme = require('storybook-readme/with-readme').default;
-const TagsCardReadme = require('./README.md');
-
+// @flow
 import { action } from '@storybook/addon-actions';
 import { select, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import TagsCard from './TagsCard';
+
+const withReadme = require('storybook-readme/with-readme').default;
+const TagsCardReadme = require('./README.md');
 
 const tags = [
   { fieldValue: 'tag01', totalCount: 2 },

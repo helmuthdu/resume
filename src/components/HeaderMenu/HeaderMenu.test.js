@@ -1,3 +1,4 @@
+// @flow
 import { shallow } from 'enzyme';
 import 'jest';
 import React from 'react';

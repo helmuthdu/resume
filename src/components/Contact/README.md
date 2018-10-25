@@ -4,4 +4,4 @@ Contact Section.
 
 ## Source
 
-    <Contact id={name}/>
+    <Contact id={string}/>

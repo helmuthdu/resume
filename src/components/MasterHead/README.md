@@ -4,4 +4,4 @@ MasterHead Section.
 
 ## Source
 
-    <MasterHead id={name}/>
+    <MasterHead id={string}/>

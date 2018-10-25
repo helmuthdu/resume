@@ -1,11 +1,12 @@
-const withReadme = require('storybook-readme/with-readme').default;
-const SidebarMenuReadme = require('./README.md');
-
+// @flow
 import { action } from '@storybook/addon-actions';
 import { text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import SidebarMenu from './SidebarMenu';
+
+const withReadme = require('storybook-readme/with-readme').default;
+const SidebarMenuReadme = require('./README.md');
 
 const items = [
   { name: 'Home', path: '/', exact: true, icon: 'home' },

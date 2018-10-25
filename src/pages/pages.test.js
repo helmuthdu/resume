@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import { App } from './index';
+import { App } from '.';
 
 describe('pages -> App', () => {
   const history = {
