@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { bindActionCreators, Dispatch } from 'redux';
 import { Icon, Menu, Sidebar } from 'semantic-ui-react';
-import { toggleSidebar, UIStoreState } from '../../store/modules/ui';
+import { toggleSidebar } from '../../store/modules/ui';
 import { MenuItem, MenuProps } from '../Menu/Menu';
 
 interface SidebarMenuProps extends MenuProps {
@@ -32,7 +32,7 @@ export const SidebarMenu = ({ items, pathname, visible, toggleSidebar }: Sidebar
   );
 };
 
-const mapStateToProps = (state: UIStoreState) => ({
+const mapStateToProps = (state: any) => ({
   visible: state.ui.isSidebarVisible
 });
 

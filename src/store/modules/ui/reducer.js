@@ -2,12 +2,12 @@
 import { initialState, UIStoreState } from './state';
 import { UI_TOGGLE_SIDEBAR } from './types';
 
-export interface ToggleSidebar {
+export interface ToggleSidebarActions {
   type: typeof UI_TOGGLE_SIDEBAR;
 }
 
 // Reducer
-export const uiReducer = (state: UIStoreState = initialState, action: ToggleSidebar): UIStoreState => {
+export const reducer = (state: UIStoreState = initialState, action: ToggleSidebarActions): UIStoreState => {
   switch (action.type) {
     case UI_TOGGLE_SIDEBAR:
       return Object.assign({}, state, { isSidebarVisible: !state.isSidebarVisible });

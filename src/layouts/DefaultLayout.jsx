@@ -68,10 +68,10 @@ export class DefaultLayout extends PureComponent<DefaultLayoutProps, DefaultLayo
               {isHome ? null : <HeaderMenu pathname={pathname} items={menuItems} />}
 
               {/* Render children pages */}
-              <div style={{ paddingBottom: 47 }}>{this.props.children}</div>
+              {this.props.children}
 
               {/* Footer */}
-              <Segment inverted vertical style={{ position: 'absolute', bottom: 0, width: '100%' }}>
+              <Segment inverted vertical style={{ position: 'fixed', bottom: 0, width: '100%' }}>
                 <Container textAlign="center">
                   <p>
                     Powered with <Icon name="heart" /> by React

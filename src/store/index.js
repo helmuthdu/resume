@@ -1,35 +1,66 @@
+// @flow
 import { anchorate } from 'anchorate';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
-import { createBrowserHistory } from 'history';
+import { createBrowserHistory, createMemoryHistory } from 'history';
 import { applyMiddleware, compose, createStore } from 'redux';
+import { combineReducers } from 'redux';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import thunkMiddleware from 'redux-thunk';
-import rootReducer from './modules';
 
-export const history = createBrowserHistory({ basename: process.env.PUBLIC_URL });
+import { uiStore } from './modules';
 
-history.listen(() => {
-  anchorate();
-});
+export const isServer = !(typeof window !== 'undefined' && window.document && window.document.createElement);
 
-const initialState = {};
-const enhancers = [];
-const middleware = [thunkMiddleware, routerMiddleware(history)];
+export default (modules: any[] = [], url: string = process.env.PUBLIC_URL || '/') => {
+  // Create a history depending on the environment
+  const history = isServer
+    ? createMemoryHistory({
+        initialEntries: [url]
+      })
+    : createBrowserHistory({
+        basename: url
+      });
 
-if (process.env.NODE_ENV === 'development') {
-  // Redux middleware that spits an error on you when you try to mutate your state either inside a dispatch or between dispatches.
-  middleware.push(reduxImmutableStateInvariant());
+  history.listen(() => {
+    anchorate();
+  });
 
-  const devToolsExtension = window.devToolsExtension;
+  // Do we have preloaded state available? Great, save it.
+  const initialState = !isServer ? window.__PRELOADED_STATE__ : {};
+  const enhancers = [];
+  const middleware = [thunkMiddleware, routerMiddleware(history)];
 
-  if (typeof devToolsExtension === 'function') {
-    enhancers.push(devToolsExtension());
+  if (process.env.NODE_ENV === 'development' && !isServer) {
+    // Redux middleware that spits an error on you when you try to mutate your state either inside a dispatch or between dispatches.
+    middleware.push(reduxImmutableStateInvariant());
+
+    const devToolsExtension = window.devToolsExtension;
+
+    if (typeof devToolsExtension === 'function') {
+      enhancers.push(devToolsExtension());
+    }
   }
-}
 
-const composedEnhancers = compose(
-  applyMiddleware(...middleware),
-  ...enhancers
-);
+  const composedEnhancers = compose(
+    applyMiddleware(...middleware),
+    ...enhancers
+  );
 
-export default createStore(connectRouter(history)(rootReducer), initialState, composedEnhancers);
+  // Delete it once we have it stored in a variable
+  if (!isServer) {
+    delete window.__PRELOADED_STATE__;
+  }
+
+  const rootReducer = combineReducers({
+    [uiStore.name]: uiStore.reducer,
+    ...modules.reduce((acc, module: any) => ({ ...acc, [module.name]: module.reducer }), {})
+  });
+
+  // Create the store
+  const store = createStore(connectRouter(history)(rootReducer), initialState, composedEnhancers);
+
+  return {
+    store,
+    history
+  };
+};

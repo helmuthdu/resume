@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import { Card, List } from 'semantic-ui-react';
 
