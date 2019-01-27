@@ -1,500 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`component -> MasterHead should render correctly 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <MasterHead
-    pathname="/"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "function",
-    "props": Object {
-      "children": Array [
-        <Connect(HeaderMenu)
-          inverted={true}
-          items={
-            Array [
-              Object {
-                "exact": true,
-                "icon": "home",
-                "inverted": true,
-                "name": "Home",
-                "path": "/",
-              },
-              Object {
-                "exact": false,
-                "icon": "info circle",
-                "name": "About",
-                "path": "#about",
-              },
-              Object {
-                "exact": false,
-                "icon": "newspaper",
-                "name": "Resume",
-                "path": "#resume",
-              },
-              Object {
-                "exact": false,
-                "icon": "newspaper",
-                "name": "Portfolio",
-                "path": "#portfolio",
-              },
-              Object {
-                "exact": false,
-                "icon": "newspaper",
-                "name": "Contact",
-                "path": "#contact",
-              },
-            ]
-          }
-          pathname="/"
-          pointing={true}
-          secondary={true}
-          visible={true}
-        />,
-        <Container
-          text={true}
-        >
-          <Header
-            as="h1"
-            inverted={true}
-          >
-            Helmuth Saatkamp
-          </Header>
-          <Divider
-            hidden={true}
-          />
-          <Header
-            as="h2"
-            inverted={true}
-          >
-            Web Developer
-          </Header>
-          <Button
-            as="a"
-            href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
-            inverted={true}
-            primary={true}
-            role="button"
-            size="large"
-          >
-            Download My CV
-          </Button>
-        </Container>,
-      ],
-      "className": "masthead",
-      "inverted": true,
-      "textAlign": "center",
-      "vertical": true,
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
+<Segment
+  className="masthead"
+  inverted={true}
+  textAlign="center"
+  vertical={true}
+>
+  <Connect(HeaderMenu)
+    inverted={true}
+    items={
+      Array [
+        Object {
+          "exact": true,
+          "icon": "home",
           "inverted": true,
-          "items": Array [
-            Object {
-              "exact": true,
-              "icon": "home",
-              "inverted": true,
-              "name": "Home",
-              "path": "/",
-            },
-            Object {
-              "exact": false,
-              "icon": "info circle",
-              "name": "About",
-              "path": "#about",
-            },
-            Object {
-              "exact": false,
-              "icon": "newspaper",
-              "name": "Resume",
-              "path": "#resume",
-            },
-            Object {
-              "exact": false,
-              "icon": "newspaper",
-              "name": "Portfolio",
-              "path": "#portfolio",
-            },
-            Object {
-              "exact": false,
-              "icon": "newspaper",
-              "name": "Contact",
-              "path": "#contact",
-            },
-          ],
-          "pathname": "/",
-          "pointing": true,
-          "secondary": true,
-          "visible": true,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": Array [
-            <Header
-              as="h1"
-              inverted={true}
-            >
-              Helmuth Saatkamp
-            </Header>,
-            <Divider
-              hidden={true}
-            />,
-            <Header
-              as="h2"
-              inverted={true}
-            >
-              Web Developer
-            </Header>,
-            <Button
-              as="a"
-              href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
-              inverted={true}
-              primary={true}
-              role="button"
-              size="large"
-            >
-              Download My CV
-            </Button>,
-          ],
-          "text": true,
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "as": "h1",
-              "children": "Helmuth Saatkamp",
-              "inverted": true,
-            },
-            "ref": null,
-            "rendered": "Helmuth Saatkamp",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "hidden": true,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "as": "h2",
-              "children": "Web Developer",
-              "inverted": true,
-            },
-            "ref": null,
-            "rendered": "Web Developer",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "as": "a",
-              "children": "Download My CV",
-              "href": "https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf",
-              "inverted": true,
-              "primary": true,
-              "role": "button",
-              "size": "large",
-            },
-            "ref": null,
-            "rendered": "Download My CV",
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-    ],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": Array [
-          <Connect(HeaderMenu)
-            inverted={true}
-            items={
-              Array [
-                Object {
-                  "exact": true,
-                  "icon": "home",
-                  "inverted": true,
-                  "name": "Home",
-                  "path": "/",
-                },
-                Object {
-                  "exact": false,
-                  "icon": "info circle",
-                  "name": "About",
-                  "path": "#about",
-                },
-                Object {
-                  "exact": false,
-                  "icon": "newspaper",
-                  "name": "Resume",
-                  "path": "#resume",
-                },
-                Object {
-                  "exact": false,
-                  "icon": "newspaper",
-                  "name": "Portfolio",
-                  "path": "#portfolio",
-                },
-                Object {
-                  "exact": false,
-                  "icon": "newspaper",
-                  "name": "Contact",
-                  "path": "#contact",
-                },
-              ]
-            }
-            pathname="/"
-            pointing={true}
-            secondary={true}
-            visible={true}
-          />,
-          <Container
-            text={true}
-          >
-            <Header
-              as="h1"
-              inverted={true}
-            >
-              Helmuth Saatkamp
-            </Header>
-            <Divider
-              hidden={true}
-            />
-            <Header
-              as="h2"
-              inverted={true}
-            >
-              Web Developer
-            </Header>
-            <Button
-              as="a"
-              href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
-              inverted={true}
-              primary={true}
-              role="button"
-              size="large"
-            >
-              Download My CV
-            </Button>
-          </Container>,
-        ],
-        "className": "masthead",
-        "inverted": true,
-        "textAlign": "center",
-        "vertical": true,
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "inverted": true,
-            "items": Array [
-              Object {
-                "exact": true,
-                "icon": "home",
-                "inverted": true,
-                "name": "Home",
-                "path": "/",
-              },
-              Object {
-                "exact": false,
-                "icon": "info circle",
-                "name": "About",
-                "path": "#about",
-              },
-              Object {
-                "exact": false,
-                "icon": "newspaper",
-                "name": "Resume",
-                "path": "#resume",
-              },
-              Object {
-                "exact": false,
-                "icon": "newspaper",
-                "name": "Portfolio",
-                "path": "#portfolio",
-              },
-              Object {
-                "exact": false,
-                "icon": "newspaper",
-                "name": "Contact",
-                "path": "#contact",
-              },
-            ],
-            "pathname": "/",
-            "pointing": true,
-            "secondary": true,
-            "visible": true,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "name": "Home",
+          "path": "/",
         },
         Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": Array [
-              <Header
-                as="h1"
-                inverted={true}
-              >
-                Helmuth Saatkamp
-              </Header>,
-              <Divider
-                hidden={true}
-              />,
-              <Header
-                as="h2"
-                inverted={true}
-              >
-                Web Developer
-              </Header>,
-              <Button
-                as="a"
-                href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
-                inverted={true}
-                primary={true}
-                role="button"
-                size="large"
-              >
-                Download My CV
-              </Button>,
-            ],
-            "text": true,
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "as": "h1",
-                "children": "Helmuth Saatkamp",
-                "inverted": true,
-              },
-              "ref": null,
-              "rendered": "Helmuth Saatkamp",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "hidden": true,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "as": "h2",
-                "children": "Web Developer",
-                "inverted": true,
-              },
-              "ref": null,
-              "rendered": "Web Developer",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "as": "a",
-                "children": "Download My CV",
-                "href": "https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf",
-                "inverted": true,
-                "primary": true,
-                "role": "button",
-                "size": "large",
-              },
-              "ref": null,
-              "rendered": "Download My CV",
-              "type": [Function],
-            },
-          ],
-          "type": [Function],
+          "exact": false,
+          "icon": "info circle",
+          "name": "About",
+          "path": "#about",
         },
-      ],
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
+        Object {
+          "exact": false,
+          "icon": "newspaper",
+          "name": "Resume",
+          "path": "#resume",
         },
-      },
-    },
-  },
-}
+        Object {
+          "exact": false,
+          "icon": "newspaper",
+          "name": "Portfolio",
+          "path": "#portfolio",
+        },
+        Object {
+          "exact": false,
+          "icon": "newspaper",
+          "name": "Contact",
+          "path": "#contact",
+        },
+      ]
+    }
+    pathname="/"
+    pointing={true}
+    secondary={true}
+    visible={true}
+  />
+  <Container
+    text={true}
+  >
+    <Header
+      as="h1"
+      inverted={true}
+    >
+      Helmuth Saatkamp
+    </Header>
+    <Divider
+      hidden={true}
+    />
+    <Header
+      as="h2"
+      inverted={true}
+    >
+      Web Developer
+    </Header>
+    <Button
+      as="a"
+      href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
+      inverted={true}
+      primary={true}
+      role="button"
+      size="large"
+    >
+      Download My CV
+    </Button>
+  </Container>
+</Segment>
 `;
