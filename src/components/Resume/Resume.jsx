@@ -78,7 +78,12 @@ export const Resume = ({ id }: IResume) => (
                   <Feed.Extra text>
                     <List relaxed>
                       <List.Item>
-                        <List.Content>Implement new features for AI based systems using ReactJS and Redux</List.Content>
+                        <List.Content>
+                          Implement new features for AI based systems using React/Redux/Saga and Typescript.
+                        </List.Content>
+                      </List.Item>
+                      <List.Item>
+                        <List.Content>Maintainer of the company component library.</List.Content>
                       </List.Item>
                     </List>
                   </Feed.Extra>
@@ -94,7 +99,7 @@ export const Resume = ({ id }: IResume) => (
                       <List.Item>
                         <List.Content>
                           Performed design, front-end architecture, and development of market analysis and reporting
-                          systems for automobile manufacturers using Vue, Kendo-UI, and Node
+                          systems for automobile manufacturers using Vue, Kendo-UI, and Node.
                         </List.Content>
                       </List.Item>
                       <List.Item>
