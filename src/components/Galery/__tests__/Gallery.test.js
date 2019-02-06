@@ -1,7 +1,6 @@
-// @flow
 import { shallow } from 'enzyme/build/index';
 import React from 'react';
-import Gallery from './Galery';
+import Gallery from '../Galery';
 
 describe('component -> Gallery', () => {
   const props = {

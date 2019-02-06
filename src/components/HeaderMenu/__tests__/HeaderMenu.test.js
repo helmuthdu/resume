@@ -1,8 +1,6 @@
-// @flow
 import { shallow } from 'enzyme';
-import 'jest';
 import React from 'react';
-import { HeaderMenu } from './HeaderMenu';
+import { HeaderMenu } from '../HeaderMenu';
 
 const items = [
   { name: 'Home', path: '/', exact: true },
@@ -10,8 +8,8 @@ const items = [
   { name: 'Blog', path: '/blog/', exact: false }
 ];
 
-const LinkStub = (props: any) => <div {...props} />;
-const dispatchStub = (a: any) => a;
+const LinkStub = props => <div {...props} />;
+const dispatchStub = a => a;
 
 describe('component -> HeaderMenu', () => {
   it('should nothing active', () => {
@@ -37,7 +35,7 @@ describe('component -> HeaderMenu', () => {
   });
 
   it('should dispatch the correct message on burger click', () => {
-    const dispatchMock: any = jest.fn();
+    const dispatchMock = jest.fn();
     const wrapper = shallow(<HeaderMenu Link={LinkStub} items={items} pathname="" toggleSidebar={dispatchMock} />);
     wrapper.find('.mobile.only').simulate('click');
     expect(dispatchMock.mock.calls.length).toBe(1);

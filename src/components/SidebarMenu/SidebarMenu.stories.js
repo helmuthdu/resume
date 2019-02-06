@@ -1,4 +1,3 @@
-// @flow
 import { action } from '@storybook/addon-actions';
 import { text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
@@ -14,7 +13,7 @@ const items = [
   { name: 'Blog', path: '/blog/', exact: false, icon: 'newspaper' }
 ];
 
-const LinkStub: any = (props: any) => (
+const LinkStub = props => (
   <div {...props} onClick={action(props.to.toString())}>
     {props.children}
   </div>

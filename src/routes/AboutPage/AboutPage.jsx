@@ -1,4 +1,3 @@
-// @flow
 import React from 'react';
 import { Container, Header, Icon, Segment } from 'semantic-ui-react';
 

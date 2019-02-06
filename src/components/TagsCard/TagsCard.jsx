@@ -1,14 +1,8 @@
-// @flow
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Card, List } from 'semantic-ui-react';
 
-interface TagsCardProps {
-  tags: Array<any>;
-  Link: any;
-  tag?: string;
-}
-
-const TagCard = (props: TagsCardProps) => {
+const TagCard = props => {
   return (
     <Card>
       <Card.Content>
@@ -36,6 +30,11 @@ const TagCard = (props: TagsCardProps) => {
       </Card.Content>
     </Card>
   );
+};
+
+TagCard.propTypes = {
+  tag: PropTypes.string.isRequired,
+  tags: PropTypes.array.isRequired
 };
 
 export default TagCard;

@@ -1,4 +1,3 @@
-// @flow
 import { action } from '@storybook/addon-actions';
 import { boolean, text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
@@ -14,13 +13,12 @@ const items = [
   { name: 'Blog', path: '/blog/', exact: false }
 ];
 
-const LinkStub = (props: any) => (
+const LinkStub = props => (
   <div {...props} onClick={action(props.to.toString())}>
     {props.children}
   </div>
 );
-const dispatchStub = (a: any) => action(a.type)(a) && a;
-
+const dispatchStub = a => action(a.type)(a) && a;
 storiesOf('HeaderMenu', module)
   .addDecorator(withKnobs)
   .addDecorator(withReadme(HeaderMenuReadme))

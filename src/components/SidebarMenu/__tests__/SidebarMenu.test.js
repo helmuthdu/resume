@@ -1,9 +1,8 @@
 import { render } from 'enzyme';
-import 'jest';
 import { shallow } from 'enzyme/build/index';
 import React from 'react';
 import { withRouter } from 'react-router';
-import { SidebarMenu } from './SidebarMenu';
+import { SidebarMenu } from '../SidebarMenu';
 
 describe('component -> SidebarMenu', () => {
   const props = {

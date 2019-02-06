@@ -1,22 +1,14 @@
-// @flow
+import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { bindActionCreators, Dispatch } from 'redux';
 import { Icon, Menu, Sidebar } from 'semantic-ui-react';
 import { toggleSidebar } from '../../store/modules/ui';
-import { MenuItem, MenuProps } from '../Menu/Menu';
 
-interface SidebarMenuProps extends MenuProps {
-  items: MenuItem[];
-  pathname: any;
-  toggleSidebar: Dispatch;
-  visible?: boolean;
-}
-
-export const SidebarMenu = ({ items, pathname, visible, toggleSidebar }: SidebarMenuProps) => {
-  const isActive = (item: MenuItem) => (item.exact ? pathname === item.path : pathname.startsWith(item.path));
-  const activeItem = items.find((item: MenuItem) => isActive(item)) || {};
+export const SidebarMenu = ({ items, pathname, visible, toggleSidebar }) => {
+  const isActive = item => (item.exact ? pathname === item.path : pathname.startsWith(item.path));
+  const activeItem = items.find(item => isActive(item)) || {};
   return (
     <Sidebar as={Menu} visible={visible} vertical animation="uncover" inverted={activeItem.inverted}>
       {items.map(item => {
@@ -32,7 +24,7 @@ export const SidebarMenu = ({ items, pathname, visible, toggleSidebar }: Sidebar
   );
 };
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = state => ({
   visible: state.ui.isSidebarVisible
 });
 
@@ -43,6 +35,18 @@ const mapDispatchToProps = (dispatch: Dispatch) =>
     },
     dispatch
   );
+
+SidebarMenu.propTypes = {
+  items: PropTypes.array.isRequired,
+  pathname: PropTypes.string.isRequired,
+  toggleSidebar: PropTypes.func.isRequired,
+  visible: PropTypes.bool
+};
+
+SidebarMenu.defaultProps = {
+  items: [],
+  visible: false
+};
 
 export default connect(
   mapStateToProps,

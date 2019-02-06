@@ -1,10 +1,10 @@
-// @flow
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Button, Container, Divider, Header, Segment } from 'semantic-ui-react';
 import { menuItems } from '../../layouts/DefaultLayout';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
 
-export const MasterHead = ({ pathname }: any) => (
+export const MasterHead = ({ pathname }) => (
   <Segment vertical inverted textAlign="center" className="masthead">
     <HeaderMenu pathname={pathname} items={menuItems} pointing secondary inverted visible />
     <Container text>
@@ -26,5 +26,9 @@ export const MasterHead = ({ pathname }: any) => (
     </Container>
   </Segment>
 );
+
+MasterHead.propTypes = {
+  pathname: PropTypes.string.isRequired
+};
 
 export default MasterHead;

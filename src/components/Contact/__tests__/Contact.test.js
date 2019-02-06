@@ -1,7 +1,6 @@
 import { shallow } from 'enzyme';
-import 'jest';
 import React from 'react';
-import { Contact } from './Contact';
+import { Contact } from '../Contact';
 
 describe('component -> Contact', () => {
   let id = 'contact';

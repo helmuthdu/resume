@@ -1,4 +1,3 @@
-// @flow
 import { anchorate } from 'anchorate';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory, createMemoryHistory } from 'history';
@@ -12,7 +11,7 @@ export const isServer = !(typeof window !== 'undefined' && window.document && wi
 
 let storeInstance;
 
-export default (modules: any[] = [], url: string = process.env.PUBLIC_URL || '/') => {
+export default (modules = [], url = process.env.PUBLIC_URL || '/') => {
   if (storeInstance) {
     return storeInstance;
   }
@@ -60,7 +59,7 @@ export default (modules: any[] = [], url: string = process.env.PUBLIC_URL || '/'
     combineReducers({
       router: connectRouter(history),
       [uiStore.name]: uiStore.reducer,
-      ...modules.reduce((acc, module: any) => ({ ...acc, [module.name]: module.reducer }), {})
+      ...modules.reduce((acc, module) => ({ ...acc, [module.name]: module.reducer }), {})
     });
 
   // Create the store

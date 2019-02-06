@@ -1,14 +1,14 @@
-// @flow
 import { action } from '@storybook/addon-actions';
 import { number, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
+import PropTypes from 'prop-types';
 import React from 'react';
 import BlogPagination from './BlogPagination';
 
 const withReadme = require('storybook-readme/with-readme').default;
 const BlogPaginationReadme = require('./README.md');
 
-const LinkStub = (props: any) => (
+const LinkStub = props => (
   <div {...props} onClick={action(props.to.toString())}>
     {props.children}
   </div>
@@ -24,3 +24,8 @@ storiesOf('BlogPagination', module)
 
     return <BlogPagination pathname={pathname} Link={LinkStub} pageCount={pageCount} />;
   });
+
+LinkStub.propTypes = {
+  children: PropTypes.node.isRequired,
+  to: PropTypes.string.isRequired
+};

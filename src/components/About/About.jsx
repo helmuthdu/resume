@@ -1,10 +1,6 @@
-// @flow
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Divider, Grid, Header, List, Segment } from 'semantic-ui-react';
-
-interface IAbout {
-  id: string;
-}
 
 const EXPERIENCES = [
   {
@@ -24,7 +20,7 @@ const EXPERIENCES = [
   }
 ];
 
-export const About = ({ id }: IAbout) => (
+export const About = ({ id }) => (
   <Segment id={id} vertical className="stripe" textAlign="center">
     <Header size="large">
       ABOUT ME
@@ -91,5 +87,9 @@ export const About = ({ id }: IAbout) => (
     </Grid>
   </Segment>
 );
+
+About.propTypes = {
+  id: PropTypes.string.isRequired
+};
 
 export default About;

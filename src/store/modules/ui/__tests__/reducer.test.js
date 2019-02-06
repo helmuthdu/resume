@@ -1,6 +1,6 @@
-import { toggleSidebar } from './actions';
-import { reducer } from './reducer';
-import { initialState } from './state';
+import { toggleSidebar } from '../actions';
+import { reducer } from '../reducer';
+import { initialState } from '../state';
 
 describe('store -> UI', () => {
   it('should handle the initial state', () => {

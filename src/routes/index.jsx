@@ -1,5 +1,5 @@
-// @flow
 import { ConnectedRouter } from 'connected-react-router';
+import PropTypes from 'prop-types';
 import React, { lazy, Suspense } from 'react';
 import { hot } from 'react-hot-loader';
 import { Redirect } from 'react-router';
@@ -11,7 +11,7 @@ const DefaultLayoutRoute = lazy(() => import('../layouts/DefaultLayout'));
 const AboutPage = lazy(() => import('./AboutPage/AboutPage'));
 const HomePage = lazy(() => import('./HomePage/HomePage'));
 
-export const AppRoutes = ({ routes }: any) => {
+export const AppRoutes = ({ routes }) => {
   return (
     <Suspense fallback={null}>
       <Switch>
@@ -25,12 +25,25 @@ export const AppRoutes = ({ routes }: any) => {
   );
 };
 
-export const AppRouter = ({ history, routes }: any) => {
+AppRoutes.propTypes = {
+  routes: PropTypes.array.isRequired
+};
+
+AppRoutes.defaultProps = {
+  routes: []
+};
+
+export const AppRouter = ({ history, routes }) => {
   return (
     <ConnectedRouter history={history}>
       <AppRoutes routes={routes} />
     </ConnectedRouter>
   );
+};
+
+AppRouter.propTypes = {
+  history: PropTypes.any.isRequired,
+  routes: PropTypes.array.isRequired
 };
 
 export default hot(module)(AppRouter);

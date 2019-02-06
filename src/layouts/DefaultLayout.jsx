@@ -1,5 +1,5 @@
-// @flow
 import 'prismjs/themes/prism-okaidia.css';
+import PropTypes from 'prop-types';
 import React, { Fragment, PureComponent } from 'react';
 import { Route } from 'react-router-dom';
 import 'semantic-ui-css/semantic.css';
@@ -17,15 +17,7 @@ export const menuItems = [
   { name: 'Contact', path: '#contact', exact: false, icon: 'newspaper' }
 ];
 
-interface DefaultLayoutProps {
-  children: any;
-}
-
-interface DefaultLayoutState {
-  calculations: any;
-}
-
-export class DefaultLayout extends PureComponent<DefaultLayoutProps, DefaultLayoutState> {
+export class DefaultLayout extends PureComponent {
   state = {
     calculations: {
       direction: 'none',
@@ -44,7 +36,7 @@ export class DefaultLayout extends PureComponent<DefaultLayoutProps, DefaultLayo
     }
   };
 
-  handleUpdate = (e: Event, { calculations }: any) => {
+  handleUpdate = (e, { calculations }) => {
     this.setState({ calculations });
   };
 
@@ -86,7 +78,7 @@ export class DefaultLayout extends PureComponent<DefaultLayoutProps, DefaultLayo
   }
 }
 
-export const DefaultLayoutRoute = ({ component: Component, ...rest }: any) => {
+export const DefaultLayoutRoute = ({ component: Component, ...rest }) => {
   return (
     <Route
       {...rest}
@@ -97,6 +89,10 @@ export const DefaultLayoutRoute = ({ component: Component, ...rest }: any) => {
       )}
     />
   );
+};
+
+DefaultLayout.propTypes = {
+  children: PropTypes.node.isRequired
 };
 
 export default DefaultLayoutRoute;

@@ -1,4 +1,4 @@
-// @flow
+import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 import About from '../../components/About/About';
 import Contact from '../../components/Contact/Contact';
@@ -8,13 +8,7 @@ import Resume from '../../components/Resume/Resume';
 
 import './HomePage.css';
 
-interface IndexPageProps {
-  location: {
-    pathname: string
-  };
-}
-
-const HomePage = (props: IndexPageProps) => (
+const HomePage = props => (
   <Fragment>
     <MasterHead pathname={props.location.pathname} />
     <About id="about" />
@@ -23,5 +17,9 @@ const HomePage = (props: IndexPageProps) => (
     <Contact id="contact" />
   </Fragment>
 );
+
+HomePage.propTypes = {
+  location: PropTypes.any.isRequired
+};
 
 export default HomePage;

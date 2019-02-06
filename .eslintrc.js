@@ -18,21 +18,13 @@ module.exports = {
     'eslint:recommended',
     'plugin:jest/recommended',
     'plugin:react/recommended',
-    'plugin:flowtype/recommended',
     'plugin:prettier/recommended',
-    'prettier/flowtype',
     'prettier/react',
-    'prettier/standard'
   ],
-  plugins: ['jest', 'react', 'flowtype', 'prettier'],
+  plugins: ['jest', 'react', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
     'no-console': 'off'
-  },
-  settings: {
-    flowtype: {
-      onlyFilesWithFlowAnnotation: true
-    }
   },
   overrides: [
     {

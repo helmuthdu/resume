@@ -1,4 +1,4 @@
-// @flow
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Divider, Grid, Header, Menu, Segment } from 'semantic-ui-react';
 import Gallery from '../Galery/Galery';
@@ -84,20 +84,12 @@ const portfolioImages = [
   }
 ];
 
-interface IProfileState {
-  active: string;
-}
-
-interface IProfile {
-  id: string;
-}
-
-export class Profile extends Component<IProfile, IProfileState> {
+export class Profile extends Component {
   state = {
     active: 'all'
   };
 
-  _setCurrentActive(name: string) {
+  _setCurrentActive(name) {
     this.setState({ active: name });
   }
 
@@ -155,5 +147,9 @@ export class Profile extends Component<IProfile, IProfileState> {
     );
   }
 }
+
+Profile.propTypes = {
+  id: PropTypes.string.isRequired
+};
 
 export default Profile;

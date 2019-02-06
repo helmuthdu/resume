@@ -1,7 +1,6 @@
 import { shallow } from 'enzyme';
-import 'jest';
 import React from 'react';
-import { Profile } from './Profile';
+import { Profile } from '../Profile';
 
 describe('component -> Profile', () => {
   let id = 'profile';

@@ -1,15 +1,9 @@
-// @flow
 import { times } from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Menu } from 'semantic-ui-react';
 
-interface BlogPaginationProps {
-  pathname: string;
-  Link: any;
-  pageCount: number;
-}
-
-export default (props: BlogPaginationProps) => {
+export const BlogPagination = props => {
   if (props.pageCount === 1) {
     return null;
   }
@@ -46,3 +40,11 @@ export default (props: BlogPaginationProps) => {
     </Menu>
   );
 };
+
+BlogPagination.propTypes = {
+  Link: PropTypes.string,
+  pageCount: PropTypes.node,
+  pathname: PropTypes.number
+};
+
+export default BlogPagination;

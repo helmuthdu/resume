@@ -1,7 +1,6 @@
 import { shallow } from 'enzyme';
-import 'jest';
 import React from 'react';
-import { MasterHead } from './MasterHead';
+import { MasterHead } from '../MasterHead';
 
 describe('component -> MasterHead', () => {
   it('should render correctly', () => {

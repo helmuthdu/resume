@@ -1,14 +1,13 @@
 import { shallow } from 'enzyme';
-import 'jest';
 import React from 'react';
 import { List } from 'semantic-ui-react';
-import TagsCard from './TagsCard';
+import TagsCard from '../TagsCard';
 
 describe('component -> TagsCard', () => {
-  let LinkStub: any;
+  let LinkStub;
 
   beforeEach(() => {
-    LinkStub = (props: any) => <div>{props.children}</div>;
+    LinkStub = props => <div>{props.children}</div>;
   });
 
   it('should list all the tags', () => {

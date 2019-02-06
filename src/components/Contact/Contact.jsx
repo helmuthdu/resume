@@ -1,11 +1,7 @@
-// @flow
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Button, Divider, Form, Grid, Header, Segment } from 'semantic-ui-react';
 import ContactMap from '../ContactMap/ContactMap';
-
-interface IContact {
-  id: string;
-}
 
 const FIELDS = [
   {
@@ -50,7 +46,7 @@ const FIELDS = [
   }
 ];
 
-export const Contact = ({ id }: IContact) => (
+export const Contact = ({ id }) => (
   <Segment id={id} vertical inverted textAlign="center" className="stripe feature">
     <Header size="large" inverted>
       CONTACT
@@ -83,5 +79,9 @@ export const Contact = ({ id }: IContact) => (
     </Grid>
   </Segment>
 );
+
+Contact.propTypes = {
+  id: PropTypes.string.isRequired
+};
 
 export default Contact;

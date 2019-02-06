@@ -1,4 +1,3 @@
-// @flow
 import { action } from '@storybook/addon-actions';
 import { select, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
@@ -14,7 +13,7 @@ const tags = [
   { fieldValue: 'tag03', totalCount: 6 }
 ];
 
-const LinkStub = (props: any) => <div onClick={action(props.to.toString())}>{props.children}</div>;
+const LinkStub = props => <div onClick={action(props.to.toString())}>{props.children}</div>;
 
 storiesOf('TagsCard', module)
   .addDecorator(withReadme(TagsCardReadme))

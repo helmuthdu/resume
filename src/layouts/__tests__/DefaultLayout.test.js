@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import { DefaultLayout, DefaultLayoutRoute } from './DefaultLayout';
+import { DefaultLayout, DefaultLayoutRoute } from '../DefaultLayout';
 
 describe('layout -> DefaultLayout', () => {
   const children = {

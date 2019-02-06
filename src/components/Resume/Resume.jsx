@@ -1,10 +1,6 @@
-// @flow
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Divider, Feed, Grid, Header, Icon, Label, List, Progress, Segment } from 'semantic-ui-react';
-
-interface IResume {
-  id: string;
-}
 
 const ASSETS = ['Responsible', 'Diligence', 'Labour', 'Creative', 'Rigor', 'Initiative', 'Funny', 'Visual Thinking'];
 
@@ -50,7 +46,7 @@ const LANGUAGES = [
   }
 ];
 
-export const Resume = ({ id }: IResume) => (
+export const Resume = ({ id }) => (
   <Segment id={id} vertical textAlign="center" className="stripe alternate feature">
     <Header size="large">
       RESUME
@@ -281,5 +277,9 @@ export const Resume = ({ id }: IResume) => (
     </Grid>
   </Segment>
 );
+
+Resume.propTypes = {
+  id: PropTypes.string.isRequired
+};
 
 export default Resume;

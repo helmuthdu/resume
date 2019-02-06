@@ -1,26 +1,9 @@
-// @flow
 import { css, StyleSheet } from 'aphrodite/no-important';
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Lightbox from 'react-images';
 
-interface IGallery {
-  heading?: string;
-  subheading?: string;
-  images: Array<any>;
-  showThumbnails?: boolean;
-  preventScroll?: boolean;
-  spinner?: string;
-  spinnerColor?: string;
-  spinnerSize?: string;
-  theme?: string;
-}
-
-interface IGalleryState {
-  lightboxIsOpen: boolean;
-  currentImage: number;
-}
-
-export class Gallery extends Component<IGallery, IGalleryState> {
+export class Gallery extends Component {
   constructor() {
     super();
 
@@ -30,7 +13,7 @@ export class Gallery extends Component<IGallery, IGalleryState> {
     };
   }
 
-  openLightbox = (index: number, event: Event) => {
+  openLightbox = (index, event) => {
     event.preventDefault();
     this.setState({
       currentImage: index,
@@ -57,7 +40,7 @@ export class Gallery extends Component<IGallery, IGalleryState> {
     });
   };
 
-  gotoImage = (index: number) => {
+  gotoImage = index => {
     this.setState({
       currentImage: index
     });
@@ -177,5 +160,17 @@ const classes = StyleSheet.create({
     width: 'auto'
   }
 });
+
+Gallery.propTypes = {
+  heading: PropTypes.string,
+  images: PropTypes.array.isRequired,
+  preventScroll: PropTypes.bool,
+  showThumbnails: PropTypes.bool,
+  spinner: PropTypes.bool,
+  spinnerColor: PropTypes.string,
+  spinnerSize: PropTypes.string,
+  subheading: PropTypes.string,
+  theme: PropTypes.string
+};
 
 export default Gallery;

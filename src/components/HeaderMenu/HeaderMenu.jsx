@@ -1,33 +1,12 @@
-// @flow
+import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { bindActionCreators, Dispatch } from 'redux';
+import { bindActionCreators } from 'redux';
 import { Container, Menu } from 'semantic-ui-react';
 import { toggleSidebar } from '../../store/modules/ui';
-import { MenuProps } from '../Menu/Menu';
 
-interface HeaderMenuProps extends MenuProps {
-  fixed?: boolean;
-  inverted?: boolean;
-  link: any;
-  pathname: string;
-  pointing?: boolean;
-  secondary?: boolean;
-  toggleSidebar: Dispatch<any>;
-  visible?: boolean;
-}
-
-export const HeaderMenu = ({
-  fixed,
-  inverted,
-  items,
-  pathname,
-  pointing,
-  secondary,
-  toggleSidebar,
-  visible
-}: HeaderMenuProps) => (
+export const HeaderMenu = ({ fixed, inverted, items, pathname, pointing, secondary, toggleSidebar, visible }) => (
   <Menu
     size="large"
     pointing={pointing}
@@ -62,6 +41,26 @@ const mapDispatchToProps = dispatch =>
     },
     dispatch
   );
+
+HeaderMenu.propTypes = {
+  fixed: PropTypes.bool,
+  inverted: PropTypes.bool,
+  items: PropTypes.array,
+  pathname: PropTypes.string.isRequired,
+  pointing: PropTypes.bool,
+  secondary: PropTypes.bool,
+  toggleSidebar: PropTypes.func.isRequired,
+  visible: PropTypes.bool
+};
+
+HeaderMenu.defaultProps = {
+  fixed: false,
+  inverted: false,
+  items: [],
+  pointing: false,
+  secondary: false,
+  visible: false
+};
 
 export default connect(
   null,

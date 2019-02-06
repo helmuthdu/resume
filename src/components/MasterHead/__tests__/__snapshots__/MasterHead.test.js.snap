@@ -72,7 +72,6 @@ exports[`component -> MasterHead should render correctly 1`] = `
       href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
       inverted={true}
       primary={true}
-      role="button"
       size="large"
     >
       Download My CV

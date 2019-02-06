@@ -1,13 +1,12 @@
 import { shallow } from 'enzyme';
-import 'jest';
 import React from 'react';
-import { Resume } from './Resume';
+import { About } from '../About';
 
-describe('component -> Resume', () => {
+describe('component -> About', () => {
   let id = 'about';
 
   it('should have id defined', () => {
-    const wrapper = shallow(<Resume id={id} />);
+    const wrapper = shallow(<About id={id} />);
     expect(wrapper.find({ id }).prop('id')).toBe(id);
   });
 });
