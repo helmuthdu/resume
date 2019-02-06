@@ -121,8 +121,8 @@ export const Resume = ({ id }: IResume) => (
                     <List relaxed>
                       <List.Item>
                         <List.Content>
-                          Full stack web developer responsible for end-to-end development of an online GIS solution to
-                          show deforestation and hazards in Brazil for{' '}
+                          Full stack web developer responsible for development of an online GIS solution to show
+                          deforestation and hazards in Brazil for{' '}
                           <a href="http://www.ibama.gov.br/" target="_blank" rel="noopener noreferrer">
                             IBAMA
                           </a>{' '}
