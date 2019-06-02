@@ -43,7 +43,7 @@ const mapDispatchToProps = dispatch =>
   );
 
 HeaderMenu.propTypes = {
-  fixed: PropTypes.bool,
+  fixed: PropTypes.string,
   inverted: PropTypes.bool,
   items: PropTypes.array,
   pathname: PropTypes.string.isRequired,
@@ -54,7 +54,7 @@ HeaderMenu.propTypes = {
 };
 
 HeaderMenu.defaultProps = {
-  fixed: false,
+  fixed: 'top',
   inverted: false,
   items: [],
   pointing: false,
