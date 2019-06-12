@@ -47,6 +47,18 @@ const portfolioImages = [
     caption: 'NeoDash - Direct Sales'
   },
   {
+    src: 'images/ottoge_1.png',
+    thumbnail: 'images/ottoge_1.png',
+    tags: [{ value: 'mockup', title: 'mockup' }],
+    caption: 'Ottoge - Main Window'
+  },
+  {
+    src: 'images/ottoge_2.png',
+    thumbnail: 'images/ottoge_2.png',
+    tags: [{ value: 'mockup', title: 'mockup' }],
+    caption: 'Ottoge - Events'
+  },
+  {
     src: 'images/cn_events_entrance_cards.png',
     thumbnail: 'images/cn_events_entrance_cards.png',
     tags: [{ value: 'site', title: 'site' }],
