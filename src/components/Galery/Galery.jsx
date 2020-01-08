@@ -1,30 +1,30 @@
 import { css, StyleSheet } from 'aphrodite/no-important';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Lightbox from 'react-images';
+import LightBox from 'react-images';
 
 export class Gallery extends Component {
   constructor() {
     super();
 
     this.state = {
-      lightboxIsOpen: false,
+      open: false,
       currentImage: 0
     };
   }
 
-  openLightbox = (index, event) => {
+  handleOpen = (index, event) => {
     event.preventDefault();
     this.setState({
       currentImage: index,
-      lightboxIsOpen: true
+      open: true
     });
   };
 
-  closeLightbox = () => {
+  handleClose = () => {
     this.setState({
       currentImage: 0,
-      lightboxIsOpen: false
+      open: false
     });
   };
 
@@ -63,7 +63,7 @@ export class Gallery extends Component {
           href={obj.src}
           className={css(classes.thumbnail, classes[obj.orientation])}
           key={i}
-          onClick={e => this.openLightbox(i, e)}>
+          onClick={e => this.handleOpen(i, e)}>
           <img
             src={obj.thumbnail}
             className={css(classes.source)}
@@ -83,15 +83,15 @@ export class Gallery extends Component {
         {this.props.heading && <h2>{this.props.heading}</h2>}
         {this.props.subheading && <p>{this.props.subheading}</p>}
         {this.renderGallery()}
-        <Lightbox
+        <LightBox
           currentImage={this.state.currentImage}
           images={this.props.images}
-          isOpen={this.state.lightboxIsOpen}
+          isOpen={this.state.open}
           onClickImage={this.handleClickImage}
           onClickNext={this.gotoNext}
           onClickPrev={this.gotoPrevious}
           onClickThumbnail={this.gotoImage}
-          onClose={this.closeLightbox}
+          onClose={this.handleClose}
           preventScroll={this.props.preventScroll}
           showThumbnails={this.props.showThumbnails}
           spinner={this.props.spinner}

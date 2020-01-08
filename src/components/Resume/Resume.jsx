@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Divider, Feed, Grid, Header, Icon, Label, List, Progress, Segment } from 'semantic-ui-react';
+import dayjs from 'dayjs';
 
 const ASSETS = ['Responsible', 'Diligence', 'Labour', 'Creative', 'Rigor', 'Initiative', 'Funny', 'Visual Thinking'];
 
@@ -42,7 +43,52 @@ const LANGUAGES = [
   },
   {
     name: 'German',
-    level: 10
+    level: 30
+  }
+];
+
+const JOBS = [
+  {
+    current: true,
+    startAt: new Date('2019-06-01'),
+    endAt: new Date('2019-03-31'),
+    title: 'Front End Engineer',
+    company: 'NIST Gmbh',
+    tasks: ['One of the responsible for the new Architecture of the next generation product.']
+  },
+  {
+    current: false,
+    startAt: new Date('2018-09-15'),
+    endAt: new Date('2019-05-30'),
+    title: 'Senior Front End Engineer',
+    company: 'Leverton',
+    tasks: [
+      'Implement new features for AI based systems using React/Redux/Saga with Typescript.',
+      'Added unit tests and E2E tests to the new/legacy products.',
+      'Maintainer of the company component library.'
+    ]
+  },
+  {
+    current: false,
+    startAt: new Date('2013-11-01'),
+    endAt: new Date('2018-08-31'),
+    title: 'Senior Front End Developer',
+    company: 'Neocom',
+    tasks: [
+      'Performed design, front-end architecture, and development of market analysis and reporting systems for automobile manufacturers using Vue, Kendo-UI, and Node.',
+      'Assisted in development of back-end features in ASP.NET.',
+      'Prototyped an average of 20 new product features per year.'
+    ]
+  },
+  {
+    current: false,
+    startAt: new Date('2013-01-01 '),
+    endAt: new Date('2013-11-30'),
+    title: 'Systems Analyst',
+    company: 'Hex',
+    tasks: [
+      'Full stack web developer responsible for development of an online GIS solution to show deforestation and hazards in Brazil for <a href="http://www.ibama.gov.br/" target="_blank" rel="noopener noreferrer">IBAMA using PHP and JQuery.'
+    ]
   }
 ];
 
@@ -62,77 +108,37 @@ export const Resume = ({ id }) => (
             <Header icon>Work Experience</Header>
             <Icon name="briefcase" color="grey" className="pull-right" />
             <Feed>
-              <Feed.Event>
-                <Feed.Content>
-                  <Feed.Date>
-                    set 2018 -{' '}
-                    <Label size="small" color="blue">
-                      Current
-                    </Label>
-                  </Feed.Date>
-                  <Feed.Summary>Senior Front End Engineer - Leverton</Feed.Summary>
-                  <Feed.Extra text>
-                    <List relaxed>
-                      <List.Item>
-                        <List.Content>
-                          Implement new features for AI based systems using React/Redux/Saga and Typescript.
-                        </List.Content>
-                      </List.Item>
-                      <List.Item>
-                        <List.Content>Maintainer of the company component library.</List.Content>
-                      </List.Item>
-                    </List>
-                  </Feed.Extra>
-                </Feed.Content>
-              </Feed.Event>
-              <Divider hidden />
-              <Feed.Event>
-                <Feed.Content>
-                  <Feed.Date>nov 2013 - ago 2018</Feed.Date>
-                  <Feed.Summary>Senior Front End Developer - Neocom</Feed.Summary>
-                  <Feed.Extra text>
-                    <List relaxed>
-                      <List.Item>
-                        <List.Content>
-                          Performed design, front-end architecture, and development of market analysis and reporting
-                          systems for automobile manufacturers using Vue, Kendo-UI, and Node.
-                        </List.Content>
-                      </List.Item>
-                      <List.Item>
-                        <List.Content>Assisted in development of back-end features in ASP.NET.</List.Content>
-                      </List.Item>
-                      <List.Item>
-                        <List.Content>Prototyped an average of 20 new product features per year.</List.Content>
-                      </List.Item>
-                    </List>
-                  </Feed.Extra>
-                </Feed.Content>
-              </Feed.Event>
-              <Divider hidden />
-              <Feed.Event>
-                <Feed.Content>
-                  <Feed.Date>jan 2013 - nov 2013</Feed.Date>
-                  <Feed.Summary>Systems Analyst - Hex</Feed.Summary>
-                  <Feed.Extra text>
-                    <List relaxed>
-                      <List.Item>
-                        <List.Content>
-                          Full stack web developer responsible for development of an online GIS solution to show
-                          deforestation and hazards in Brazil for{' '}
-                          <a href="http://www.ibama.gov.br/" target="_blank" rel="noopener noreferrer">
-                            IBAMA
-                          </a>{' '}
-                          using PHP and JQuery.
-                        </List.Content>
-                      </List.Item>
-                      <List.Item>
-                        <List.Content>Development team leader with 2-3 developers.</List.Content>
-                      </List.Item>
-                    </List>
-                  </Feed.Extra>
-                </Feed.Content>
-              </Feed.Event>
-              <Divider hidden />
+              {JOBS.map(job => (
+                <>
+                  <Feed.Event>
+                    <Feed.Content>
+                      <Feed.Date>
+                        {dayjs(job.startAt).format('MMM YYYY')} -{' '}
+                        {job.current ? (
+                          <Label size="small" color="blue">
+                            Current
+                          </Label>
+                        ) : (
+                          dayjs(job.endAt).format('MMM YYYY')
+                        )}
+                      </Feed.Date>
+                      <Feed.Summary>
+                        {job.title} - {job.company}
+                      </Feed.Summary>
+                      <Feed.Extra text>
+                        <List relaxed>
+                          {job.tasks.map((task, index) => (
+                            <List.Item key={index}>
+                              <List.Content>{task}</List.Content>
+                            </List.Item>
+                          ))}
+                        </List>
+                      </Feed.Extra>
+                    </Feed.Content>
+                  </Feed.Event>
+                  <Divider hidden />
+                </>
+              ))}
               <Feed.Event>
                 <Feed.Content>
                   <Feed.Date>
@@ -211,7 +217,7 @@ export const Resume = ({ id }) => (
                     </a>
                   </Feed.Summary>
                   <Feed.Extra text>
-                    <strong>29</strong> Courses completed & <strong>395</strong> Lessons watched
+                    <strong>34</strong> Courses completed & <strong>483</strong> Lessons watched
                   </Feed.Extra>
                 </Feed.Content>
               </Feed.Event>

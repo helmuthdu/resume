@@ -42,13 +42,13 @@ describe('component -> Gallery', () => {
   });
 
   it('should change current image index', () => {
-    wrapper.instance().openLightbox(1, event);
+    wrapper.instance().handleOpen(1, event);
     expect(wrapper.state().currentImage).toBe(1);
   });
 
   it('should close de lightbox', () => {
-    wrapper.instance().closeLightbox();
-    expect(wrapper.state().lightboxIsOpen).toBe(false);
+    wrapper.instance().handleClose();
+    expect(wrapper.state().open).toBe(false);
   });
 
   it('should go to the next image', () => {
