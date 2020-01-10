@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Divider, Feed, Grid, Header, Icon, Label, List, Progress, Segment } from 'semantic-ui-react';
 import dayjs from 'dayjs';
 
@@ -54,7 +54,10 @@ const JOBS = [
     endAt: new Date('2019-03-31'),
     title: 'Front End Engineer',
     company: 'NIST Gmbh',
-    tasks: ['One of the responsible for the new Architecture of the next generation product.']
+    tasks: [
+      'Build company’s web solution using Next.js with Typescript and support for I18n.',
+      'SEO improvements, Performance optimizations.'
+    ]
   },
   {
     current: false,
@@ -87,7 +90,14 @@ const JOBS = [
     title: 'Systems Analyst',
     company: 'Hex',
     tasks: [
-      'Full stack web developer responsible for development of an online GIS solution to show deforestation and hazards in Brazil for <a href="http://www.ibama.gov.br/" target="_blank" rel="noopener noreferrer">IBAMA using PHP and JQuery.'
+      <>
+        Full stack web developer responsible for development of an online GIS solution to show deforestation and hazards
+        in Brazil for{' '}
+        <a href="http://www.ibama.gov.br/" target="_blank" rel="noopener noreferrer">
+          IBAMA
+        </a>{' '}
+        using PHP and JQuery.
+      </>
     ]
   }
 ];
@@ -109,7 +119,7 @@ export const Resume = ({ id }) => (
             <Icon name="briefcase" color="grey" className="pull-right" />
             <Feed>
               {JOBS.map(job => (
-                <>
+                <Fragment key={job.company}>
                   <Feed.Event>
                     <Feed.Content>
                       <Feed.Date>
@@ -137,7 +147,7 @@ export const Resume = ({ id }) => (
                     </Feed.Content>
                   </Feed.Event>
                   <Divider hidden />
-                </>
+                </Fragment>
               ))}
               <Feed.Event>
                 <Feed.Content>
