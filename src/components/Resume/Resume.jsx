@@ -53,10 +53,10 @@ const JOBS = [
     startAt: new Date('2019-06-01'),
     endAt: new Date('2019-03-31'),
     title: 'Front End Engineer',
-    company: 'NIST Gmbh',
+    company: 'NIST GmbH',
     tasks: [
-      'Build company’s web solution using Next.js with Typescript and support for I18n.',
-      'SEO improvements, Performance optimizations.'
+      'Built the company’s web solution using Next.js with Typescript and support for I18n.',
+      'SEO improvements and Performance optimizations.'
     ]
   },
   {
@@ -64,9 +64,9 @@ const JOBS = [
     startAt: new Date('2018-09-15'),
     endAt: new Date('2019-05-30'),
     title: 'Senior Front End Engineer',
-    company: 'Leverton',
+    company: 'Leverton GmbH',
     tasks: [
-      'Implement new features for AI based systems using React/Redux/Saga with Typescript.',
+      'Implemented new features using React/Redux/Saga and Typescript.',
       'Added unit tests and E2E tests to the new/legacy products.',
       'Maintainer of the company component library.'
     ]
