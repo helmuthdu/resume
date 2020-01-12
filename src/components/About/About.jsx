@@ -23,7 +23,7 @@ const EXPERIENCES = [
 
 export const About = ({ id }) => (
   <>
-    <Image className={css(classes.avatar)} src="/images/me.jpg" size="small" circular centered />
+    <Image className={css(classes.avatar)} src="images/me.jpg" size="small" circular centered />
     <Segment id={id} vertical className="stripe" textAlign="center">
       <Header size="large">
         ABOUT ME
