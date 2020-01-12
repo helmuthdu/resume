@@ -48,7 +48,4 @@ SidebarMenu.defaultProps = {
   visible: false
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SidebarMenu);
+export default connect(mapStateToProps, mapDispatchToProps)(SidebarMenu);

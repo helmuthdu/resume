@@ -7,9 +7,9 @@
 }
 
 .masthead.segment {
-  min-height: 800px;
+  min-height: 475px;
   padding: 1em 0;
-  background: url('../assets/images/bg.jpg') no-repeat fixed center !important;
+  background: url('../assets/images/bg.jpg') no-repeat fixed top center !important;
 }
 
 .masthead .logo.item img {
@@ -21,7 +21,7 @@
 }
 
 .masthead h1.ui.header {
-  margin-top: 3em;
+  margin-top: 2em;
   margin-bottom: 0;
   font-size: 4em;
   font-weight: normal;

@@ -52,10 +52,10 @@ const JOBS = [
     current: true,
     startAt: new Date('2019-06-01'),
     endAt: new Date('2019-03-31'),
-    title: 'Front End Engineer',
+    title: 'Senior Frontend Engineer',
     company: 'NIST GmbH',
     tasks: [
-      'Built the company’s web solution using Next.js with Typescript and support for I18n.',
+      'Build the company’s web solution using Next.js with Typescript and support for I18n.',
       'SEO improvements and Performance optimizations.'
     ]
   },
@@ -63,7 +63,7 @@ const JOBS = [
     current: false,
     startAt: new Date('2018-09-15'),
     endAt: new Date('2019-05-30'),
-    title: 'Senior Front End Engineer',
+    title: 'Senior Frontend Engineer',
     company: 'Leverton GmbH',
     tasks: [
       'Implemented new features using React/Redux/Saga and Typescript.',
@@ -75,7 +75,7 @@ const JOBS = [
     current: false,
     startAt: new Date('2013-11-01'),
     endAt: new Date('2018-08-31'),
-    title: 'Senior Front End Developer',
+    title: 'Senior Frontend Developer',
     company: 'Neocom',
     tasks: [
       'Performed design, front-end architecture, and development of market analysis and reporting systems for automobile manufacturers using Vue, Kendo-UI, and Node.',
@@ -96,7 +96,7 @@ const JOBS = [
         <a href="http://www.ibama.gov.br/" target="_blank" rel="noopener noreferrer">
           IBAMA
         </a>{' '}
-        using PHP and JQuery.
+        using PHP, CoffeeScript and JQuery.
       </>
     ]
   }

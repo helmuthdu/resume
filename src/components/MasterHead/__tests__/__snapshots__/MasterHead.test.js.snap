@@ -65,13 +65,13 @@ exports[`component -> MasterHead should render correctly 1`] = `
       as="h2"
       inverted={true}
     >
-      Web Developer
+      Software Engineer
     </Header>
     <Button
       as="a"
+      color="blue"
       href="https://github.com/helmuthdu/resume/raw/master/public/docs/helmuth_saatkamp_resume_en.pdf"
       inverted={true}
-      primary={true}
       size="large"
     >
       Download My CV

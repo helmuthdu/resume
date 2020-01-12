@@ -13,10 +13,10 @@ export const MasterHead = ({ pathname }) => (
       </Header>
       <Divider hidden />
       <Header inverted as="h2">
-        Web Developer
+        Software Engineer
       </Header>
       <Button
-        primary
+        color={'blue'}
         inverted
         size="large"
         as="a"

@@ -62,7 +62,4 @@ HeaderMenu.defaultProps = {
   visible: false
 };
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(HeaderMenu);
+export default connect(null, mapDispatchToProps)(HeaderMenu);

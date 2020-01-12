@@ -22,6 +22,10 @@ storiesOf('TagsCard', module)
     return <TagsCard tags={tags} Link={LinkStub} />;
   })
   .add('with tag property', () => {
-    const tag = select('Tag', tags.map(t => t.fieldValue), 'tag01');
+    const tag = select(
+      'Tag',
+      tags.map(t => t.fieldValue),
+      'tag01'
+    );
     return <TagsCard tags={tags} tag={tag} Link={LinkStub} />;
   });

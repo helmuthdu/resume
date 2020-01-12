@@ -45,10 +45,7 @@ export default (modules = [], url = process.env.PUBLIC_URL || '/') => {
     }
   }
 
-  const composedEnhancers = compose(
-    applyMiddleware(...middleware),
-    ...enhancers
-  );
+  const composedEnhancers = compose(applyMiddleware(...middleware), ...enhancers);
 
   // Delete it once we have it stored in a variable
   if (!isServer) {
