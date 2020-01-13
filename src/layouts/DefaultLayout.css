@@ -9,7 +9,8 @@
 .masthead.segment {
   min-height: 475px;
   padding: 1em 0;
-  background: url('../assets/images/bg.jpg') no-repeat fixed top center !important;
+  background: linear-gradient(rgba(23, 70, 96, 0.75), rgba(10, 9, 75, 0.85)),
+    url('../assets/images/bg.jpg') no-repeat fixed center center / cover !important;
 }
 
 .masthead .logo.item img {

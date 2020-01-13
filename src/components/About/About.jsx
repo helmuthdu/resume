@@ -99,7 +99,7 @@ About.propTypes = {
 const classes = StyleSheet.create({
   avatar: {
     marginTop: '-70px',
-    border: '4px solid white',
+    border: '5px solid white',
     marginBottom: '-70px'
   }
 });
