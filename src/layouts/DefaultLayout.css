@@ -9,8 +9,11 @@
 .masthead.segment {
   min-height: 475px;
   padding: 1em 0;
-  background: linear-gradient(rgba(23, 70, 96, 0.75), rgba(10, 9, 75, 0.85)),
+  background: linear-gradient(rgba(23, 70, 96, 0.25), rgba(10, 9, 75, 0.35)),
     url('../assets/images/bg.jpg') no-repeat fixed center center / cover !important;
+}
+.masthead .ui.list > a.item i.icon {
+  color: #ffffff;
 }
 
 .masthead .logo.item img {
@@ -22,9 +25,9 @@
 }
 
 .masthead h1.ui.header {
-  margin-top: 2em;
+  margin-top: 1.5em;
   margin-bottom: 0;
-  font-size: 4em;
+  font-size: 3.75em;
   font-weight: normal;
 }
 
