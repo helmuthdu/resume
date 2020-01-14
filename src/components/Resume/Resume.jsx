@@ -7,28 +7,28 @@ const ASSETS = ['Responsible', 'Diligence', 'Labour', 'Creative', 'Rigor', 'Init
 
 const SKILLS = [
   {
-    name: 'HTML / CSS / SASS',
+    name: 'HTML | CSS | SASS',
     level: 100
   },
   {
-    name: 'Javascript / Node',
+    name: 'Javascript | Typescript | Node',
     level: 100
   },
   {
-    name: 'Vue / Angular / React',
+    name: 'Vue | Angular | React',
     level: 100
   },
   {
-    name: 'C# / Asp.Net Core',
+    name: 'React-native | Flutter',
+    level: 100
+  },
+  {
+    name: 'C# | Asp.Net Core | Entity',
     level: 65
   },
   {
-    name: 'SQL Server / PostgreSQL / MongoDB',
+    name: 'SQL Server | PostgreSQL | MongoDB',
     level: 65
-  },
-  {
-    name: 'Affinity Design',
-    level: 100
   }
 ];
 
@@ -66,7 +66,7 @@ const JOBS = [
     title: 'Senior Frontend Engineer',
     company: 'Leverton GmbH',
     tasks: [
-      'Implemented new features using React/Redux/Saga and Typescript.',
+      'Implemented new features using React, Redux, Saga and Typescript.',
       'Added unit tests and E2E tests to the new/legacy products.',
       'Maintainer of the company component library.'
     ]
@@ -91,8 +91,7 @@ const JOBS = [
     company: 'Hex',
     tasks: [
       <>
-        Full stack web developer responsible for development of an online GIS solution to show deforestation and hazards
-        in Brazil for{' '}
+        Responsible for development of an online GIS solution to show deforestation and hazards in Brazil for{' '}
         <a href="http://www.ibama.gov.br/" target="_blank" rel="noopener noreferrer">
           IBAMA
         </a>{' '}

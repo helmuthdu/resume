@@ -12,7 +12,7 @@ const EXPERIENCES = [
   {
     icon: 'computer',
     header: 'Web Design',
-    description: 'Progressive web pages, wireframes and mockups'
+    description: 'UX/UI, wireframes and mockups'
   },
   {
     icon: 'world',
