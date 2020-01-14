@@ -78,7 +78,7 @@ const JOBS = [
     title: 'Senior Frontend Developer',
     company: 'Neocom',
     tasks: [
-      'Performed design, front-end architecture, and development of market analysis and reporting systems for automobile manufacturers using Vue, Kendo-UI, and Node.',
+      'Performed design, frontend architecture, and development of market analysis and reporting systems for automobile manufacturers using Vue, Node and PostegreSQL',
       'Assisted in development of back-end features in ASP.NET.',
       'Prototyped an average of 20 new product features per year.'
     ]
