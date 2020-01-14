@@ -58,15 +58,52 @@ exports[`component -> MasterHead should render correctly 1`] = `
     >
       Helmuth Saatkamp
     </Header>
-    <Divider
-      hidden={true}
-    />
     <Header
       as="h2"
       inverted={true}
     >
       Software Engineer
     </Header>
+    <List
+      horizontal={true}
+    >
+      <ListItem
+        as="a"
+        href="https://www.linkedin.com/in/helmuthdu"
+        target="_blank"
+      >
+        <Icon
+          as="i"
+          name="linkedin"
+          size="large"
+        />
+      </ListItem>
+      <ListItem
+        as="a"
+        href="https://github.com/helmuthdu"
+        target="_blank"
+      >
+        <Icon
+          as="i"
+          name="github"
+          size="large"
+        />
+      </ListItem>
+      <ListItem
+        as="a"
+        href="https://twitter.com/helmuthdu"
+        target="_blank"
+      >
+        <Icon
+          as="i"
+          name="twitter"
+          size="large"
+        />
+      </ListItem>
+    </List>
+    <Divider
+      hidden={true}
+    />
     <Button
       as="a"
       color="blue"
