@@ -77,6 +77,18 @@ const portfolioImages = [
     caption: 'Sisbra - Observatório Sismológico de Brasília - http://obsis.unb.br/sisbra'
   },
   {
+    src: 'images/nist_login.png',
+    thumbnail: 'images/nist_login.png',
+    tags: [{ value: 'site', title: 'site' }],
+    caption: 'NIST GmbH - Login - https://nist.de'
+  },
+  {
+    src: 'images/nist_overview.png',
+    thumbnail: 'images/nist_overview.png',
+    tags: [{ value: 'site', title: 'site' }],
+    caption: 'NIST GmbH - Overview - https://nist.de'
+  },
+  {
     src: 'images/evenths_mobile_ui_1.png',
     thumbnail: 'images/evenths_mobile_ui_1.png',
     tags: [{ value: 'wireframe', title: 'wireframe' }],

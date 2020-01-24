@@ -89,17 +89,6 @@ exports[`component -> MasterHead should render correctly 1`] = `
           size="large"
         />
       </ListItem>
-      <ListItem
-        as="a"
-        href="https://twitter.com/helmuthdu"
-        target="_blank"
-      >
-        <Icon
-          as="i"
-          name="twitter"
-          size="large"
-        />
-      </ListItem>
     </List>
     <Divider
       hidden={true}

@@ -21,9 +21,6 @@ export const MasterHead = ({ pathname }) => (
         <List.Item as="a" href="https://github.com/helmuthdu" target="_blank">
           <Icon name="github" size="large" />
         </List.Item>
-        <List.Item as="a" href="https://twitter.com/helmuthdu" target="_blank">
-          <Icon name="twitter" size="large" />
-        </List.Item>
       </List>
       <Divider hidden />
       <Button

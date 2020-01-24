@@ -55,8 +55,8 @@ const JOBS = [
     title: 'Senior Frontend Engineer',
     company: 'NIST GmbH',
     tasks: [
-      'Build the company’s web solution using Next.js with Typescript and support for I18n.',
-      'SEO improvements and Performance optimizations.'
+      'Built the company’s web solution using Next.js with Typescript and support for I18n',
+      'SEO improvements and Performance optimizations'
     ]
   },
   {
@@ -66,9 +66,9 @@ const JOBS = [
     title: 'Senior Frontend Engineer',
     company: 'Leverton GmbH',
     tasks: [
-      'Implemented new features using React, Redux, Saga and Typescript.',
-      'Added unit tests and E2E tests to the new/legacy products.',
-      'Maintainer of the company component library.'
+      'Implemented new features using React, Redux, Saga, and Typescript',
+      'Added unit tests and E2E tests to the new/legacy products',
+      'Maintainer of the company component library'
     ]
   },
   {
@@ -78,9 +78,9 @@ const JOBS = [
     title: 'Senior Frontend Developer',
     company: 'Neocom',
     tasks: [
-      'Performed design, frontend architecture, and development of market analysis and reporting systems for automobile manufacturers using Vue, Node and PostegreSQL',
-      'Assisted in development of back-end features in ASP.NET.',
-      'Prototyped an average of 20 new product features per year.'
+      'Performed design, frontend architecture, and development of market analysis and reporting systems for automobile manufacturers using Vue, Node and PostgreSQL',
+      'Assisted in the improvement of backend features in ASP.NET',
+      'Prototyped an average of 20 new product features per year'
     ]
   },
   {
