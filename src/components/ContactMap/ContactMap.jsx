@@ -2,7 +2,7 @@ import React from 'react';
 import { GoogleMap, Marker, withGoogleMap, withScriptjs } from 'react-google-maps';
 import { compose, withProps } from 'recompose';
 
-const apiKey = 'AIzaSyBUDsKbbMvYm2uGIqKmYn6lxkpPycr5KcY';
+const apiKey = 'AIzaSyA2xs-b0kwEebBXrPR6hko3Rb5nzF9hPqA';
 const coordinates = { lng: 13.404842, lat: 52.520032 };
 
 export const GMaps = ({ isMarkerShown }) => (
