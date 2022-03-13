@@ -1,6 +1,5 @@
 import { times } from 'lodash';
 import PropTypes from 'prop-types';
-import React from 'react';
 import { Menu } from 'semantic-ui-react';
 
 export const BlogPagination = props => {

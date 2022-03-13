@@ -123,7 +123,7 @@ export class Profile extends Component {
         <Header size="large">
           PROFILE / RECENT WORK
           <Header sub>
-            <cite>"If you can dream it you can do it." - Walt Disney</cite>
+            <cite>&quot;If you can dream it you can do it.&quot; - Walt Disney</cite>
           </Header>
         </Header>
         <Divider hidden section />

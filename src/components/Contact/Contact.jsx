@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import React from 'react';
 import { Button, Divider, Form, Grid, Header, Segment } from 'semantic-ui-react';
 import ContactMap from '../ContactMap/ContactMap';
 
@@ -52,7 +51,8 @@ export const Contact = ({ id }) => (
       CONTACT
       <Header sub>
         <cite>
-          "Here is a powerful yet simple rule. Always give people more than they expect to get." – Nelson Boswell
+          &quot;Here is a powerful yet simple rule. Always give people more than they expect to get.&quot; – Nelson
+          Boswell
         </cite>
       </Header>
     </Header>

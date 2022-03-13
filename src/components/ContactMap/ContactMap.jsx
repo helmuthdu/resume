@@ -1,13 +1,12 @@
-import React from 'react';
 import { GoogleMap, Marker, withGoogleMap, withScriptjs } from 'react-google-maps';
 import { compose, withProps } from 'recompose';
 
 const apiKey = 'AIzaSyA2xs-b0kwEebBXrPR6hko3Rb5nzF9hPqA';
 const coordinates = { lng: 13.404842, lat: 52.520032 };
 
-export const GMaps = ({ isMarkerShown }) => (
+export const GMaps = () => (
   <GoogleMap defaultZoom={12} defaultCenter={coordinates}>
-    {isMarkerShown && <Marker position={coordinates} />}
+    {<Marker position={coordinates} />}
   </GoogleMap>
 );
 

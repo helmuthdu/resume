@@ -2,7 +2,6 @@ import { action } from '@storybook/addon-actions';
 import { number, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import PropTypes from 'prop-types';
-import React from 'react';
 import BlogPagination from './BlogPagination';
 
 const withReadme = require('storybook-readme/with-readme').default;

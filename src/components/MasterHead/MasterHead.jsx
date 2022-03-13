@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import React from 'react';
 import { Button, Container, Icon, Header, Segment, List, Divider } from 'semantic-ui-react';
 import { menuItems } from '../../layouts/DefaultLayout';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';

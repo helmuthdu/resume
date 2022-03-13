@@ -1,6 +1,6 @@
 import { css, StyleSheet } from 'aphrodite/no-important';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import { Component } from 'react';
 import LightBox from 'react-images';
 
 export class Gallery extends Component {

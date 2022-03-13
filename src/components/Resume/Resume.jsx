@@ -50,12 +50,24 @@ const LANGUAGES = [
 const JOBS = [
   {
     current: true,
+    startAt: new Date('2020-04-01'),
+    endAt: new Date(),
+    title: 'Senior Frontend Engineer',
+    company: 'Mercedes-Benz.io',
+    tasks: [
+      'Develop new UI components in Javascript/Typescript with Vue',
+      'Improve our technology stack and support decisions in architecture',
+      'Testing Coach, FE Team Facilitator and Onboarding Buddy'
+    ]
+  },
+  {
+    current: false,
     startAt: new Date('2019-06-01'),
-    endAt: new Date('2019-03-31'),
+    endAt: new Date('2020-03-31'),
     title: 'Senior Frontend Engineer',
     company: 'NIST GmbH',
     tasks: [
-      'Built the company’s web solution using Next.js with Typescript and support for I18n',
+      'Develop new UI components in Javascript/Typescript with Next.js',
       'SEO improvements and Performance optimizations'
     ]
   },
@@ -66,7 +78,7 @@ const JOBS = [
     title: 'Senior Frontend Engineer',
     company: 'Leverton GmbH',
     tasks: [
-      'Implemented new features using React, Redux, Saga, and Typescript',
+      'Develop new UI components in Javascript/Typescript with React',
       'Added unit tests and E2E tests to the new/legacy products',
       'Maintainer of the company component library'
     ]
@@ -78,9 +90,9 @@ const JOBS = [
     title: 'Senior Frontend Developer',
     company: 'Neocom',
     tasks: [
-      'Performed design, frontend architecture, and development of market analysis and reporting systems for automobile manufacturers using Vue, Node and PostgreSQL',
+      'Develop new UI components in Javascript/Typescript with Vue',
       'Assisted in the improvement of backend features in ASP.NET',
-      'Prototyped an average of 20 new product features per year'
+      'Support product designers on UI/UX concepts'
     ]
   },
   {
@@ -89,15 +101,7 @@ const JOBS = [
     endAt: new Date('2013-11-30'),
     title: 'Systems Analyst',
     company: 'Hex',
-    tasks: [
-      <>
-        Responsible for development of an online GIS solution to show deforestation and hazards in Brazil for{' '}
-        <a href="http://www.ibama.gov.br/" target="_blank" rel="noopener noreferrer">
-          IBAMA
-        </a>{' '}
-        using PHP, CoffeeScript and JQuery.
-      </>
-    ]
+    tasks: []
   }
 ];
 
@@ -106,7 +110,7 @@ export const Resume = ({ id }) => (
     <Header size="large">
       RESUME
       <Header sub>
-        <cite>"Life without knowledge is death in disguise." - Talib Kweli</cite>
+        <cite>&quot;Life without knowledge is death in disguise.&quot; - Talib Kweli</cite>
       </Header>
     </Header>
     <Divider hidden section />
@@ -148,43 +152,6 @@ export const Resume = ({ id }) => (
                   <Divider hidden />
                 </Fragment>
               ))}
-              <Feed.Event>
-                <Feed.Content>
-                  <Feed.Date>
-                    dez 2013 -{' '}
-                    <Label size="small" color="blue">
-                      Current
-                    </Label>
-                  </Feed.Date>
-                  <Feed.Summary>Freelance Web Developer</Feed.Summary>
-                  <Feed.Extra text>
-                    <List relaxed>
-                      <List.Item>
-                        <List.Content>
-                          Developed a{' '}
-                          <a href="http://cn-events.azurewebsites.net/e" target="_blank" rel="noopener noreferrer">
-                            check-in web app
-                          </a>{' '}
-                          for the kid’s department at{' '}
-                          <a href="http://comunidadedasnacoes.com.br" target="_blank" rel="noopener noreferrer">
-                            Community of Nations
-                          </a>{' '}
-                          using Angular, ASP.NET Core, SQL Server, and Azure.
-                        </List.Content>
-                      </List.Item>
-                      <List.Item>
-                        <List.Content>
-                          Built a gis web app to show earthquakes in Brazil for the{' '}
-                          <a href="http://obsis.unb.br/sisbra" target="_blank" rel="noopener noreferrer">
-                            Seismological Observatory
-                          </a>{' '}
-                          at the University of Brasilia using Meteor and MongoDB.
-                        </List.Content>
-                      </List.Item>
-                    </List>
-                  </Feed.Extra>
-                </Feed.Content>
-              </Feed.Event>
             </Feed>
           </Segment>
         </Grid.Column>

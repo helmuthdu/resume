@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Header, Icon, Segment } from 'semantic-ui-react';
 
 const AboutPage = () => {
@@ -13,7 +12,7 @@ const AboutPage = () => {
       <Segment vertical>
         <p>This project is created by @helmuthdu.</p>
         <p>
-          For any question, I'm on{' '}
+          For any question, I&apos;m on
           <a href="mailto:helmuthdu@gmail.com" target="blank">
             helmuthdu@gmail.com
           </a>

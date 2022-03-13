@@ -1,6 +1,5 @@
 import { css, StyleSheet } from 'aphrodite/no-important';
 import PropTypes from 'prop-types';
-import React from 'react';
 import { Divider, Grid, Header, Image, List, Segment } from 'semantic-ui-react';
 
 const EXPERIENCES = [

@@ -1,7 +1,6 @@
 import { ConnectedRouter } from 'connected-react-router';
 import PropTypes from 'prop-types';
 import React, { lazy, Suspense } from 'react';
-import { hot } from 'react-hot-loader';
 import { Redirect } from 'react-router';
 import { Route, Switch } from 'react-router-dom';
 
@@ -46,4 +45,4 @@ AppRouter.propTypes = {
   routes: PropTypes.array.isRequired
 };
 
-export default hot(module)(AppRouter);
+export default AppRouter;

@@ -1,5 +1,4 @@
 import { render } from 'enzyme';
-import React from 'react';
 import BlogPagination from '../BlogPagination';
 
 const LinkStub = props => <div {...props} />;

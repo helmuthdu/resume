@@ -1,5 +1,4 @@
 import { shallow } from 'enzyme/build/index';
-import React from 'react';
 import HomePage from '../HomePage';
 
 describe('pages -> HomePage component', () => {

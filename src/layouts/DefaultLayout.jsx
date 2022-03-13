@@ -1,11 +1,11 @@
-import 'prismjs/themes/prism-okaidia.css';
 import PropTypes from 'prop-types';
-import React, { Fragment, PureComponent } from 'react';
+import { Fragment, PureComponent } from 'react';
 import { Route } from 'react-router-dom';
-import 'semantic-ui-css/semantic.css';
 import { Container, Icon, Segment, Sidebar, Visibility } from 'semantic-ui-react';
 import HeaderMenu from '../components/HeaderMenu/HeaderMenu';
 import SidebarMenu from '../components/SidebarMenu/SidebarMenu';
+import 'semantic-ui-css/semantic.min.css';
+import 'prismjs/themes/prism-okaidia.css';
 import './DefaultLayout.css';
 import './ResponsiveLayout.css';
 
@@ -78,6 +78,7 @@ export class DefaultLayout extends PureComponent {
   }
 }
 
+// eslint-disable-next-line
 export const DefaultLayoutRoute = ({ component: Component, ...rest }) => {
   return (
     <Route
@@ -92,7 +93,8 @@ export const DefaultLayoutRoute = ({ component: Component, ...rest }) => {
 };
 
 DefaultLayout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  component: PropTypes.any
 };
 
 export default DefaultLayoutRoute;

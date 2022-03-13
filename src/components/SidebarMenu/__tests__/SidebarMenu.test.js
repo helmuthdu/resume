@@ -1,6 +1,5 @@
 import { render } from 'enzyme';
 import { shallow } from 'enzyme/build/index';
-import React from 'react';
 import { withRouter } from 'react-router';
 import { SidebarMenu } from '../SidebarMenu';
 
