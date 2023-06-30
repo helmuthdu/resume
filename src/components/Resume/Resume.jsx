@@ -55,9 +55,9 @@ const JOBS = [
     title: 'Senior Frontend Engineer',
     company: 'Mercedes-Benz.io',
     tasks: [
-      'Develop new UI components in Javascript/Typescript with Vue',
+      'Create Web Solutions using Javascript/Typescript with Vue',
       'Improve our technology stack and support decisions in architecture',
-      'Testing Coach, FE Team Facilitator and Onboarding Buddy'
+      'Testing Coach, FE Team Facilitator, and Onboarding Buddy'
     ]
   },
   {
@@ -67,8 +67,8 @@ const JOBS = [
     title: 'Senior Frontend Engineer',
     company: 'NIST GmbH',
     tasks: [
-      'Develop new UI components in Javascript/Typescript with Next.js',
-      'SEO improvements and Performance optimizations'
+      'Create Web Solutions using Javascript/Typescript with Next.js',
+      'SEO improvements and performance optimizations'
     ]
   },
   {
@@ -78,9 +78,9 @@ const JOBS = [
     title: 'Senior Frontend Engineer',
     company: 'Leverton GmbH',
     tasks: [
-      'Develop new UI components in Javascript/Typescript with React',
-      'Added unit tests and E2E tests to the new/legacy products',
-      'Maintainer of the company component library'
+      'Create Web Solutions using Javascript/Typescript with React',
+      'Add unit tests and E2E tests to new/legacy products',
+      'Maintainer of the company\'s component library'
     ]
   },
   {
@@ -90,9 +90,9 @@ const JOBS = [
     title: 'Senior Frontend Developer',
     company: 'Neocom',
     tasks: [
-      'Develop new UI components in Javascript/Typescript with Vue',
-      'Assisted in the improvement of backend features in ASP.NET',
-      'Support product designers on UI/UX concepts'
+      'Create Web Solutions using Javascript/Typescript with Vue',
+      'Support development of backend features using Node.js',
+      'Create UI/UX design concepts\n'
     ]
   },
   {
